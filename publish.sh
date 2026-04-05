@@ -1,37 +1,34 @@
 #!/bin/bash
 set -e
 
-# Guarda a branch atual e garante que vamos voltar para ela mesmo em caso de erro
-CURRENT_BRANCH=$(git branch --show-current)
-cleanup() {
-    git checkout "$CURRENT_BRANCH" 2>/dev/null || true
-    git branch -D temp-gh-pages 2>/dev/null || true
-}
-trap cleanup EXIT
-
 echo "📚 Gerando o site com mdBook..."
 mdbook build
 
-echo "🚀 Preparando o envio para gh-pages..."
+echo "🚀 Preparando deploy para gh-pages via /tmp..."
 
-# Cria branch temporária sem histórico
-git checkout --orphan temp-gh-pages
-git rm -rf . > /dev/null 2>&1 || true
+# Cria uma pasta temporária única
+TMP_DIR=$(mktemp -d -t gh-pages-deploy-XXXXXX)
 
-# Copia os arquivos gerados
-cp -r "$(pwd)/book/"* .
+# Copia o conteúdo compilado (a pasta book) para a pasta temporária
+cp -r book/* "$TMP_DIR/"
 
-# Adiciona todos os arquivos
+# Inicializa um repositório git na pasta temporária
+cd "$TMP_DIR"
+git init
+git checkout -b gh-pages   # cria branch gh-pages
 git add .
+git commit -m "Deploy do site - $(date '+%Y-%m-%d %H:%M:%S')"
 
-# Verifica se há mudanças para commit
-if git diff --cached --quiet; then
-    echo "⚠️ Nenhuma mudança detectada. O site já está atualizado."
-    echo "✅ Nada a fazer. Saindo..."
-    exit 0
-else
-    git commit -m "Deploy do site - $(date '+%Y-%m-%d %H:%M:%S')"
-    # Envia para o branch gh-pages (sobrescreve)
-    git push origin temp-gh-pages:gh-pages --force
-    echo "✅ Pronto! Site publicado em: https://claudeblog.github.io/nefelibata"
-fi
+# Adiciona o repositório remoto (seu GitHub)
+git remote add origin https://github.com/claudeblog/nefelibata.git
+
+# Envia (força) a branch gh-pages para o GitHub
+git push origin gh-pages --force
+
+# Volta para o diretório original
+cd -
+
+# Remove a pasta temporária
+rm -rf "$TMP_DIR"
+
+echo "✅ Pronto! Site publicado em: https://claudeblog.github.io/nefelibata"
