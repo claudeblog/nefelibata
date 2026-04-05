@@ -37,10 +37,34 @@ if ! grep -q 'export PATH="$HOME/.cargo/bin:$PATH"' ~/.bashrc; then
     echo "➕ Adicionado ~/.cargo/bin ao PATH no ~/.bashrc"
 fi
 
+# 5. Configurar hook do Git (post-commit) para executar publish.sh automaticamente
+if [ -d ".git" ]; then
+    echo "🔗 Configurando hook post-commit do Git..."
+    HOOK_FILE=".git/hooks/post-commit"
+    cat > "$HOOK_FILE" << 'EOF'
+#!/bin/bash
+# post-commit hook: executa publish.sh após cada commit no branch main
+
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+if [ "$BRANCH" = "main" ]; then
+    echo "🔁 Commit detectado no branch main. Executando publish.sh..."
+    ./publish.sh
+fi
+EOF
+    chmod +x "$HOOK_FILE"
+    echo "✅ Hook post-commit instalado com sucesso."
+else
+    echo "⚠️ Diretório .git não encontrado. Certifique-se de que este é um repositório Git."
+    echo "   O hook automático não foi instalado. Execute 'git init' e depois rode este script novamente."
+fi
+
 echo "🎉 Tudo pronto! Você pode agora usar os comandos:"
 echo "   mdbook build   - para gerar o site"
 echo "   mdbook serve   - para ver localmente"
+echo "   ./publish.sh   - para publicar no GitHub Pages"
 echo ""
-echo "Para começar, execute:"
+echo "📌 O hook post-commit já está configurado: a cada 'git commit' no branch main, o site será publicado automaticamente."
+echo "   Para começar, execute:"
 echo "   cd ~/Projects/nefelibata"
 echo "   mdbook serve --open"
