@@ -1,70 +1,136 @@
 #!/bin/bash
-set -e  # Para o script se algum comando falhar
+set -e
 
 echo "🔧 Instalando pré-requisitos para o projeto mdBook..."
 
-# Atualiza lista de pacotes
+# 1. Atualiza sistema e instala pacotes base
 sudo apt update
-
-# 1. Instalar git, curl e build-essential (linker C)
-echo "📦 Instalando git, curl e build-essential..."
 sudo apt install -y git curl build-essential
 
-# 2. Verificar/instalar Rust
+# 2. Instala Rust (se ausente)
 if ! command -v rustc &> /dev/null; then
-    echo "🦀 Rust não encontrado. Instalando via rustup..."
+    echo "🦀 Instalando Rust..."
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-    # Carrega o ambiente Rust para a sessão atual
     source "$HOME/.cargo/env"
 else
-    echo "✅ Rust já está instalado."
+    echo "✅ Rust já instalado."
 fi
 
-# Garantir que o Cargo está no PATH (para o script)
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# 3. Instalar mdBook via Cargo (se não existir)
+# 3. Instala mdBook via Cargo
 if ! command -v mdbook &> /dev/null; then
-    echo "📚 Instalando mdBook via cargo..."
+    echo "📚 Instalando mdBook..."
     cargo install mdbook
 else
-    echo "✅ mdBook já está instalado."
+    echo "✅ mdBook já instalado."
 fi
 
-# 4. Adicionar ~/.cargo/bin ao PATH permanentemente (se ainda não tiver)
+# 4. Adiciona ~/.cargo/bin ao PATH permanentemente
 if ! grep -q 'export PATH="$HOME/.cargo/bin:$PATH"' ~/.bashrc; then
     echo 'export PATH="$HOME/.cargo/bin:$PATH"' >> ~/.bashrc
-    echo "➕ Adicionado ~/.cargo/bin ao PATH no ~/.bashrc"
+    echo "➕ PATH atualizado no ~/.bashrc"
 fi
 
-# 5. Configurar hook do Git (post-commit) para executar publish.sh automaticamente
-if [ -d ".git" ]; then
-    echo "🔗 Configurando hook post-commit do Git..."
-    HOOK_FILE=".git/hooks/post-commit"
-    cat > "$HOOK_FILE" << 'EOF'
+# 5. Cria script update-summary.sh (gerador de SUMMARY.md plano)
+cat > update-summary.sh << 'EOF'
 #!/bin/bash
-# post-commit hook: executa publish.sh após cada commit no branch main
+# Gera src/SUMMARY.md no formato plano (sem aninhamento)
 
-BRANCH=$(git rev-parse --abbrev-ref HEAD)
+SUMMARY_FILE="src/SUMMARY.md"
+TMP_SUMMARY=$(mktemp)
 
-if [ "$BRANCH" = "main" ]; then
-    echo "🔁 Commit detectado no branch main. Executando publish.sh..."
-    ./publish.sh
+cat > "$TMP_SUMMARY" << 'HEAD'
+# Summary
+
+HEAD
+
+for file in src/*.md; do
+    [ -f "$file" ] || continue
+    basename=$(basename "$file")
+    [[ "$basename" == "README.md" || "$basename" == "SUMMARY.md" ]] && continue
+    [[ "${basename,,}" == "sobre.md" ]] && continue
+    if [[ "$basename" =~ \  ]]; then
+        echo "⚠️ Ignorando arquivo com espaço: $basename"
+        continue
+    fi
+    title=$(basename "$file" .md | tr '-' ' ')
+    title=$(echo "$title" | sed 's/  */ /g')
+    rel_path=$(echo "$file" | sed 's|src/||')
+    echo "- [$title]($rel_path)" >> "$TMP_SUMMARY"
+done
+
+if [ -f "src/sobre.md" ]; then
+    echo "- [Sobre](sobre.md)" >> "$TMP_SUMMARY"
 fi
+
+mv "$TMP_SUMMARY" "$SUMMARY_FILE"
+echo "✅ SUMMARY.md atualizado (formato plano)."
 EOF
-    chmod +x "$HOOK_FILE"
-    echo "✅ Hook post-commit instalado com sucesso."
+chmod +x update-summary.sh
+echo "✅ Script update-summary.sh criado."
+
+# 6. Cria script publish.sh
+cat > publish.sh << 'EOF'
+#!/bin/bash
+set -e
+
+echo "📚 Gerando o site com mdBook..."
+mdbook build
+
+echo "🚀 Publicando para gh-pages..."
+TMP_DIR=$(mktemp -d -t gh-pages-deploy-XXXXXX)
+cp -r book/* "$TMP_DIR/"
+cd "$TMP_DIR"
+git init
+git checkout -b gh-pages
+git add .
+git commit -m "Deploy do site - $(date '+%Y-%m-%d %H:%M:%S')"
+git remote add origin https://github.com/claudeblog/nefelibata.git
+git push origin gh-pages --force
+cd -
+rm -rf "$TMP_DIR"
+
+echo "✅ Site publicado em: https://claudeblog.github.io/nefelibata"
+EOF
+chmod +x publish.sh
+echo "✅ Script publish.sh criado."
+
+# 7. Configura hooks do Git (se dentro de um repositório)
+if [ -d ".git" ]; then
+    mkdir -p .git/hooks
+
+    # pre-commit: atualiza SUMMARY.md e adiciona ao commit
+    cat > .git/hooks/pre-commit << 'EOF'
+#!/bin/bash
+./update-summary.sh
+git add src/SUMMARY.md
+EOF
+    chmod +x .git/hooks/pre-commit
+    echo "✅ Hook pre-commit instalado (atualiza SUMMARY.md antes de cada commit)."
+
+    # post-commit: (opcional) publica automaticamente
+    read -p "Deseja instalar o hook post-commit para publicar automaticamente após cada commit? (s/N) " -n 1 -r
+    echo
+    if [[ $REPLY =~ ^[Ss]$ ]]; then
+        cat > .git/hooks/post-commit << 'EOF'
+#!/bin/bash
+./publish.sh
+EOF
+        chmod +x .git/hooks/post-commit
+        echo "✅ Hook post-commit instalado (publica automaticamente)."
+    else
+        echo "ℹ️ Você pode executar ./publish.sh manualmente quando quiser publicar."
+    fi
 else
-    echo "⚠️ Diretório .git não encontrado. Certifique-se de que este é um repositório Git."
-    echo "   O hook automático não foi instalado. Execute 'git init' e depois rode este script novamente."
+    echo "⚠️ Diretório .git não encontrado. Hooks não instalados."
+    echo "   Execute 'git init' e depois rode este script novamente para configurar os hooks."
 fi
 
-echo "🎉 Tudo pronto! Você pode agora usar os comandos:"
-echo "   mdbook build   - para gerar o site"
-echo "   mdbook serve   - para ver localmente"
-echo "   ./publish.sh   - para publicar no GitHub Pages"
+echo "🎉 Instalação concluída!"
+echo "Comandos disponíveis:"
+echo "  ./update-summary.sh   - atualiza o SUMÁRIO do blog (apenas links planos)"
+echo "  ./publish.sh          - gera o site e publica no GitHub Pages"
 echo ""
-echo "📌 O hook post-commit já está configurado: a cada 'git commit' no branch main, o site será publicado automaticamente."
-echo "   Para começar, execute:"
-echo "   cd ~/Projects/nefelibata"
-echo "   mdbook serve --open"
+echo "Se instalou o hook pre-commit, o sumário será atualizado automaticamente a cada commit."
+echo "Se instalou o post-commit, o site será publicado automaticamente após cada commit."
