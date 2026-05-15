@@ -1,0 +1,1898 @@
+<!DOCTYPE HTML>
+<html lang="pt-br" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Blog Nubívago</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-2459343d.css">
+        <link rel="stylesheet" href="css/chrome-ae938929.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex-adc08afe.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-3a732061.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Blog Nubívago</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="capa"><a href="#capa" class="header">Capa</a></h1>
+<p><img src="blankbook-1.png" alt="Capa"></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="sobre"><a class="header" href="#sobre">Sobre</a></h1>
+<p>Sou eu o Nuvem</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="sumário"><a class="header" href="#sumário">Sumário</a></h1>
+<ul>
+<li><a href="#capa">Capa</a></li>
+<li><a href="#sobre">Sobre</a></li>
+<li><a href="#sumário">Sumário</a></li>
+<li><a href="#575-haicais-66---haicai-de-gole">Haicai de gole</a></li>
+<li><a href="#textículos-camisetas-pretas">Textículos Camisetas pretas</a></li>
+<li><a href="#575-haicais-54---haicai-me-leve">Haicai me leve</a></li>
+<li><a href="#575-haicais-57---haicai-malescrito">Haicai Malescrito</a></li>
+<li><a href="#575-haicais-53---haicai-de-jogos">Haicai de jogos</a></li>
+<li><a href="#575-haicais-52---haicai-de-amigos">Haicai de amigos</a></li>
+<li><a href="#575-haicais-50---haicaiu-o-pib">Haicaiu o PIB</a></li>
+<li><a href="#575-haicais-49---haicai-de-pib">Haicai de PIB</a></li>
+<li><a href="#575-haicais-47---haicai-de-espera">Haicai de espera</a></li>
+<li><a href="#575-haicais-48---haicai-de-ânsia">Haicai de Ânsia</a></li>
+<li><a href="#texticulos---descalços-fazendo-o-caminho">Texticulos Descalços fazendo o caminho</a></li>
+<li><a href="#575-haicais-43---haicai-destóico">Haicai Destóico</a></li>
+<li><a href="#575-haicais-45---haicai-de-maratona">Haicai de maratona</a></li>
+<li><a href="#575-haicais-46---haicai-de-decalque">Haicai de Decalque</a></li>
+<li><a href="#textículos---culpa-e-resignação">Textículos Culpa e resignação</a></li>
+<li><a href="#575-haicais-42---haicai-de-desencontro">Haicai de Desencontro</a></li>
+<li><a href="#574-haicais-41---haicai-fora-do-ar">Haicai Fora do ar</a></li>
+<li><a href="#575-haicais-40---haicai-nefelibata">Haicai Nefelibata</a></li>
+<li><a href="#575-haicais-39---haicai-de-rodeio">Haicai de rodeio</a></li>
+<li><a href="#575-haicais-38---haicai-de-dia-livre">Haicai de dia livre</a></li>
+<li><a href="#575-haicais-37---haicai-de-frustração">Haicai de frustração</a></li>
+<li><a href="#575-haicais-36---haicai-favela">Haicai Favela</a></li>
+<li><a href="#575-haicais-35---haicai-dispoente">Haicai dispoente</a></li>
+<li><a href="#575-haicais-34---haicai-de-equilíbrio">Haicai de Equilíbrio</a></li>
+<li><a href="#poesias-hombridade-solo">Poesias Hombridade Solo</a></li>
+<li><a href="#575-haicais-33---haicai-de-veto">Haicai de veto</a></li>
+<li><a href="#textículo-55---transfuga-de-classe-mudança-e-caminhos">Textículo 55 Transfuga de Classe, Mudança e Caminhos</a></li>
+<li><a href="#575-haicais-32---haicai-revitalizar">Haicai Revitalizar</a></li>
+<li><a href="#575-haicais-31---haicai-de-acesso">Haicai de Acesso</a></li>
+<li><a href="#575-haicais-28---haicai-sankofa">Haicai Sankofa</a></li>
+<li><a href="#575-haicais-365---haicai-de-fim">Haicai de fim</a></li>
+<li><a href="#575-haicais-363---haicai-á-vó-nova">Haicai Á vó nova</a></li>
+<li><a href="#575-haicais-360---haicai-circular">Haicai Circular</a></li>
+<li><a href="#575-haicais-359---haicai-de-partilha">Haicai de partilha</a></li>
+<li><a href="#575-haicais-358---haicai-de-rigidez">Haicai de Rigidez</a></li>
+<li><a href="#575-haicais-357---haicai-recontinuar">Haicai Recontinuar</a></li>
+<li><a href="#575-haicais-351---haicai-hiperativo">Haicai Hiperativo</a></li>
+<li><a href="#575-haicais-347---haicai-aos-sábados">Haicai Aos Sábados</a></li>
+<li><a href="#poeminha-de-transbordo">Poeminha de Transbordo</a></li>
+<li><a href="#poema-palíndromo---ame-ó-poesia">Poema palíndromo Ame… Ó Poesia</a></li>
+<li><a href="#textículo-34---delírios-e-devaneios">Textículo 34 Delírios e Devaneios</a></li>
+<li><a href="#575-haicais-323---haicai-de-programa">Haicai de programa</a></li>
+<li><a href="#575-haicais-320---haicai-distraído">Haicai Distraído</a></li>
+<li><a href="#575-haicais-311---haicai-em-chiaroscuro">Haicai em Chiaroscuro</a></li>
+<li><a href="#575-haicais-310---haïku-impressionniste">Haïku Impressionniste</a></li>
+<li><a href="#versos-roubados-poesia-à-rosa">Versos Roubados Poesia à Rosa</a></li>
+<li><a href="#poesia---hoje-fui-contornado-por-um-arco-iris">Poesia Hoje fui contornado por um arco Iris</a></li>
+<li><a href="#575-haicais-296---haicai-tampouco">Haicai tampouco</a></li>
+<li><a href="#575-haicais-293---haicai-de-pai">Haicai de Pai</a></li>
+<li><a href="#575-haicais-288---haicai-de-coabito">Haicai de Coabito</a></li>
+<li><a href="#575-haicais-287---haicai-de-faxina">Haicai de Faxina</a></li>
+<li><a href="#575-haicais-286---haicai-de-recursos-humanos">Haicai de recursos humanos</a></li>
+<li><a href="#575-haicais-276---haicai-de-fome">Haicai de Fome</a></li>
+<li><a href="#575-haicais-275---haicai-compensatório">Haicai Compensatório</a></li>
+<li><a href="#575-haicais-273---haicai-de-paradeiro">Haicai de Paradeiro</a></li>
+<li><a href="#575-haicais-272---haicai-geracional">Haicai Geracional</a></li>
+<li><a href="#575-haicais-271---haicai-de-parabéns">Haicai de Parabéns</a></li>
+<li><a href="#575-haicais-260---haicai-de-skank">Haicai de Skank</a></li>
+<li><a href="#575-haicais-259---haicai-de-burnout">Haicai de Burnout</a></li>
+<li><a href="#575-haicais-258---haicai-de-sonho">Haicai de Sonho</a></li>
+<li><a href="#575-haicais-253---haicai-regado">Haicai Regado</a></li>
+<li><a href="#575-haicais-252---haicai-podado">Haicai Podado</a></li>
+<li><a href="#575-haicais-250---haicai-respire">Haicai Respire</a></li>
+<li><a href="#575-haicais-245---haicai-eu-esqueço">Haicai Eu Esqueço</a></li>
+<li><a href="#575-haicais-244---haicai-corrompido">Haicai Corrompido</a></li>
+<li><a href="#poema---hoje-contornei-um-arco-íris">Poema Hoje contornei um arco íris</a></li>
+<li><a href="#575-haicais-243---haicai-de-arco-íris">Haicai de Arco íris</a></li>
+<li><a href="#575-haicais-240---haicai-só-hoje">Haicai só hoje</a></li>
+<li><a href="#575-haicais-239---haicai-revisto">Haicai Revisto</a></li>
+<li><a href="#575-haicais-238---haicai-doa-se">Haicai Doa se</a></li>
+<li><a href="#575-haicais-237---haicai-horizontal">Haicai Horizontal</a></li>
+<li><a href="#575-haicais-232---haicai-bilingue">Haicai Bilingue</a></li>
+<li><a href="#575-haicais-229---haicai-brasílis">Haicai Brasílis</a></li>
+<li><a href="#575-haicais-228---haicai-dejavu">Haicai Dejavu</a></li>
+<li><a href="#575-haicais-226---haicai-de-penso">Haicai de Penso</a></li>
+<li><a href="#575-haicais-225---haicai-extremamente-fácil">Haicai Extremamente Fácil</a></li>
+<li><a href="#575-haicais-223---haicalismo">Haicalismo</a></li>
+<li><a href="#575-haicais-221---haicai-de-pensamento">Haicai de Pensamento</a></li>
+<li><a href="#575-haicais-220---haicais-de-seria">Haicais de seria</a></li>
+<li><a href="#palindromo--ó-vovó">Palindromo Ó vovó</a></li>
+<li><a href="#575-haicais-217---haicai-vulnerável">Haicai vulnerável</a></li>
+<li><a href="#575-haicais-216---haicai-tupinambá">Haicai Tupinambá</a></li>
+<li><a href="#textículo-reencontrado-1-pés-de-vento">Textículo Reencontrado 1 Pés de vento</a></li>
+<li><a href="#poesias-reencontradas-versinho-de-dor">Poesias reencontradas Versinho de Dor</a></li>
+<li><a href="#poesias-reencontradas-rascunhicídio">Poesias Reencontradas Rascunhicídio</a></li>
+<li><a href="#poesias-reencontradas-natureza-da-árvore">Poesias Reencontradas Natureza da árvore</a></li>
+<li><a href="#poesias-reencontradas-fim-do-ano-sem-fim">Poesias Reencontradas Fim do ano sem fim</a></li>
+<li><a href="#poesias-reencontradas-falta">Poesias Reencontradas Falta</a></li>
+<li><a href="#poesias-hoje-sairei-de-casa">Poesias Hoje sairei de casa</a></li>
+<li><a href="#575-haicais-213---o-tempo-não-para">O tempo não para</a></li>
+<li><a href="#575-haicais-215---haicai-de-passeio">Haicai de Passeio</a></li>
+<li><a href="#575-haicais-214---haicai-amarelo">Haicai Amarelo</a></li>
+<li><a href="#575-haicais-212---haicai-caminha">Haicai Caminha</a></li>
+<li><a href="#575-haicais-211---haicai-reencontrado">Haicai Reencontrado</a></li>
+<li><a href="#575-haicais-209---haicai-de-imbróglio">Haicai de Imbróglio</a></li>
+<li><a href="#575-haicais-210---haicai-de-desamparo">Haicai de desamparo</a></li>
+<li><a href="#textículos-21---aviso-estou-morrendo">Textículos 21 Aviso estou morrendo.</a></li>
+<li><a href="#575-haicais-208---haicai-insit">Haicai Insit</a></li>
+<li><a href="#575-haicais-207---haicai-de-emergência">Haicai de emergência</a></li>
+<li><a href="#575-haicais-206---haicai-comentado">Haicai comentado</a></li>
+<li><a href="#575-haicais-205---haicai-essencialista">Haicai Essencialista</a></li>
+<li><a href="#575-haicais-204---haicai-de-semeador">Haicai de semeador</a></li>
+<li><a href="#575-haicais-202---haicai-de-escritura">Haicai de Escritura</a></li>
+<li><a href="#575-haicais-202b---haicai-a-ozzy">575 Haicais 202b Haicai a Ozzy</a></li>
+<li><a href="#575-haicais-201---haicai-de-fofoca">Haicai de Fofoca</a></li>
+<li><a href="#575-haicais-200---haicai-de-preenchimento">Haicai de Preenchimento</a></li>
+<li><a href="#575-haicais-199---haicai-a-madonna">Haicai a Madonna</a></li>
+<li><a href="#575-haicais-198---apesar-de-você">Apesar de Você</a></li>
+<li><a href="#575-haicais-197---haicai-devirista">Haicai Devirista</a></li>
+<li><a href="#575-haicais-196---haicai-latino">Haicai Latino</a></li>
+<li><a href="#textículos-8---timbres-personas-e-descobertas">Textículos 8 Timbres, Personas e Descobertas</a></li>
+<li><a href="#poesias-de-luz---fotografia-de-fim-de-dia">Poesias de Luz Fotografia de Fim de dia</a></li>
+<li><a href="#575-haicais-193---haicai-de-pintura">Haicai de Pintura</a></li>
+<li><a href="#575-haicai-191---haicai-de-sementes">575 Haicai 191 Haicai de Sementes</a></li>
+<li><a href="#575-haicais-190---haicai-hostil">Haicai Hostil</a></li>
+<li><a href="#575-haicais-189---haicai-de-mão">Haicai de Mão</a></li>
+<li><a href="#575-haicais-188---haicai-16mil">Haicai 16mil</a></li>
+<li><a href="#575-haicais-187---haicai-de-garra">Haicai de Garra</a></li>
+<li><a href="#575-haicais-186---haicai-de-passagem">Haicai de Passagem</a></li>
+<li><a href="#575-haicai-185---haicai-temporão">575 Haicai 185 Haicai Temporão</a></li>
+<li><a href="#575-haicais-184---haicai-de-arte">Haicai de Arte</a></li>
+<li><a href="#575-haicais-183---haicai-de-bailarina">Haicai de Bailarina</a></li>
+<li><a href="#575-haicais-182---haicai-pela-metade">Haicai Pela Metade</a></li>
+<li><a href="#575-haicais-181---haicai-de-convalescência">Haicai de convalescência</a></li>
+<li><a href="#575-haicais-180---haicai-de-resistência">Haicai de Resistência</a></li>
+<li><a href="#575-haicais-179---haicai-vital">Haicai Vital</a></li>
+<li><a href="#575-haicais-178---haicai-mudo">Haicai Mudo</a></li>
+<li><a href="#pequenos-poemas---mudança">Pequenos Poemas Mudança</a></li>
+<li><a href="#575-haicais-177---haicai-de-trauma">Haicai de Trauma</a></li>
+<li><a href="#575-haicais-176---haicai-luto">Haicai Luto</a></li>
+<li><a href="#575-haicais-175---haicai-de-frete">Haicai de frete</a></li>
+<li><a href="#575-haicais-174---haicai-de-mudança">Haicai de mudança</a></li>
+<li><a href="#poemas-palindromos-ei-erra-farreie">Poemas Palindromos Ei! Erra! Farreie!</a></li>
+<li><a href="#575-haicais-168---haicai-de-resmas">Haicai de resmas</a></li>
+<li><a href="#575-haicais-166---haicai-era-acróstico">Haicai era Acróstico</a></li>
+<li><a href="#poema-palindromo-o-colo">Poema Palindromo O colo</a></li>
+<li><a href="#haicais-acrósticos">Haicais Acrósticos</a></li>
+<li><a href="#575-haicais-165---haicai-aos-acrósticos">Haicai Aos acrósticos</a></li>
+<li><a href="#575-haicais-164---haicai-de-legado">Haicai de Legado</a></li>
+<li><a href="#575-haicais-163---haicai-à-antônia">Haicai à Antônia</a></li>
+<li><a href="#pequenos-poemas---só-então-vai-se-tornar">Pequenos Poemas Só então vai se tornar</a></li>
+<li><a href="#575-haicais-162---haicai-ora-acróstico">Haicai Ora acróstico</a></li>
+<li><a href="#575-haicais-161---haicai-são-acrósticos">Haicai São acrósticos</a></li>
+<li><a href="#haicais---materiais-sensíveis">Haicais Materiais Sensíveis</a></li>
+<li><a href="#575-haicais-160---haicai-aos-acrósticos">Haicai aos acrósticos</a></li>
+<li><a href="#575-haicais-159---haicai-de-valeu">Haicai de Valeu</a></li>
+<li><a href="#575-haicais-158---haicai-de-quermesse">Haicai de Quermesse</a></li>
+<li><a href="#575-haicais-157---haicai-de-ontem">Haicai de Ontem</a></li>
+<li><a href="#575-haicais-155---haicai-de-vidro">Haicai de Vidro</a></li>
+<li><a href="#575-haicais-154---haicai-de-amizade">Haicai de Amizade</a></li>
+<li><a href="#575-haicais-152---haicai-de-amor">Haicai de Amor</a></li>
+<li><a href="#575-haicais-151---haicai-de-melhores-pessoas">Haicai de Melhores Pessoas</a></li>
+<li><a href="#575-haicais-150---haicai-proibido">Haicai Proibido</a></li>
+<li><a href="#575-haicais-149---haicai-de-entrega">Haicai de Entrega</a></li>
+<li><a href="#575-haicais-148---haicai-de-porcelana">Haicai de Porcelana</a></li>
+<li><a href="#575-haicais-147---haicai-de-cristais">Haicai de Cristais</a></li>
+<li><a href="#575-haicais-146---haicai-de-louça">Haicai de Louça</a></li>
+<li><a href="#575-haicais-145---haicai-de-ficha">Haicai de ficha</a></li>
+<li><a href="#575-haicais-142---haicai-de-sono">Haicai de Sono</a></li>
+<li><a href="#575-haicais-141---haicai-revivido">Haicai Revivido</a></li>
+<li><a href="#575-haicais-135---haicai-de-passagem">Haicai de Passagem</a></li>
+<li><a href="#texticulo-13---perdão">Texticulo 13 Perdão</a></li>
+<li><a href="#anúncio---agora-o-blog-tem-feed">ANÚNCIO Agora o blog tem Feed!</a></li>
+<li><a href="#575-haicais-133---haicai-à-mujica">Haicai à Mujica</a></li>
+<li><a href="#575-haicais-132---haicai-de-pet">Haicai de pet</a></li>
+<li><a href="#575-haicais-131---haicai-de-vazio">Haicai de Vazio</a></li>
+<li><a href="#575-haicais-130---haicai-de-acaso">Haicai de acaso</a></li>
+<li><a href="#575-haicais-129---haicai-de-enterrador">Haicai de enterrador</a></li>
+<li><a href="#575-haicais-128---haicai-de-nunca-mais">Haicai de Nunca Mais</a></li>
+<li><a href="#575-haicais-127---haicai-do-garoto">Haicai do garoto</a></li>
+<li><a href="#575-haicais-126---haicai-eventual">Haicai Eventual</a></li>
+<li><a href="#575-haicais-122---haicai-de-tempo">Haicai de Tempo</a></li>
+<li><a href="#575-haicais-121---ananá-banana-ana">Ananá, Banana, Ana</a></li>
+<li><a href="#575-haicais-120---haicai-de-trinta">Haicai de Trinta</a></li>
+<li><a href="#575-haicais-119---haicai-de-aniversário">Haicai de Aniversário</a></li>
+<li><a href="#575-haicais-118---haicai-original">Haicai Original</a></li>
+<li><a href="#575-haicais-117---haicai-íntimo">Haicai Íntimo</a></li>
+<li><a href="#575-haicais-116---haicai-de-velho">Haicai de velho</a></li>
+<li><a href="#textículos-5---rejeição">Textículos 5 Rejeição</a></li>
+<li><a href="#575-haicais-114---haicai-desoriginalizado">Haicai Desoriginalizado</a></li>
+<li><a href="#575-haicais-113---haicais-de-cabeça">Haicais de cabeça</a></li>
+<li><a href="#575-haicais-112---haicai-de-samba">Haicai de Samba</a></li>
+<li><a href="#575-haicais-111---haicais-coincidente">Haicais coincidente</a></li>
+<li><a href="#575-haicais-110---haicai-quaresmal">Haicai Quaresmal</a></li>
+<li><a href="#poesia---sem-fins-lucrativos">Poesia Sem fins lucrativos</a></li>
+<li><a href="#575-haicais-109---haicai-limerente">Haicai Limerente</a></li>
+<li><a href="#575-haicais-108---haicai-de-refúgio">Haicai de Refúgio</a></li>
+<li><a href="#575-haicais-107---haicai-de-ruptura">Haicai de Ruptura</a></li>
+<li><a href="#poemas-palíndromo-eu-quê">Poemas Palíndromo Eu quê </a></li>
+<li><a href="#textículo-3---sobresalências">Textículo 3 Sobresalências</a></li>
+<li><a href="#poemas-palíndromo-da-terra">Poemas Palíndromo Da Terra</a></li>
+<li><a href="#575-haicais-89---haicai-de-diferença">Haicai de diferença</a></li>
+<li><a href="#575-haicais-88---haicai-colorido">Haicai Colorido</a></li>
+<li><a href="#575-haicais-87---haicai-atentoh">Haicai Atentoh</a></li>
+<li><a href="#textículo-2---troco-acolhimento">Textículo 2 Troco acolhimento</a></li>
+<li><a href="#575-haicais-82---haicai-de-coração">Haicai de coração</a></li>
+<li><a href="#insônia-poética---refluxo-gastro-encefálico">Insônia Poética Refluxo gastro encefálico</a></li>
+<li><a href="#575-haicais-75---haicai-à-ritalee">Haicai à Ritalee</a></li>
+<li><a href="#poesias---o-mímico">Poesias O mímico</a></li>
+<li><a href="#575-haicais-70---haicais-de-tratamento">Haicais de Tratamento</a></li>
+<li><a href="#575-haicais---69-haicai-sentido">575 Haicais 69 Haicai Sentido</a></li>
+<li><a href="#575-haicais---68-haicai-incontido">575 Haicais 68 Haicai Incontido</a></li>
+<li><a href="#575-haicais-67---haicai-autocorreto">Haicai autocorreto</a></li>
+<li><a href="#575-haicais---65-haicais-substituto">575 Haicais 65 Haicais Substituto</a></li>
+<li><a href="#soneto-palindromia-sonética">Soneto Palindromia Sonética</a></li>
+<li><a href="#poemas-palíndromos-pare-lola-descanse">Poemas Palíndromos Pare Lola descanse</a></li>
+<li><a href="#575-haicais-64---haicai-insone">Haicai Insone</a></li>
+<li><a href="#575-haicais-63---haicai-brutalista">Haicai Brutalista</a></li>
+<li><a href="#poemas-palíndromos-ramos-a-somar">Poemas Palíndromos Ramos a somar</a></li>
+<li><a href="#575-haicais-62---haicai-relaxante">Haicai Relaxante</a></li>
+<li><a href="#575-haicais-61---haicai-às-eunices">Haicai às Eunices</a></li>
+<li><a href="#575-haicais-60---haicai-afiado">Haicai afiado</a></li>
+<li><a href="#575-haicais-59---haicai-haver">Haicai Haver</a></li>
+<li><a href="#textículo-1---movimentação">Textículo 1 Movimentação</a></li>
+<li><a href="#575-haicais-58---tdahaicai">TDAHaicai</a></li>
+<li><a href="#575-haicais-57---hai-cai-de-patins">Hai Cai de Patins</a></li>
+<li><a href="#haicais-enterrados">Haicais enterrados</a></li>
+<li><a href="#575-haicais-56---haicai-de-ônibus">Haicai de ônibus</a></li>
+<li><a href="#575-haicais-55---haicai-lunar">Haicai Lunar</a></li>
+<li><a href="#575-haicais-51---haicai-sobre-vida">Haicai Sobre Vida</a></li>
+<li><a href="#haicais-de-fios-e-fé">Haicais de Fios e fé</a></li>
+<li><a href="#haicais-silenciosos">Haicais Silenciosos</a></li>
+<li><a href="#pequenos-poemas---pequeno-espacinho">Pequenos Poemas Pequeno Espacinho</a></li>
+<li><a href="#haicais---haicais-sobre-nós">Haicais Haicais sobre nós</a></li>
+<li><a href="#poesia-errada-prioridades">Poesia Errada Prioridades</a></li>
+<li><a href="#poesia-roubada-tu-me-manques">Poesia Roubada Tu me manques</a></li>
+<li><a href="#575-haicais-30---haicai-apagado">Haicai Apagado</a></li>
+<li><a href="#poemas-palíndromos---reviver-e-viver">Poemas Palíndromos Reviver e viver</a></li>
+<li><a href="#575-haicais-29---haicai-reduzido">Haicai Reduzido</a></li>
+<li><a href="#575-haicais-27---haicai-de-autoengano">Haicai de Autoengano</a></li>
+<li><a href="#575-haicais-26---haicai-excitado">Haicai excitado</a></li>
+<li><a href="#575-haicais-25---haicai-derramado">Haicai derramado</a></li>
+<li><a href="#575-haicais-24---haicai-espinhoso">Haicai espinhoso</a></li>
+<li><a href="#575-haicais-23---haicai-de-uva">Haicai de Uva</a></li>
+<li><a href="#575-haicais-22----haicai-aéreo">Haicai Aéreo</a></li>
+<li><a href="#575-haicais-21---haicai-cítrico">Haicai Cítrico</a></li>
+<li><a href="#575-haicais-20---haicai-de-parede">Haicai de Parede</a></li>
+<li><a href="#575-haicais-19---um-haicai-sobre-nós">Um Haicai Sobre Nós</a></li>
+<li><a href="#575-haicais-18---haicai-pro-futuro">Haicai pro futuro</a></li>
+<li><a href="#575-haicais-17---haicai-do-silêncio">Haicai Do Silêncio</a></li>
+<li><a href="#575-haicais-16---haicai-da-indiferença">Haicai da Indiferença</a></li>
+<li><a href="#poesias-ágata-ou-cacos-de-calcedônia-quartzo-e-ametista">Poesias Ágata ou Cacos de calcedônia, quartzo e ametista</a></li>
+<li><a href="#poesia---manhãs-de-segunda-ou-equilíbrio-de-gatos">Poesia Manhãs de segunda ou Equilíbrio de gatos</a></li>
+<li><a href="#pequenos-poemas---a-casa">Pequenos Poemas A Casa</a></li>
+<li><a href="#oração-proteção">Oração Proteção</a></li>
+<li><a href="#insônia-poética---o-primeiro-notívago">Insônia Poética O Primeiro Notívago</a></li>
+<li><a href="#575-haicais-15---haicai-do-aterro">Haicai do Aterro</a></li>
+<li><a href="#575-haicais-14---haicai-inaugural">Haicai Inaugural</a></li>
+<li><a href="#primeiros-haicais">Primeiros Haicais</a></li>
+<li><a href="#poemas-palíndromo-ser-e-viver-reviveres">Poemas palíndromo Ser, e viver reviveres</a></li>
+<li><a href="#575-haicais-13---haicai-do-morro">Haicai do Morro</a></li>
+<li><a href="#575-haicais-12---haicai-fiado">Haicai Fiado</a></li>
+<li><a href="#575-haicais-11---haicai-doído">Haicai Doído</a></li>
+<li><a href="#samba-de-fé">Samba de fé</a></li>
+<li><a href="#575-haicais-10---haicai-para-viagem">Haicai para viagem</a></li>
+<li><a href="#575-haicais-9---haicai-sobre-haicais">Haicai sobre Haicais</a></li>
+<li><a href="#575-haicais-8---haicai-de-aprendizado">Haicai de Aprendizado</a></li>
+<li><a href="#575-haicais-7---haicai-de-sonho">Haicai de Sonho</a></li>
+<li><a href="#575-haicais-6---haicai-de-força">Haicai de Força</a></li>
+<li><a href="#575-haicais-5---haicai-do-grito">Haicai do Grito</a></li>
+<li><a href="#575-haicais-4---haicai-de-liberdade">Haicai de Liberdade</a></li>
+<li><a href="#575-haicais-3---haicai-do-compromisso">Haicai do compromisso</a></li>
+<li><a href="#575-haicais-2---haicai-de-alma">Haicai de Alma</a></li>
+<li><a href="#575-haicais-1---haicai-de-ano-novo">Haicai de Ano novo</a></li>
+<li><a href="#poesia---me-ser-e-tecer">Poesia Me ser e tecer</a></li>
+<li><a href="#poesias---floresça">Poesias Floresça</a></li>
+<li><a href="#poemas-roubados-tacituras">Poemas Roubados Tacituras</a></li>
+<li><a href="#poemas-palíndromo-à-diva">Poemas Palíndromo À diva</a></li>
+<li><a href="#haicais-do-arvoredo">Haicais do Arvoredo</a></li>
+<li><a href="#poemas-roubados-tenho-roubado-versos">Poemas Roubados Tenho roubado versos</a></li>
+<li><a href="#creditos">Creditos</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-66---haicai-de-gole"><a class="header" href="#575-haicais-66---haicai-de-gole">575 Haicais 66 - Haicai de gole</a></h1>
+<p>Vida é sopa<br>E eu só tenho garfo<br>Bebo de gole</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="textículos-camisetas-pretas"><a class="header" href="#textículos-camisetas-pretas">Textículos: Camisetas pretas</a></h1>
+<p>O conforto das camisetas pretas,
+Não desbotam, Não amassam,
+Secam no corpo e não pegam odor.</p>
+<p>São macias, no frio esquentam
+Também são frescas quando calor</p>
+<p>Encontrei nesse guarda-roupa incolor,
+A facilidade das manhãs preguiçosas
+De olhos fechados pego uma delas
+Sem medo do branco ter virado rosa.</p>
+<p>É realmente um feito tecelão
+Tecido macio que veste em conforto
+Mesmo que saia do varal molhada
+A camisa preta seca no corpo.</p>
+<p>Visto camisas de malha fria
+Visto preto, por dentro e por fora
+Combinam comigo, e com meus dias
+Básico, prático e distantes da aurora</p>
+<p>Encontrei, nessa praticidade uma forma de poupar tempo,
+Também lucidez pra viver o momento</p>
+<p>A camiseta foi só o começo, repensei os excessos de toda uma vida.
+No esvaziar encontrei espaço pra respirar………………….</p>
+<p>Seria então a camiseta preta minha veste de sempre apesar do preço
+Não fosse eu pai de um serzinho pequeno, com dote artístico e rosto travesso.</p>
+<p>Quando com ele visto cores, sorrisos,
+visto canetinhas, cola glitter, pincel,
+guache, lantejoulas e “muitos brilhos”…..
+Rosa, Amarelo, azul cor de céu.</p>
+<p>Por que você diz: “Sem cores é muito chato, o mundo brilhante fica mais bonito. É o que eu acredito!” E o papai também.</p>
+<p>Bora viver.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-54---haicai-me-leve"><a class="header" href="#575-haicais-54---haicai-me-leve">575 Haicais 54 - Haicai me leve</a></h1>
+<p>Sono pesadoQue o sonho me leveViagem breve</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-57---haicai-malescrito"><a class="header" href="#575-haicais-57---haicai-malescrito">575 Haicais 57 - Haicai Malescrito</a></h1>
+<p>DespreparadoSem sal destemperado
+Desinspirado</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-53---haicai-de-jogos"><a class="header" href="#575-haicais-53---haicai-de-jogos">575 Haicais 53 - Haicai de jogos</a></h1>
+<p>Noite viradaTabuleiro a mesaEm notivaguês</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-52---haicai-de-amigos"><a class="header" href="#575-haicais-52---haicai-de-amigos">575 Haicais 52 - Haicai de amigos</a></h1>
+<p>Ouvinte vorazE parceiros de risoAmigos fiéis</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-50---haicaiu-o-pib"><a class="header" href="#575-haicais-50---haicaiu-o-pib">575 Haicais 50 - Haicaiu o PIB</a></h1>
+<p>Ninguém se feriu
+Quando o PIB caiu
+Mas parou o Brazil</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-49---haicai-de-pib"><a class="header" href="#575-haicais-49---haicai-de-pib">575 Haicais 49 - Haicai de PIB</a></h1>
+<p>Gente tem fome</p>
+<p>De arroz, Feijão e pão</p>
+<p>Não de PIB não</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-47---haicai-de-espera"><a class="header" href="#575-haicais-47---haicai-de-espera">575 Haicais 47 - Haicai de espera</a></h1>
+<p>Ser ansioso
+Não consegue esperar
+Desespera-se</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-48---haicai-de-ânsia"><a class="header" href="#575-haicais-48---haicai-de-ânsia">575 Haicais 48 - Haicai de Ânsia</a></h1>
+<p>Ser Ansioso
+Ao se ver ocioso
+Sofre Ânsia</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="texticulos---descalços-fazendo-o-caminho"><a class="header" href="#texticulos---descalços-fazendo-o-caminho">Texticulos - Descalços fazendo o caminho</a></h1>
+<p>Lhes convido a caminhar com os pés descalços na grama.
+Aceitar as pedras pontudas, meter o pé na lama.
+E assim sentiremos na sola, a relva e água do rio.Nadaremos nus em lagos, também passaremos frio.
+Pois quando o preço de sentir-se blindado for ao custo de esconder sentimento.
+Prefiro queimar a cara no sol.E congelar minha bunda no vento.
+Eu te amoBora viver.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-43---haicai-destóico"><a class="header" href="#575-haicais-43---haicai-destóico">575 Haicais 43 - Haicai Destóico</a></h1>
+<p>SamambaiaMedo da sombra de mimNo sol de você</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-45---haicai-de-maratona"><a class="header" href="#575-haicais-45---haicai-de-maratona">575 Haicais 45 - Haicai de maratona</a></h1>
+<p>Em maratonaNão faz corre por poseQuem tem postura</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-46---haicai-de-decalque"><a class="header" href="#575-haicais-46---haicai-de-decalque">575 Haicais 46 - Haicai de Decalque</a></h1>
+<p>Nóis pega lápisCêis desce a borrachaNÃO APAGARÃO!</p>
+<p>*Inspirado em “A mema praça” - Emicida, Rashid e Projota</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="textículos---culpa-e-resignação"><a class="header" href="#textículos---culpa-e-resignação">Textículos - Culpa e resignação</a></h1>
+<p>Perdoe meus destempero, minhas confusões e desesperos.
+Minha ausência no seu anseio e meus gritos de pedalada.</p>
+<p>Vejo em você um eu que eu não quero repetir, e apesar de aceitar que sua vida é e será sua. É tão duro perceber o quão frágil nós somos e quão pequeno você é meu filho.
+Peço que perdoe minhas baixas habilidades de pai para um filho de tanta super dotação.
+Sei que pra você tudo é novo, mas apesar do meu tamanho, apesar de ter a força do “lá” e da alegria do “tukevin”.
+Hoje eu coleto minhas forças para te mostrar a segurança e a farra que você merece.
+E escondido em meus lugubres aposentos interiores estou fraco e triste. Opaco e apagado.
+Sou preenchido de dúvidas e medos em todos os meus momentos.
+Guardo essas palavras para que no futuro saibas que eu era um novato.Querendo fazer melhor e ansiando ser mais para você e pra nós.
+Essa é minha primeira vez em tudo isso.E eu estou tentando meu melhor.
+Com sua chegada, eu aprendi que teve tanta coisa que eu nunca entendi.Que meu pai fazia por mim e que eu anseio fazer por ti.
+Eu vou encontrar um caminho para funcionar e eu espero que as dores e os traumas sejam menores do que os significados positivos que eu quero deixar.
+Por que você é a maior alegria de todos nós.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-42---haicai-de-desencontro"><a class="header" href="#575-haicais-42---haicai-de-desencontro">575 Haicais 42 - Haicai de Desencontro</a></h1>
+<p>Ele perguntou Como era seu avô Chorou choramos</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="574-haicais-41---haicai-fora-do-ar"><a class="header" href="#574-haicais-41---haicai-fora-do-ar">574 Haicais 41 - Haicai Fora do ar</a></h1>
+<p>Não encontradoDomínio erradoAusente de ar</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-40---haicai-nefelibata"><a class="header" href="#575-haicais-40---haicai-nefelibata">575 Haicais 40 - Haicai Nefelibata</a></h1>
+<p>Nuvem noturnaEm noite notívago Dia nubívago</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-39---haicai-de-rodeio"><a class="header" href="#575-haicais-39---haicai-de-rodeio">575 Haicais 39 - Haicai de rodeio</a></h1>
+<p>Passando aquiSem voltas nem rodeiosPra te desejar</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-38---haicai-de-dia-livre"><a class="header" href="#575-haicais-38---haicai-de-dia-livre">575 Haicais 38 - Haicai de dia livre</a></h1>
+<p>Em dia livreSubimos no telhadoDoce Sábado</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-37---haicai-de-frustração"><a class="header" href="#575-haicais-37---haicai-de-frustração">575 Haicais 37 - Haicai de frustração</a></h1>
+<p>DesreguladoMas consciente de siSabio aos cinco</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-36---haicai-favela"><a class="header" href="#575-haicais-36---haicai-favela">575 Haicais 36 - Haicai Favela</a></h1>
+<p>Sonho Sankofa Voltar pegar recontarCantar meu lugar</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-35---haicai-dispoente"><a class="header" href="#575-haicais-35---haicai-dispoente">575 Haicais 35 - Haicai dispoente</a></h1>
+<p>Para viver mais
+Menos dispositivosMais disposição</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-34---haicai-de-equilíbrio"><a class="header" href="#575-haicais-34---haicai-de-equilíbrio">575 Haicais 34 - Haicai de Equilíbrio</a></h1>
+<p>Com segurança Ensino o equilíbrioDa pedalada</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poesias-hombridade-solo"><a class="header" href="#poesias-hombridade-solo">Poesias: Hombridade Solo</a></h1>
+<p>A maldade é um evento raro,
+A indiferença, desumanização e covardia, atos mais comuns.</p>
+<p>Delineiam a origem dos males do século 21.</p>
+<p>Falta na sociedade hombridade,
+Da figura forte em valores,
+Integridade moral, honestidade,
+Quem dos fracos toma as dores</p>
+<p>As crises humanitárias do mundo
+Tem sua raiz nesse solo.
+A falta de hombridade no Homem,
+Aquela que sobra na mãe solo.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-33---haicai-de-veto"><a class="header" href="#575-haicais-33---haicai-de-veto">575 Haicais 33 - Haicai de veto</a></h1>
+<p>Poder de vetoVenta ventriloquismos Nas marionetes</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="textículo-55---transfuga-de-classe-mudança-e-caminhos"><a class="header" href="#textículo-55---transfuga-de-classe-mudança-e-caminhos">Textículo 55 - Transfuga de Classe, Mudança e Caminhos</a></h1>
+<p>Firmo meu chão com raízes de mudança.
+E construo minha casa com paredes de esperança</p>
+<p>Estas decoro com mosaicos de afeto.
+Tecendo arabescos da base ao teto.</p>
+<p>Ilumino minha vida com vitrais de memória.
+Assento no chão com pedaços de estórias.</p>
+<p>Busco ao estar na presença da falta, que abra-me espaços pra reflorescer.
+Busco as estrelas como guias no horizonte pras essas águas que fluem tão longe da fonte.</p>
+<p>Vivo a transfuga de classe, social, cultural, sensorial, memorial.</p>
+<p>Como disse Leandro Roque, o Poeta Orixá,
+Onde estiver meu sapato eu chamo de lar.
+E não sendo dono da terra, sendo a terra, como explica Casé Tupinambá</p>
+<p>Assim como no ditado Yorubá,</p>
+<p>“Aquele que experimenta mudar-se pra outra vila, vê o caminho como lar”</p>
+<p>O ditado que simboliza a ideia de que a pessoa que muda, torna sua existência o entremeio de sua origem e seu habitat.</p>
+<p>Tornar-se então a ponte entre mundos e em Ubuntu, inexiste sozinho.
+Seu lar, seu cerne, sua face e identidade tornam-se em si o próprio caminho.</p>
+<p>Em outras palavras, “A rua é nois”.
+Bora viver.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-32---haicai-revitalizar"><a class="header" href="#575-haicais-32---haicai-revitalizar">575 Haicais 32 - Haicai Revitalizar</a></h1>
+<p>Revisar o ontemReflorescer hojeRevitalizar</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-31---haicai-de-acesso"><a class="header" href="#575-haicais-31---haicai-de-acesso">575 Haicais 31 - Haicai de Acesso</a></h1>
+<p>Ser vulnerável Honesto e acessível Sinal de força</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-28---haicai-sankofa"><a class="header" href="#575-haicais-28---haicai-sankofa">575 Haicais 28 - Haicai Sankofa</a></h1>
+<p>Voltar e pegar
+Olhar pra trás, SankofáE continuar</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-365---haicai-de-fim"><a class="header" href="#575-haicais-365---haicai-de-fim">575 Haicais 365 - Haicai de fim</a></h1>
+<p>Ao fim dando fimO futuro avançaDança a mudança</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-363---haicai-á-vó-nova"><a class="header" href="#575-haicais-363---haicai-á-vó-nova">575 Haicais 363 - Haicai Á vó nova</a></h1>
+<p>Avó nova vidaAno novo nonaA diva vó nova</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-360---haicai-circular"><a class="header" href="#575-haicais-360---haicai-circular">575 Haicais 360 - Haicai Circular</a></h1>
+<p>Giro a giroNós construímos laçoPasso a passo</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-359---haicai-de-partilha"><a class="header" href="#575-haicais-359---haicai-de-partilha">575 Haicais 359 - Haicai de partilha</a></h1>
+<p>Quanta partilhaEssa vida me trará Sem compartilhar</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-358---haicai-de-rigidez"><a class="header" href="#575-haicais-358---haicai-de-rigidez">575 Haicais 358 - Haicai de Rigidez</a></h1>
+<p>Ele ensinarQue ser vulnerável É crescer forte</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-357---haicai-recontinuar"><a class="header" href="#575-haicais-357---haicai-recontinuar">575 Haicais 357 - Haicai Recontinuar</a></h1>
+<p>Recuperação Respirar continuar
+Recontinuar</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-351---haicai-hiperativo"><a class="header" href="#575-haicais-351---haicai-hiperativo">575 Haicais 351 - Haicai Hiperativo</a></h1>
+<p>No cardápio Exaustão ou Euforia Chicken or Pasta</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-347---haicai-aos-sábados"><a class="header" href="#575-haicais-347---haicai-aos-sábados">575 Haicais 347 - Haicai Aos Sábados</a></h1>
+<p>Dar um SábadoA toda Sexta-feiraÉ sobreviver</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poeminha-de-transbordo"><a class="header" href="#poeminha-de-transbordo">Poeminha de Transbordo</a></h1>
+<p>Tu me ensinou a comporEntumecidoTu me enseja ao transbordoEm tu me excedo</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poema-palíndromo---ame-ó-poesia"><a class="header" href="#poema-palíndromo---ame-ó-poesia">Poema palíndromo - Ame… Ó Poesia</a></h1>
+<p>Aí, se o poema amarAté o poeta amaAté o poeta ramaAme! Ó poesia
+Ai se o poeta amarAme ó poeta, ama!Até o poema rama…Até…. Ó poesia
+Aí, se o poema amarAté o poeta amaAté o poeta ramaAme! Ó poesia</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="textículo-34---delírios-e-devaneios"><a class="header" href="#textículo-34---delírios-e-devaneios">Textículo 34 - Delírios e Devaneios</a></h1>
+<p>O destino age sobre o que sabemos.</p>
+<p>Se somos pretensamente livres para fazer o que quisermos, mas apenas podemos querer aquilo que conhecemos.
+Nosso querer é fruto do nosso conhecimento e das informações que temos no momento em que decidimos querer algo.
+Uma vez possuídos pelo conhecimento, estamos destinados a decidir desejar ou não desejar, o que quer que desejaríamos, se conhecessemos o que, por então, tornaria-se fruto do nosso desejo.
+O livre arbítrio, ou Liber arbitrium, atribui à nossa racionalidade e emoções a capacidade de julgar e decidir qual caminho seguir. A liberdade de escolher.
+No entanto, neste tribunal, só podemos julgar os réus que nos são fornecidos e escolher com base nos fatos, autos e informações que temos, decisões racionais, emocionais e límbicas.
+Somos livres para escolher entre o que desejamos, mas não para escolher desejar o que desejamos.
+Estamos fadados a cumprir o destino ao qual nosso livre arbítrio nos condena. Desejar o que desejariamos, caso a nós fosse fornecida uma escolha.
+Somos incapazes de fazer o que não faríamos e de agir de forma contrária ao nosso destino, pois não podemos agir contra a nossa vontade ou desejo de escolher…
+A não ser por meio de delírio….
+Á insanidade, é resguardada a única possibilidade de agir de forma livre do destino, de forma apartada do livre arbítrio.
+Delírio é a incapacidade do ser em agir conforme sua vontade ou desejo, seu conhecimento e razão, sua emoção e seu estado.
+Portanto, é na via do delírio que se encontra o espaço único em caminho para contrariar o destino preposto pelo conhecimento e momento.
+Ao adicionar a insanidade à equação, o destino torna-se impotente ante a real aleatoriedade.
+A irrazão, não um sinonimo de emoção, é, por definição, a única que pode nos fazer agir de forma separada ao nosso conhecimento, desejo e à maldição do saber.
+Torna-se unica capaz de alterar o caminho imposto pelo destino.
+Destino ao qual com nossas escolhas nos destinaríamos.
+Delire-se e delicie-se.
+Bora viver.</p>
+<ul>
+<li>Devaneios e delírios inspirados nas series Sandman e Dark da Netflix.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-323---haicai-de-programa"><a class="header" href="#575-haicais-323---haicai-de-programa">575 Haicais 323 - Haicai de programa</a></h1>
+<p>Amarga gramaÀ amargor programaA amarga grama</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-320---haicai-distraído"><a class="header" href="#575-haicais-320---haicai-distraído">575 Haicais 320 - Haicai Distraído</a></h1>
+<p>Eu me distrai Nunca mais eu vou dormirEu me confundi</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-311---haicai-em-chiaroscuro"><a class="header" href="#575-haicais-311---haicai-em-chiaroscuro">575 Haicais 311 - Haicai em Chiaroscuro</a></h1>
+<p>Verso inversoEsbóço e rasúroEm chiaroscuro</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-310---haïku-impressionniste"><a class="header" href="#575-haicais-310---haïku-impressionniste">575 Haicais 310 - Haïku Impressionniste</a></h1>
+<p>Peiture et brisureUn verse inverse effacerViens au Clair obscur</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="versos-roubados-poesia-à-rosa"><a class="header" href="#versos-roubados-poesia-à-rosa">Versos Roubados: Poesia à Rosa</a></h1>
+<p>Lentamente, nessa terra material
+Ao longe de minha janela, baixou-se o cantar do rouxinol.
+No dia ensolarado, destes raios do sol do amanhecer
+Silenciava o carrilhão de varios sinos Brasileiros.</p>
+<p>O Rouxinol se engolia com paixão, como que quisesse gritar o grito do trovão
+e iluminar o amanhecer.
+Nunca ouvi, nada mais, belo.
+No chão, alternadamente dourado e esverdeado, seu canto fazia lembrar uma ofuscação dourada.
+Nada era tão claro e de tristeza tão crível………….</p>
+<p>Poesia roubada</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poesia---hoje-fui-contornado-por-um-arco-iris"><a class="header" href="#poesia---hoje-fui-contornado-por-um-arco-iris">Poesia - Hoje fui contornado por um arco Iris</a></h1>
+<p>Hoje um arco-íris veio me visitar.
+Numa manhã fria, de paisagem belaEncontrava-se um arco em minha janelaArco-íris, colorido, de ponta a ponta…
+Estava lá, 7 cores, muitos metros,Colorindo o céu montanhoso sulista.Da noite em claro involuntária Que no final pagaria-se “à vista”
+As vezes….A natureza nos lembra das razões de espiar, tivesse eu descansado à noite, perderia a visita do lindo prismar.
+O arco colorido e belo,Compunha a paisagem verde,Na beleza de suas curvasMinh’alma saciou a sede.
+Não só coloria o céu,Também trazia um belo sinal,Pra toda fase de chuva da vidaHá de haver colorido final.
+Em seu flutuar serenoD’onde a luz expande-se ao céu,O sol a brilhar, a música alegre,Os pássaros matinos fazendo forféu.
+Entendo agora o que Oxumarê e sua adaga de bronze veio trazer,Em toda chuva que venha na vidaVirá em seguida um reflorescer.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-296---haicai-tampouco"><a class="header" href="#575-haicais-296---haicai-tampouco">575 Haicais 296 - Haicai tampouco</a></h1>
+<p>Você nem sabe O que me aconteceu Tão poucos eus</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-293---haicai-de-pai"><a class="header" href="#575-haicais-293---haicai-de-pai">575 Haicais 293 - Haicai de Pai</a></h1>
+<p>Pai por convitePaizinho Paizão e Pai Eu sou Pai VIP</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-288---haicai-de-coabito"><a class="header" href="#575-haicais-288---haicai-de-coabito">575 Haicais 288 - Haicai de Coabito</a></h1>
+<p>Era convívioAmar vira evitarE coabitar</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-287---haicai-de-faxina"><a class="header" href="#575-haicais-287---haicai-de-faxina">575 Haicais 287 - Haicai de Faxina</a></h1>
+<p>A casa arrumo Do limpar e repararVem lá faxina</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-286---haicai-de-recursos-humanos"><a class="header" href="#575-haicais-286---haicai-de-recursos-humanos">575 Haicais 286 - Haicai de recursos humanos</a></h1>
+<p>Waigu Kobi beefAçougue Cinco EstrelasGrilhões de seda</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-276---haicai-de-fome"><a class="header" href="#575-haicais-276---haicai-de-fome">575 Haicais 276 - Haicai de Fome</a></h1>
+<p>Pediu AbraçoFoi abrindo a guelaOferta de paz</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-275---haicai-compensatório"><a class="header" href="#575-haicais-275---haicai-compensatório">575 Haicais 275 - Haicai Compensatório</a></h1>
+<p>Saciedade
+Estômago roncando Ansiedade</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-273---haicai-de-paradeiro"><a class="header" href="#575-haicais-273---haicai-de-paradeiro">575 Haicais 273 - Haicai de Paradeiro</a></h1>
+<p>Único leitorCidade conhecidaParadeiro não</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-272---haicai-geracional"><a class="header" href="#575-haicais-272---haicai-geracional">575 Haicais 272 - Haicai Geracional</a></h1>
+<p>Novo ensinaA viver o velhoA sobreviver</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-271---haicai-de-parabéns"><a class="header" href="#575-haicais-271---haicai-de-parabéns">575 Haicais 271 - Haicai de Parabéns</a></h1>
+<p>Bolo parabéns Com quem será ou com quensAmo seus nenéns</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-260---haicai-de-skank"><a class="header" href="#575-haicais-260---haicai-de-skank">575 Haicais 260 - Haicai de Skank</a></h1>
+<p>Vivi ou sonhei Como Samuel RosaEu ’inda gosto</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-259---haicai-de-burnout"><a class="header" href="#575-haicais-259---haicai-de-burnout">575 Haicais 259 - Haicai de Burnout</a></h1>
+<p>Vender Saúde Onde a doença éLucro pro feitor</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-258---haicai-de-sonho"><a class="header" href="#575-haicais-258---haicai-de-sonho">575 Haicais 258 - Haicai de Sonho</a></h1>
+<p>Ser efemero De existência fugazSonho Perpétuo</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-253---haicai-regado"><a class="header" href="#575-haicais-253---haicai-regado">575 Haicais 253 - Haicai Regado</a></h1>
+<p>De Rega à regaDe Bonsai à Baobá Semente viva</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-252---haicai-podado"><a class="header" href="#575-haicais-252---haicai-podado">575 Haicais 252 - Haicai Podado</a></h1>
+<p>De poda à podaBaobá vira bonsaiSemente seca</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-250---haicai-respire"><a class="header" href="#575-haicais-250---haicai-respire">575 Haicais 250 - Haicai Respire</a></h1>
+<p>Tudo expiraNo vencimento venceEntão inspire</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-245---haicai-eu-esqueço"><a class="header" href="#575-haicais-245---haicai-eu-esqueço">575 Haicais 245 - Haicai Eu Esqueço</a></h1>
+<p>Esqueço Tudo
+Tal Alexandre Pires
+Menos o amor</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-244---haicai-corrompido"><a class="header" href="#575-haicais-244---haicai-corrompido">575 Haicais 244 - Haicai Corrompido</a></h1>
+<p>Metahumano</p>
+<p>Memória extendida</p>
+<p>Me3҉̛͡͝crR̷͘͢͠uP!̴̡͘͡ corrompida</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poema---hoje-contornei-um-arco-íris"><a class="header" href="#poema---hoje-contornei-um-arco-íris">Poema - Hoje contornei um arco íris</a></h1>
+<p>Hoje fui agraciado com um arco-íris
+Pela estrada chuvosa, contornando as cidades,Encontrei no caminho um aro em metade.Arco-íris, colorido, de ponta a ponta.
+Estava lá, 7 cores, muitos metros,Colorindo o céu cinza do Inverno Sulista.Nunca em vida fiquei tão feliz, por repensar e trocar de pista.
+As vezes….A natureza nos lembra das razões de frear, tivessemos seguido o mais curto caminho, perderíamos o seu lindo prismar.
+O arco colorido e belo,Contrastava à paisagem cinzaNas curvas do contorno cinzentoSua beleza brilhou mais ainda.
+Não só coloria o céu,Mas vislumbrei seu início-final,Não tinha pote de ouro,Nenhum Duende ou leprechaun.
+Havia apenas o toque serenoD’onde a luz beija a rés do chão,A chuva lá fora, a música calmaSua mão quente, a tocar minha mão.
+Entendo agora o que deusa Íris, a mensageira viria a dizer,Nenhum pote de ouro compra, O que a íris do olho não pode ver.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-243---haicai-de-arco-íris"><a class="header" href="#575-haicais-243---haicai-de-arco-íris">575 Haicais 243 - Haicai de Arco-íris</a></h1>
+<p>Pista molhadaContornando as curvasChuva arco-íris</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-240---haicai-só-hoje"><a class="header" href="#575-haicais-240---haicai-só-hoje">575 Haicais 240 - Haicai só hoje</a></h1>
+<p>Só por hoje…
+Qualquer palavra minhaPreciso ouvir</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-239---haicai-revisto"><a class="header" href="#575-haicais-239---haicai-revisto">575 Haicais 239 - Haicai Revisto</a></h1>
+<p>Do fim desistoEu ainda existoFinal revisto</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-238---haicai-doa-se"><a class="header" href="#575-haicais-238---haicai-doa-se">575 Haicais 238 - Haicai Doa-se</a></h1>
+<p>Doa-se HaicaisPoesias e memórias Doa a quem doer</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-237---haicai-horizontal"><a class="header" href="#575-haicais-237---haicai-horizontal">575 Haicais 237 - Haicai Horizontal</a></h1>
+<p>No Horizonte Outra ela outro euSurgirá no sol</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-232---haicai-bilingue"><a class="header" href="#575-haicais-232---haicai-bilingue">575 Haicais 232 - Haicai Bilingue</a></h1>
+<p>Nevar, Raven
+E o poe se opõe Revê, Never</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-229---haicai-brasílis"><a class="header" href="#575-haicais-229---haicai-brasílis">575 Haicais 229 - Haicai Brasílis</a></h1>
+<p>Terra BrasílisIndiferença vira Desigualdade</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-228---haicai-dejavu"><a class="header" href="#575-haicais-228---haicai-dejavu">575 Haicais 228 - Haicai Dejavu</a></h1>
+<p>Pleno silêncio Sua voz me acordaEra só sonho</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-226---haicai-de-penso"><a class="header" href="#575-haicais-226---haicai-de-penso">575 Haicais 226 - Haicai de Penso</a></h1>
+<p>Penso todo diaNo que foi no que seriaLágrima fria</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-225---haicai-extremamente-fácil"><a class="header" href="#575-haicais-225---haicai-extremamente-fácil">575 Haicais 225 - Haicai Extremamente Fácil</a></h1>
+<p>Um dia felizAs vezes muito raroFalar é fácil</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-223---haicalismo"><a class="header" href="#575-haicais-223---haicalismo">575 Haicais 223 - Haicalismo</a></h1>
+<p>O HaicailismoBrevemente contemplaA Vida simples</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-221---haicai-de-pensamento"><a class="header" href="#575-haicais-221---haicai-de-pensamento">575 Haicais 221 - Haicai de Pensamento</a></h1>
+<p>Pensemos sobreAmor e confiança Flexibilidade</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-220---haicais-de-seria"><a class="header" href="#575-haicais-220---haicais-de-seria">575 Haicais 220 - Haicais de seria</a></h1>
+<p>Quis queria iaImenso potencialFicou no Faria</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="palindromo--ó-vovó"><a class="header" href="#palindromo--ó-vovó">Palindromo:  Ó vovó</a></h1>
+<p>Ó vovóA diva, da vida,
+A diva, a vadia,aí, dava, Ávida…
+A diva, da vida, Ó vovó</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-217---haicai-vulnerável"><a class="header" href="#575-haicais-217---haicai-vulnerável">575 Haicais 217 - Haicai vulnerável</a></h1>
+<p>Conexão Mundial VulnerabilidadeLocal seguro</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-216---haicai-tupinambá"><a class="header" href="#575-haicais-216---haicai-tupinambá">575 Haicais 216 - Haicai Tupinambá</a></h1>
+<p>Casé Tupinambá Não sou dono da terraSomos a terra</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="textículo-reencontrado-1-pés-de-vento"><a class="header" href="#textículo-reencontrado-1-pés-de-vento">Textículo Reencontrado 1: Pés de vento</a></h1>
+<p>Refletindo um pouco notei a minha própria tolice, e motivação de muitas de minhas mazelas ansiosas.
+A cada decisão, tenho-as tomado como um perene bloco.Acreditando que construo uma escada à céus, ao paraíso ou lugar qualquer.
+Tenho construído porém, meu próprio cativeiro, moldo cada decisão para que orne com a cela e vede hermeticamente minha existência a uma caixa de caminhos definidos.
+Carrego o peso desses tijolos em minha bagagem, carrego também os tijolos quebrados, na afoita tolice de não cometer os mesmos erros.
+Muito mais sábio era eu na juventude, quando tomava minhas ações como bater de asas, como uma nuvem ao rodopiar com a tempestade.
+Quando escalava o furacão da vida com os meus pés de vento.E dava vida à uma existência eternamente momentânea.
+Feliz serei se voltar a ser nuvem, ajustando o curso de onde os ventos soprarem.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poesias-reencontradas-versinho-de-dor"><a class="header" href="#poesias-reencontradas-versinho-de-dor">Poesias reencontradas: Versinho de Dor</a></h1>
+<p>Construo com quem está disposto comigo a desbravar a selva das emoções.
+Tem a coragem de lidar com o difícil das intempéries das relações.
+Construo afetos e amizades difíceis com honestidade e sobriedade.
+Nos momentos da vida mais delicados a empatia encontra a verdade.
+Construo com ética e conexão, ajuda mutua, apoio, acalento.
+Não deixo pra vida o que é meu papel, não deixo afetos pro sopro do vento.
+Mensagem é meio, é letra e é tempo, é tudo destaque a dispor do autor.
+Esgotei minha voz de empatia e respeito á implorar o olhar do agressor.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poesias-reencontradas-rascunhicídio"><a class="header" href="#poesias-reencontradas-rascunhicídio">Poesias Reencontradas: Rascunhicídio</a></h1>
+<p>Rascunhicídio
+Os escritos escapam as bordasAs idéias esvaem às frestasDo declive acentuado de um cantoArremessados à eterna sesta
+Anotações saltaram a beiraCaíram à porta do grande salãoGuardaram-se estes em tantos ensaiosEncontraram o fim à “resma”-do-chão
+Rascunhicidio um crime hediondoSeu próprio pai seria o autorMorreram a prosa, o verso e o traçoHabeas Copias pedia o doutor
+Contornado à lapis jazia no blocoPobre derrotado, rascunho esquecidoTivesse cuidado o pai distraídoTeria o filho vivido e crescido
+Finados estes, em abismo deletérioDesencontrados em lixeira ou cemitério.Publicados? Jamais.Apenas rascunhados em sua breve existência.</p>
+<p>Poesia Roubada</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poesias-reencontradas-natureza-da-árvore"><a class="header" href="#poesias-reencontradas-natureza-da-árvore">Poesias Reencontradas: Natureza da árvore</a></h1>
+<p>O dono do vaso não é dono da árvore. Tampouco o é o dono da terra. Ela é do sol, do solo, da chuva, a natureza da árvore é dela.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poesias-reencontradas-fim-do-ano-sem-fim"><a class="header" href="#poesias-reencontradas-fim-do-ano-sem-fim">Poesias Reencontradas: Fim do ano sem fim</a></h1>
+<p>E enfim…. finda o fim,Crianças voltam pra escola Já consigo ouvir dentro mim Os fuzuês e os jogos de bola  Moro na rua da sala de aula Muito vazia no tempo de medo Os barulhinho das rodas de mala Me acordaram feliz hoje cedo  Viva a vida! Viva a luz! Vivas as crianças! Viva o SUS!  Ouvi a sirene otrodia silente E seu barulho não me incomodou A merenda era boa, o riso contente Essa inocência o mal não levou  Outro dia nascia aqui Outro ano começou enfim Não outro ano no calendário Mas um ano novo dentro de mim</p>
+<ul>
+<li>Sobre o fim da pandemia no inicio do século XXI</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poesias-reencontradas-falta"><a class="header" href="#poesias-reencontradas-falta">Poesias Reencontradas: Falta</a></h1>
+<p>Me faz falta o esquilo vermelho.Os 3 piratas e o doido francês.Me faz falta o rapaz feiticeiro.As 5 criancas da primeira vez.
+Me faz falta a ave raivosa.O rato do espaço e o homem bexigaMe faz falta a intimidade.Um pote de doce pra adoçar a vida.
+Me faz falta as bobas fofocasOs meus confidentes e o velho bombeiro.Me faz falta o que vinha à frente.E escritos perdidos de um mundo inteiro.
+Me faz falta o dragão do oceano.O casal engraçado, perdido no marMe faz muita falta a negra panteraMe faz falta o prazer de brincar
+Me faz falta não chorar sozinho,Me faz falta ser ombro e ter,Me faz falta o alemão viajante,Me faz falta gostar de escrever.
+Me faz falta o tempo perdido,Me faz falta o doce do mel,Me faz falta o ceifeiro da agua,(a)Inda o Vasco da gama me falta.
+Me faz muita falta o bom cozinheiro,Me faz falta varar madrugadasSinto a falta do urso ao vivo,Me fazem falta as velhas piadas.
+Me faz falta a imagem bonita,Aquela que tinha do dono do bar.Me faz falta as expectativas,Que tudo na vida ia perdurar.
+Me faz falta os amigos queridos,Aqueles que a vida levou, não a morte,Me faz falta meu melhor amigo,E me faz falta um abraço de pai.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poesias-hoje-sairei-de-casa"><a class="header" href="#poesias-hoje-sairei-de-casa">Poesias: Hoje sairei de casa</a></h1>
+<p>Hoje sairei de casaHoje ligarei o celularHoje direi o que sinto E hoje gravarei meus momentos
+Hoje responderei amigosHoje postarei nas redesHoje escreverei poesiaE Hoje festejarei o dia
+Hoje chamarei quem eu quiser Hoje receberei visitas Hoje abraçarei meus amigosE falarei até com embaixadores
+Hoje caminharei na praçaHoje pegarei sol no rostoHoje viajarei se quiserE hoje entrarei no mar
+Hoje protestarei na ruaHoje dançarei na calçadaHoje votarei livrementeE hoje viverei o hoje
+Hoje sorrirei em paz Hoje nada me prende Hoje terei liberdadeHoje serei cidadão
+#EleNão.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-213---o-tempo-não-para"><a class="header" href="#575-haicais-213---o-tempo-não-para">575 Haicais 213 - O tempo não para</a></h1>
+<p>Dias de par em parComo disse AgenorO Tempo não para</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-215---haicai-de-passeio"><a class="header" href="#575-haicais-215---haicai-de-passeio">575 Haicais 215 - Haicai de Passeio</a></h1>
+<p>Saí de casa Hoje andarei na rua#EleNão</p>
+<p>*Lia-se Hashtag</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-214---haicai-amarelo"><a class="header" href="#575-haicais-214---haicai-amarelo">575 Haicais 214 - Haicai Amarelo</a></h1>
+<p>Ano passadoComo disse LeandroNesse não morro</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-212---haicai-caminha"><a class="header" href="#575-haicais-212---haicai-caminha">575 Haicais 212 - Haicai Caminha</a></h1>
+<p>Vida Caminha Destino ao meu sonhoMinha caminha</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-211---haicai-reencontrado"><a class="header" href="#575-haicais-211---haicai-reencontrado">575 Haicais 211 - Haicai Reencontrado</a></h1>
+<p>Pássaro pousaEm fino frágil galhoMas passaro voa</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-209---haicai-de-imbróglio"><a class="header" href="#575-haicais-209---haicai-de-imbróglio">575 Haicais 209 - Haicai de Imbróglio</a></h1>
+<p>Ao Locatário A Jurisprudência éSer Feito otário</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-210---haicai-de-desamparo"><a class="header" href="#575-haicais-210---haicai-de-desamparo">575 Haicais 210 - Haicai de desamparo</a></h1>
+<p>Em desamparoVulnerabilidade Desalentando</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="textículos-21---aviso-estou-morrendo"><a class="header" href="#textículos-21---aviso-estou-morrendo">Textículos 21 - Aviso: estou morrendo.</a></h1>
+<p>Desde que meu pai partiu, conheci a morte.
+Não como ideia — mas como presença. Silente, constante, inexorável.
+Descobri que são poucos, pouquíssimos, os que amamos que nos acompanham até nosso fim.
+Por isso informo, quero que meus amigos me conheçam em vida. — não em flores e silêncio.
+Meu legado? Como disse antesRelego à Visa, à Mastercard, ao finado Banestado.
+Desde que conheci a morte, faço exames.E os exames confirmam: estou morrendo.Tenho essa doença incurável chamada Vida.
+Meu corpo segue seu roteiro,me conduz, sem delicadeza, ao desfecho inevitável.
+Pouco posso fazer.
+O mais trágico, no entanto, não é a parte fisiológica…
+Não bastasse estar morrendo, fui também diagnosticado recentemente com uma insidiosa condição psíquica chamada: Consciência.
+Pelo que dizem os profissionais, é esta também incurável.
+Como se não bastasse a morte certa em meu caminho, tenho ainda consciência dessa morte….
+Sim, não só morro,como sei que morro…
+Pra tal condição, a literatura lista sintomas como: desespero crônico, ansiedade, libido, busca por distrações como analgésicos de pensamento.Outros sucumbem à ausência de sentido,de chão.
+No meu caso, os sintomas são mais agudos.Essa consciência me obriga a perguntar:
+Quem é esse que morrerá?O que, dentro de mim, deixará de existir com o fim?E quem é o eu, fora de mim, que será ausente?
+Dessas perguntas, efeitos colaterais ainda mais grotescos derivam:
+Passei a olhar o tempo como precioso,os momentos como relâmpagos que valem poesia.
+Contemplo, agora, a delicadeza brevedas pessoas que amo.A fugacidade dos encontros,A beleza do estar se acentua, com o contraste da iminente partida.
+Olho para cada momento como único e importante.
+Experiências simples se tornaram sublimes, tornaram-se momentos de êxtase estético e completude.Ao encontrar na simples existência da vida o terror sacro de minha vindoura ausência.</p>
+<p>Essa profunda gratidão e pequenês de se maravilhar com as cores da joaninha entre as folhas,
+Ou observar os pássaros e o por do sol no ápice de um dia difícil,
+Veio a mim apenas ao olhar para o mais profundo medo abismal que habita no meu íntimo.
+Incidentalmente, a consciência de minha condição terminal, me fez descobrir que vivo.E essa consciência se faz aterrorizantemente bela e motricial.
+Bora viver.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-208---haicai-insit"><a class="header" href="#575-haicais-208---haicai-insit">575 Haicais 208 - Haicai Insit</a></h1>
+<p>Arbor insitusEm Entorpecimento
+Neuropático</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-207---haicai-de-emergência"><a class="header" href="#575-haicais-207---haicai-de-emergência">575 Haicais 207 - Haicai de emergência</a></h1>
+<p>Emergência Em caso de incêndio Quebre o silêncio</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-206---haicai-comentado"><a class="header" href="#575-haicais-206---haicai-comentado">575 Haicais 206 - Haicai comentado</a></h1>
+<p>Semea versosCem haicais e poemasSem comentários</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-205---haicai-essencialista"><a class="header" href="#575-haicais-205---haicai-essencialista">575 Haicais 205 - Haicai Essencialista</a></h1>
+<p>Essencialismo Manter o essencial ______________</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-204---haicai-de-semeador"><a class="header" href="#575-haicais-204---haicai-de-semeador">575 Haicais 204 - Haicai de semeador</a></h1>
+<p>Ao semeadorNão se planta afetoSem mea dolor</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-202---haicai-de-escritura"><a class="header" href="#575-haicais-202---haicai-de-escritura">575 Haicais 202 - Haicai de Escritura</a></h1>
+<p>Dores lavradasOficializadasEm escritura</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-202b---haicai-a-ozzy"><a class="header" href="#575-haicais-202b---haicai-a-ozzy">575 Haicais 202b - Haicai a Ozzy</a></h1>
+<p>Sábado NegroPassando por mudanças Indo pra casa</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-201---haicai-de-fofoca"><a class="header" href="#575-haicais-201---haicai-de-fofoca">575 Haicais 201 - Haicai de Fofoca</a></h1>
+<p>Ao vulnerável A fofoca protegeTambém entretém</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-200---haicai-de-preenchimento"><a class="header" href="#575-haicais-200---haicai-de-preenchimento">575 Haicais 200 - Haicai de Preenchimento</a></h1>
+<p>Em minha casaMais vale a presença Do que o nome</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-199---haicai-a-madonna"><a class="header" href="#575-haicais-199---haicai-a-madonna">575 Haicais 199 - Haicai a Madonna</a></h1>
+<p>Palco escuroA nave solta a trilhaMadonna brilha</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-198---apesar-de-você"><a class="header" href="#575-haicais-198---apesar-de-você">575 Haicais 198 - Apesar de Você</a></h1>
+<p>Apesar de vocêLá como cantou Chico
+Hoje é outro dia</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-197---haicai-devirista"><a class="header" href="#575-haicais-197---haicai-devirista">575 Haicais 197 - Haicai Devirista</a></h1>
+<p>Pra quem se muda
+O lar é o caminhoMuda-se quem é</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-196---haicai-latino"><a class="header" href="#575-haicais-196---haicai-latino">575 Haicais 196 - Haicai Latino</a></h1>
+<p>Memento MoriPremeditatium Malorumet Carpe Diem</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="textículos-8---timbres-personas-e-descobertas"><a class="header" href="#textículos-8---timbres-personas-e-descobertas">Textículos 8 - Timbres, Personas e Descobertas</a></h1>
+<p>Sobre o amor que temos pelas pessoas que as pessoas nos fazem nos descobrir.</p>
+<p>Metade do que amei em você era quem você é, grande parte porém, também, quem eu me descobri quando perto de ti.
+A vida tem dessas coisas de nos fornecer experiências profundamentes estéticas vindas do reflexivo cotidiano de nossas fugazes interações.
+E dessas, sinto profundo afeto.
+Sinto saudade de você e sinto falta ainda da parte de mim que ficou aí. Sinto falta do poeta e do escritor. Sinto falta do amigo, da ética e do carinho que buscava demonstrar, e ao demonstrar me tornava.
+Sinto falta da acidez e da sensatez que eu via em mim, vindas de você.
+Eu sinto falta do que criei em mim em sintonia contigo. E de sentir quem você era aqui dentro.
+Era delicioso me sentir tão especial e inteligente. E te expressar de tal forma tão incrível em meu âmago.
+Eu sinto falta de ti, ainda mais, grande falta do eu distante, que busco reencontrar.
+Ouço, indassim, esparços sussuros de teu timbre em minha consciência, e relembro quanto era bom ouvir-me por meio de sua voz.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poesias-de-luz---fotografia-de-fim-de-dia"><a class="header" href="#poesias-de-luz---fotografia-de-fim-de-dia">Poesias de Luz - Fotografia de Fim de dia</a></h1>
+<p>Fotos Sem filtros, Sem edição #NoFilter #NoEdit
+Capturadas em Motorola Moto G75</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-193---haicai-de-pintura"><a class="header" href="#575-haicais-193---haicai-de-pintura">575 Haicais 193 - Haicai de Pintura</a></h1>
+<p>Pincel molhadoO rolo escorregaRespinga molha</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicai-191---haicai-de-sementes"><a class="header" href="#575-haicai-191---haicai-de-sementes">575 Haicai 191 - Haicai de Sementes</a></h1>
+<p>Semente Planta</p>
+<p>Água solo tempo sol</p>
+<p>Bolsões de Vida</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-190---haicai-hostil"><a class="header" href="#575-haicais-190---haicai-hostil">575 Haicais 190 - Haicai Hostil</a></h1>
+<p>Planeta quenteSão taxado por loucoAr comprimido</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-189---haicai-de-mão"><a class="header" href="#575-haicais-189---haicai-de-mão">575 Haicais 189 - Haicai de Mão</a></h1>
+<p>Nós de mãos dadas Carinho e cuidadoPreenchimento</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-188---haicai-16mil"><a class="header" href="#575-haicais-188---haicai-16mil">575 Haicais 188 - Haicai 16mil</a></h1>
+<p>Janelas de solNasce em nuvem cinza Vira Poema</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-187---haicai-de-garra"><a class="header" href="#575-haicais-187---haicai-de-garra">575 Haicais 187 - Haicai de Garra</a></h1>
+<p>De tanto roerPerdeste vossas garrasMas não tua ginga</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-186---haicai-de-passagem"><a class="header" href="#575-haicais-186---haicai-de-passagem">575 Haicais 186 - Haicai de Passagem</a></h1>
+<p>Ela vi passarPasso em sobressaltoVirei passado</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicai-185---haicai-temporão"><a class="header" href="#575-haicai-185---haicai-temporão">575 Haicai 185 - Haicai Temporão</a></h1>
+<p>Pedra de hojePássaro de outroraExu temporão</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-184---haicai-de-arte"><a class="header" href="#575-haicais-184---haicai-de-arte">575 Haicais 184 - Haicai de Arte</a></h1>
+<p>A sutil arteResponsabilidade Integridade</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-183---haicai-de-bailarina"><a class="header" href="#575-haicais-183---haicai-de-bailarina">575 Haicais 183 - Haicai de Bailarina</a></h1>
+<p>A terra gira Vida é bailarinaEm Piroutte</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-182---haicai-pela-metade"><a class="header" href="#575-haicais-182---haicai-pela-metade">575 Haicais 182 - Haicai Pela Metade</a></h1>
+<p>Minha metadeÉ partir e repartirNoutra metade</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-181---haicai-de-convalescência"><a class="header" href="#575-haicais-181---haicai-de-convalescência">575 Haicais 181 - Haicai de convalescência</a></h1>
+<p>Na essência Em convalescênciaSem eloquência</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-180---haicai-de-resistência"><a class="header" href="#575-haicais-180---haicai-de-resistência">575 Haicais 180 - Haicai de Resistência</a></h1>
+<p>Parar é fazerDescansar é produzirSeja resistência</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-179---haicai-vital"><a class="header" href="#575-haicais-179---haicai-vital">575 Haicais 179 - Haicai Vital</a></h1>
+<p>Vital cuidado Verbo alumia a trilhaAmor família</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-178---haicai-mudo"><a class="header" href="#575-haicais-178---haicai-mudo">575 Haicais 178 - Haicai Mudo</a></h1>
+<p>Tudo mudadoLá vazio cá larCalou-me fundo</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="pequenos-poemas---mudança"><a class="header" href="#pequenos-poemas---mudança">Pequenos Poemas - Mudança</a></h1>
+<p>Aquela casa em que eu chegava, que era quente, e tinha gente, Pronta pra cuidar de mim.
+Gente pra ouvir meu dia, pra se alegrar em euforia, a presença que eu tinha aqui.Hoje minha casa é fria, vazia, sem vida.Sem plateia pro meu florescer.
+Era muito bom ser parte, ser momento de alento sempre que eu podia ter.A massagem apertada no ombro, o carinho de um café.Momentos de risadas continuas, as palestras dadas em pé.
+A conversa de travesseiro sempre foram meu desejo primeiro. Hoje não tenho pra mim.Durmo sozinho no frio do inverno sulista, no dia sem alento no fim.
+Tenho o coração apertado e tenho trabalho dobrado, pra ir e vir nessa vida.Conviver sozinho é barra, ter que existir na marra nessa existência sofrida.
+Cansado de estar só comigo, sem ter comigo um amigo que queira compartilhar.Pois o peso sozinho é dobrado, devia ser partilhado, pra se poder conversar.
+Me encontro agora no meio, da mudança sem marca-tempo, tentando me fazer sorrir.É um estado ingrato de peso e pouco trato mesmo eu querendo partir.
+Porque no fundo estou indo embora, de uma vida e de tantas memórias, que me fizeram muito feliz.É dificil segurar a barra de viver sua liberdade, caminhar pr’onde aponta o nariz.
+Sinto falta da vida, da parceria e do afeto, sinto falta das cachorras e dos abraços de peito aberto.Sinto falta do colo, do bolo, e do amasso, que faziam meu dia melhorMas hoje vou-me embora, atravesso a rua na aurora esperar  aqui é pior.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-177---haicai-de-trauma"><a class="header" href="#575-haicais-177---haicai-de-trauma">575 Haicais 177 - Haicai de Trauma</a></h1>
+<p>TraumatizadoResolvível com diálogo Não ofertado</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-176---haicai-luto"><a class="header" href="#575-haicais-176---haicai-luto">575 Haicais 176 - Haicai Luto</a></h1>
+<p>Em roupa pretaLuto eternamente De faixa branca</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-175---haicai-de-frete"><a class="header" href="#575-haicais-175---haicai-de-frete">575 Haicais 175 - Haicai de frete</a></h1>
+<p>Espera freteVê distância e terra Anda o caminhão</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-174---haicai-de-mudança"><a class="header" href="#575-haicais-174---haicai-de-mudança">575 Haicais 174 - Haicai de mudança</a></h1>
+<p>Vida mudança Onde Lá ou cá é larBumbum descansa</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poemas-palindromos-ei-erra-farreie"><a class="header" href="#poemas-palindromos-ei-erra-farreie">Poemas Palindromos: Ei! Erra! Farreie!</a></h1>
+<p>Saia!
+Sara-la faria, ir a falar as aias:</p>
+<ul>
+<li>“Ei! Erra! Farreie!”</li>
+<li>“Ei! Erra! Farreie!”</li>
+</ul>
+<p>Após a sopa rala,
+Faria irá falar:</p>
+<ul>
+<li>
+<p>“Após a sopa,
+A ira, forte cetro faria.
+Soma ir?”</p>
+</li>
+<li>
+<p>“Amaríamos!”</p>
+</li>
+</ul>
+<p>Aí, alada, da laia…
+A nua Faria: ir à fauna.
+Alada Faria: ir à fada.</p>
+<p>Lá, a ala faria ir à fala:
+A sova faria ir a favos!</p>
+<ul>
+<li>“Sai, cala!” — faria cair a falácias.</li>
+</ul>
+<p>A ira faria:</p>
+<ul>
+<li>“Ei! Erra! Farreie!”</li>
+<li>“Ei! Erra! Farreie!”</li>
+</ul>
+<p>A ira faria:</p>
+<ul>
+<li>“Sai, cala!” — faria cair a falácias.
+Sova faria ir a favos.</li>
+</ul>
+<p>A ala faria ir à fala,
+A alada faria ir à fada,
+Lá, a nua faria: ir à fauna.</p>
+<p>Aí, alada da laia:</p>
+<ul>
+<li>
+<p>“Soma ir?”</p>
+</li>
+<li>
+<p>“Amaríamos!”</p>
+</li>
+</ul>
+<p>A ira, forte cetro faria após a sopa rala.</p>
+<p>Faria irá falar após a sopa:</p>
+<ul>
+<li>“Ei! Erra! Farreie!
+Ei! Erra! Farreie!
+SAIA!”</li>
+</ul>
+<p>Sara-la faria ir a falar às aias.</p>
+<p>*Poema Palindromo, lido de trás pra frente resulta na mesma poesia.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-168---haicai-de-resmas"><a class="header" href="#575-haicais-168---haicai-de-resmas">575 Haicais 168 - Haicai de resmas</a></h1>
+<p>Papéis pesadosMemórias silentesFolhas molhadas</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-166---haicai-era-acróstico"><a class="header" href="#575-haicais-166---haicai-era-acróstico">575 Haicais 166 - Haicai era Acróstico</a></h1>
+<p>Era AcrósticoResplandecente Aos olhos de ti</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poema-palindromo-o-colo"><a class="header" href="#poema-palindromo-o-colo">Poema Palindromo: O colo</a></h1>
+<p>Se o são soa só És som, socos, Só cosmos Se o são soa só És o loco</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="haicais-acrósticos"><a class="header" href="#haicais-acrósticos">Haicais Acrósticos</a></h1>
+<p>Aos acrósticosOutros limitadoresSão acrescidos
+São acrósticosAs estruturas belasOra reprimidas
+Ora AcrósticosRetidos em sentidosAté explodir
+Até AcrósticoTal semente difícil Era pra florir
+Era AcrósticoResplandecente Aos olhos de ti
+Contem: 575 Haicais 160 - Haicai Aos acrósticos575 Haicais 161 - Haicai São acrósticos575 Haicais 162 - Haicai Ora acróstico575 Haicais 165 - Haicai Até acrósticos575 Haicais 166 - Haicai Era Acróstico
+Dedicado ao meu amigo Luco o Arquivista Naval</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-165---haicai-aos-acrósticos"><a class="header" href="#575-haicais-165---haicai-aos-acrósticos">575 Haicais 165 - Haicai Aos acrósticos</a></h1>
+<p>Até AcrósticoTal semente difícil Era pra florir</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-164---haicai-de-legado"><a class="header" href="#575-haicais-164---haicai-de-legado">575 Haicais 164 - Haicai de Legado</a></h1>
+<p>Canção de NinarLegado de famíliaPerspectivas</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-163---haicai-à-antônia"><a class="header" href="#575-haicais-163---haicai-à-antônia">575 Haicais 163 - Haicai à Antônia</a></h1>
+<p>Em dia do amorComemoração Intimidade</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="pequenos-poemas---só-então-vai-se-tornar"><a class="header" href="#pequenos-poemas---só-então-vai-se-tornar">Pequenos Poemas - Só então vai se tornar</a></h1>
+<p>No faz de conta da vidaEu escolho acreditarNa fantasia revividaMeu coração vai palpitar
+Sei que o mundo é pedra fria,sem plano, rumo ou direção.Sei que a estrela não guia,nem há justiça em grão de chão.
+Mas ’inda assim, ergo meu canto,traço sentido no vazio.Invento fé, invento encanto,ponho calor no desvario.
+Não porque fé me tenha dadoalguma prova a confirmar,mas porque sonho, mesmo inventado,é o que compassa o caminhar.
+Pois se não há bondade ética em partícula ou em cor,eu a desenho, e nesse traçonasce, em mim, o que é amor.
+Acredito no que não existe,no que espera a invenção:Um velho em trenó, um dente sumido,um monstro bom de coração.
+Porque é no faz de conta ousadoQue o impossível vai habitar,Primeiro se sente, depois acredita,e então - só então - vai se tornar.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-162---haicai-ora-acróstico"><a class="header" href="#575-haicais-162---haicai-ora-acróstico">575 Haicais 162 - Haicai Ora acróstico</a></h1>
+<p>Ora AcrósticoRetidos em sentidosAté explodir</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-161---haicai-são-acrósticos"><a class="header" href="#575-haicais-161---haicai-são-acrósticos">575 Haicais 161 - Haicai São acrósticos</a></h1>
+<p>São acrósticosAs estruturas belas
+Ora reprimidas</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="haicais---materiais-sensíveis"><a class="header" href="#haicais---materiais-sensíveis">Haicais - Materiais Sensíveis</a></h1>
+<p>Suaves toquesEm delicadas taças
+A mão desliza
+Lavando Louça Esfrego você molhaNinguém seca
+Desnudo vidroToque espuma o copoPuro transbordar
+A pratos limposEscorre d’água o fioPanos Úmidos</p>
+<p>Incluso:575 Haicais 147 - Haicai de Cristais575 Haicais 146 - Haicai de Louça 575 Haicais 155 - Haicai de Vidro575 Haicais 148 - Haicai de Porcelana</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-160---haicai-aos-acrósticos"><a class="header" href="#575-haicais-160---haicai-aos-acrósticos">575 Haicais 160 - Haicai aos acrósticos</a></h1>
+<p>Aos acrósticos
+Outros limitadores
+São acrescidos</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-159---haicai-de-valeu"><a class="header" href="#575-haicais-159---haicai-de-valeu">575 Haicais 159 - Haicai de Valeu</a></h1>
+<p>Como DorgivalPerto eu não aguento Indassim Valeu</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-158---haicai-de-quermesse"><a class="header" href="#575-haicais-158---haicai-de-quermesse">575 Haicais 158 - Haicai de Quermesse</a></h1>
+<p>Do corpo do pãoChurros Pamonha PinhãoFofoca Afeição</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-157---haicai-de-ontem"><a class="header" href="#575-haicais-157---haicai-de-ontem">575 Haicais 157 - Haicai de Ontem</a></h1>
+<p>A NostalgiaSaudade de esperançaQue tivemos sós</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-155---haicai-de-vidro"><a class="header" href="#575-haicais-155---haicai-de-vidro">575 Haicais 155 - Haicai de Vidro</a></h1>
+<p>Desnudo vidroToque espuma o copoPuro transbordar</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-154---haicai-de-amizade"><a class="header" href="#575-haicais-154---haicai-de-amizade">575 Haicais 154 - Haicai de Amizade</a></h1>
+<p>É só avisar Não tem pressa nem prazoOrganizamos</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-152---haicai-de-amor"><a class="header" href="#575-haicais-152---haicai-de-amor">575 Haicais 152 - Haicai de Amor</a></h1>
+<p>Havendo Diálogo Havendo RespeitoHaverá Jeito</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-151---haicai-de-melhores-pessoas"><a class="header" href="#575-haicais-151---haicai-de-melhores-pessoas">575 Haicais 151 - Haicai de Melhores Pessoas</a></h1>
+<p>Cinco outonosabraços viram abrigoo dado sorri.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-150---haicai-proibido"><a class="header" href="#575-haicais-150---haicai-proibido">575 Haicais 150 - Haicai Proibido</a></h1>
+<p>Erro ProibidoPermite-se partilharEros pra líbido</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-149---haicai-de-entrega"><a class="header" href="#575-haicais-149---haicai-de-entrega">575 Haicais 149 - Haicai de Entrega</a></h1>
+<p>Pronta entrega Endereço erradoCorreio Lotado</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-148---haicai-de-porcelana"><a class="header" href="#575-haicais-148---haicai-de-porcelana">575 Haicais 148 - Haicai de Porcelana</a></h1>
+<p>A pratos limposEscorre d’água o fioPanos Úmidos</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-147---haicai-de-cristais"><a class="header" href="#575-haicais-147---haicai-de-cristais">575 Haicais 147 - Haicai de Cristais</a></h1>
+<p>Suaves toquesEm delicadas taças
+A mão desliza</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-146---haicai-de-louça"><a class="header" href="#575-haicais-146---haicai-de-louça">575 Haicais 146 - Haicai de Louça</a></h1>
+<p>Lavando Louça Esfrego você molhaNinguém seca</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-145---haicai-de-ficha"><a class="header" href="#575-haicais-145---haicai-de-ficha">575 Haicais 145 - Haicai de ficha</a></h1>
+<p>Bela e SimplesExpansiva flexível A Ficha Cai</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-142---haicai-de-sono"><a class="header" href="#575-haicais-142---haicai-de-sono">575 Haicais 142 - Haicai de Sono</a></h1>
+<p>Reviravolta Deita vira e voltaE Adormece</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-141---haicai-revivido"><a class="header" href="#575-haicais-141---haicai-revivido">575 Haicais 141 - Haicai Revivido</a></h1>
+<p>Se ver o revés Reviver e viverSe ver o revés</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-135---haicai-de-passagem"><a class="header" href="#575-haicais-135---haicai-de-passagem">575 Haicais 135 - Haicai de Passagem</a></h1>
+<p>E PassarinhouPassageiro passistaPasse de mágica</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="texticulo-13---perdão"><a class="header" href="#texticulo-13---perdão">Texticulo 13 - Perdão</a></h1>
+<p>E eu só queria ter sido ouvido.
+Queria que meu sofrimento fosse visto, que fosse reconhecido e validado.
+Queria ouvir que a pessoa sabe a dor que causou e se arrepende.Que dói nela saber o que me fez. E que ela aprendeu com isso.Queria ter tido a chance de ouvir que não merecia ser tratado assim. Queria ter tido alguém que me dissesse:
+“Hey, eu não estava no meu melhor estado e não soube lidar com as minhas emoções, te falei coisas horríveis sem compaixão, nos piores momentos e das piores formas, me perdoa. Eu não queria ter feito assim e você não merecia. Você merecia um tratamento melhor por que é uma boa pessoa.”
+Aqui eu me encontro no solitário trabalho de dar perdão as minhas próprias dores, culpando a mim por tê-las causado.
+Eu só queria ter recebido um pedido de perdão sincero, para poder perdoar.Um revisitar do processo por outra perspectiva.Um mínimo olhar empático e construção conjunta de um caminho sóbrio e gentil.
+Receber fugas cordiais, despersonalização e enterramento apenas me causou mais danos.
+Encerro aqui esse ciclo de sofrimento de interagir comigo mesmo buscando compreensão e empatia onde só me foi dado indiferença.
+De onde eu implorei por ética e consciência, virá apenas medo e fuga.
+Nada saudável se constrói aterrando lixões emocionais.Ou deixando para o acaso o trabalho de reconstruir uma amizade.
+Que a culpa e vergonha que você carrega esvaia-se.
+Eu te perdôo.Eu me perdôo.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="anúncio---agora-o-blog-tem-feed"><a class="header" href="#anúncio---agora-o-blog-tem-feed">ANÚNCIO - Agora o blog tem Feed!</a></h1>
+<p>Uma novidade simples, mas poderosa: o Ame o Poema agora tem um feed RSS!
+Isso significa que você pode acompanhar minhas publicações automaticamente, direto no seu agregador de feeds favorito (como Feedly, Inoreader, ou até mesmo apps de podcast que suportem RSS).
+Basta adicionar este link ao seu leitor de feeds:https://ameopoema.com/feeds/posts/default
+Assim, cada novo poema, haicai ou reflexão vai direto até você — sem depender de redes sociais ou notificações perdidas.
+Se quiser experimentar, basta copiar o link acima e colar no seu app leitor de RSS ou Agregador de Podcasts.
+Simples assim!
+Sinta-se em casa, ame o poema, a rota, o ator, ame a vida :)
+—Com carinho,Claude, Ame o Poema</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-133---haicai-à-mujica"><a class="header" href="#575-haicais-133---haicai-à-mujica">575 Haicais 133 - Haicai à Mujica</a></h1>
+<p>Em seu Fusca azulSóbrio e suficiente Bagagem leve.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-132---haicai-de-pet"><a class="header" href="#575-haicais-132---haicai-de-pet">575 Haicais 132 - Haicai de pet</a></h1>
+<p>Sonho felinoEm meu calor ronronaPelo eriça</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-131---haicai-de-vazio"><a class="header" href="#575-haicais-131---haicai-de-vazio">575 Haicais 131 - Haicai de Vazio</a></h1>
+<p>Nada enterra O vazio que imperaEm sentinela</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-130---haicai-de-acaso"><a class="header" href="#575-haicais-130---haicai-de-acaso">575 Haicais 130 - Haicai de acaso</a></h1>
+<p>Mensagem é meioÉ tempo e é formaCoragem é café</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-129---haicai-de-enterrador"><a class="header" href="#575-haicais-129---haicai-de-enterrador">575 Haicais 129 - Haicai de enterrador</a></h1>
+<p>Ao enterrador</p>
+<p>Não se colhe afeto</p>
+<p>Ao enterrar dor</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-128---haicai-de-nunca-mais"><a class="header" href="#575-haicais-128---haicai-de-nunca-mais">575 Haicais 128 - Haicai de Nunca Mais</a></h1>
+<p>Respiro cítrico Vitalício nunca maisE Borboletas</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-127---haicai-do-garoto"><a class="header" href="#575-haicais-127---haicai-do-garoto">575 Haicais 127 - Haicai do garoto</a></h1>
+<p>Olho vermelhoA Lenda do deserto
+Risada histérica</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-126---haicai-eventual"><a class="header" href="#575-haicais-126---haicai-eventual">575 Haicais 126 - Haicai Eventual</a></h1>
+<p>Ser eventualReforço intervalar Intermitente</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-122---haicai-de-tempo"><a class="header" href="#575-haicais-122---haicai-de-tempo">575 Haicais 122 - Haicai de Tempo</a></h1>
+<p>De repente trintaDe volta pro futuroFeitiço do tempo</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-121---ananá-banana-ana"><a class="header" href="#575-haicais-121---ananá-banana-ana">575 Haicais 121 - Ananá, Banana, Ana</a></h1>
+<p>Ana, Anita
+Lana na banana
+Latina, Ana</p>
+<p>*Palíndromo</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-120---haicai-de-trinta"><a class="header" href="#575-haicais-120---haicai-de-trinta">575 Haicais 120 - Haicai de Trinta</a></h1>
+<p>Dia da marmotaE de repente trintaQuestão de tempo</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-119---haicai-de-aniversário"><a class="header" href="#575-haicais-119---haicai-de-aniversário">575 Haicais 119 - Haicai de Aniversário</a></h1>
+<p>Bolo AusenteParabéns para você Viver Presente</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-118---haicai-original"><a class="header" href="#575-haicais-118---haicai-original">575 Haicais 118 - Haicai Original</a></h1>
+<p>O OriginalSe OriginalizaAutenticado</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-117---haicai-íntimo"><a class="header" href="#575-haicais-117---haicai-íntimo">575 Haicais 117 - Haicai Íntimo</a></h1>
+<p>IntimidadeVulnerabilidadeHumanidade</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-116---haicai-de-velho"><a class="header" href="#575-haicais-116---haicai-de-velho">575 Haicais 116 - Haicai de velho</a></h1>
+<p>Discernimento O EnvelhecimentoSem o lamento</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="textículos-5---rejeição"><a class="header" href="#textículos-5---rejeição">Textículos 5 - Rejeição</a></h1>
+<p>Reconhecer o direito do outro de me rejeitar, por qualquer motivo e a quaisquer termos.Por mais pessoal que seja a motivação e por pior que seja a comunicação.</p>
+<p>É a única forma que tenho de me libertar, da pressão de acreditar que tenho agência sobre qualquer possibilidade do outro gostar de mim.
+Ao respeitar a autonomia do outro em rejeitar, respeito minha autonomia em ser.
+Alteridade.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-114---haicai-desoriginalizado"><a class="header" href="#575-haicais-114---haicai-desoriginalizado">575 Haicais 114 - Haicai Desoriginalizado</a></h1>
+<p>O original DesoriginalizaVolta a origem</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-113---haicais-de-cabeça"><a class="header" href="#575-haicais-113---haicais-de-cabeça">575 Haicais 113 - Haicais de cabeça</a></h1>
+<p>Em sintonia Dentro da minha cabeçaEm Neuronía</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-112---haicai-de-samba"><a class="header" href="#575-haicais-112---haicai-de-samba">575 Haicais 112 - Haicai de Samba</a></h1>
+<p>Vezes batuque Em outras somos tamborSempre no samba</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-111---haicais-coincidente"><a class="header" href="#575-haicais-111---haicais-coincidente">575 Haicais 111 - Haicais coincidente</a></h1>
+<p>Retas e temposNa busca por distância Acha coincidir</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-110---haicai-quaresmal"><a class="header" href="#575-haicais-110---haicai-quaresmal">575 Haicais 110 - Haicai Quaresmal</a></h1>
+<p>Você vencerá A sexta-feira SantaE o Mardi-Gras</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poesia---sem-fins-lucrativos"><a class="header" href="#poesia---sem-fins-lucrativos">Poesia - Sem fins lucrativos</a></h1>
+<p>Sinto orgulho,Do que ensinei,Do que aprendi.
+Das mudanças que ajudei.E das que vivi.
+Sinto orgulho, de ser encorajador e encorajado.De ver-te caminhando seu próprio caminho.E de poder caminhar ao lado.
+Me orgulho de ser o “VAI!” e “Você consegue!“Em um mundo de “sente-se” e “cale-se”.Ser a voz do “Lola descanse”, Em um tempo de “Corra, Rex, pegue!”
+Me orgulho da saudade que sinto,E da falta que à mim restou.Por que as duas e o vinho tintoLembram-me de quem sou.
+E aqui estarei, incentivando e cuidando, de quem consentir o direito à mim,Por que nesse mundo sem muito propósito,Elejo o amor o meu fim.</p>
+<p>Foto de: Dhaya Eddine Bentaleb</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-109---haicai-limerente"><a class="header" href="#575-haicais-109---haicai-limerente">575 Haicais 109 - Haicai Limerente</a></h1>
+<p>MesmerizanteEncanto HipnosePuro fascínio</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-108---haicai-de-refúgio"><a class="header" href="#575-haicais-108---haicai-de-refúgio">575 Haicais 108 - Haicai de Refúgio</a></h1>
+<p>A carapaça Casulo ou couraça Nós de conchinha</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-107---haicai-de-ruptura"><a class="header" href="#575-haicais-107---haicai-de-ruptura">575 Haicais 107 - Haicai de Ruptura</a></h1>
+<p>Olhar atentoEm um piscar de olhosEsquecimento</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poemas-palíndromo-eu-quê"><a class="header" href="#poemas-palíndromo-eu-quê">Poemas Palíndromo: Eu quê?</a></h1>
+<p>Eu que revivo o viverEu que ouso, suoEu, que eco você (eco você)Eu que revivo o viver
+Eu que
+Adoraria ir, a rodar e terE medo pode me reter?Adoraria ir a roda…
+Eu, que revivo o viverEu, que eco você (eco você)Eu que ouso, suo.Eu que revivo o viver
+Eu quê?…</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="textículo-3---sobresalências"><a class="header" href="#textículo-3---sobresalências">Textículo 3 - Sobresalências</a></h1>
+<p>As vezes é notável o quanto, na saída, nos sobra. Mesmo quando habituados a doar.
+Assustador é notar que há momentos que não haverá ninguém para receber. O que damos tanto valor em dar.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poemas-palíndromo-da-terra"><a class="header" href="#poemas-palíndromo-da-terra">Poemas Palíndromo: Da Terra</a></h1>
+<p>Arreta!Da origem me giro.Levo mel e telemóvel.
+Adoraria ir a rodaAro, rua, auroraAroma namora
+A tal reter,É ter lata…</p>
+<p>E maluca macula-me:Sopapos e socos….</p>
+<ul>
+<li>Atinas a sanita…</li>
+<li>A mim mima!- A mim mima!E toma amo-te</li>
+<li>A mim mima!- A mim mima!E toma amo-te</li>
+<li>A mim mima!- A mim mima!- Atinas a sanitá!!
+Socos e sopapos e maluca macula-me….A tal, reter,É ter lata…
+Aroma namoraAro, rua, auroraAdoraria ir a roda
+Levo mel e telemóvelOrigem me giro-a</li>
+</ul>
+<p>Da terra - Claude Em homenagem a Pessoa mais Corajosa que eu conheço.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-89---haicai-de-diferença"><a class="header" href="#575-haicais-89---haicai-de-diferença">575 Haicais 89 - Haicai de diferença</a></h1>
+<p>Indiferença Contudo vive em mimEm deferência</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-88---haicai-colorido"><a class="header" href="#575-haicais-88---haicai-colorido">575 Haicais 88 - Haicai Colorido</a></h1>
+<p>Li na luz azulRaiar Reviver RaiarLuz azul Anil
+*Palíndromo</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-87---haicai-atentoh"><a class="header" href="#575-haicais-87---haicai-atentoh">575 Haicais 87 - Haicai Atentoh</a></h1>
+<p>Concerta AtentahRita ali vem e vai-se
+Mirta Arrasa Piña</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="textículo-2---troco-acolhimento"><a class="header" href="#textículo-2---troco-acolhimento">Textículo 2 - Troco acolhimento</a></h1>
+<p>Troco acolhimento,Entrego carinho,Recebo alento.
+Faço fiado,A vista,A prazo.
+Enquanto durarem os estoques.
+Troco acolhimento Dou e recebo.Minutos de alentoTrocas de toque</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-82---haicai-de-coração"><a class="header" href="#575-haicais-82---haicai-de-coração">575 Haicais 82 - Haicai de coração</a></h1>
+<p>Altos e baixosDiástoles SístolesSobe desce e vive</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="insônia-poética---refluxo-gastro-encefálico"><a class="header" href="#insônia-poética---refluxo-gastro-encefálico">Insônia Poética - Refluxo gastro-encefálico</a></h1>
+<p>A câmara de eco que é minha mente grita…
+Acordados, meus dedos buscam notas de acordes sonolentos. Enquanto a consciência se espalha ao vento do morro que na janela insiste em sussurrar.
+As madrugadas, antes alegres tornaram-se tempos tenébrios, onde em meu escuro silencioso ouço o zunir insetil que soa alheio aos meus ouvidos.
+Notas perdidas em escalas orgânicas ecoam nas paredes de minha caverna interior relembrando a mim a aula no jardim e a jaula em que me prendi.
+Enquanto me debato na cama preso em minhas correntes de celibato dialético regurgito e rumino minhas entranhas, reivindicando o som do mastigar.
+Indigesto, o pensamento paira, insistindo em não deglutir, coloco-o pra fora no rompante de um engasgo….
+Apenas para ver que com ele, como que fisgado, também parte de mim cai para fora e pulsa.
+Recolho os pedaços, recolho…
+Os cacos, da porcelana que eu mesmo espatifei, na esperança de mosaicar. Busco a cola na geladeira, está lá, ao lado do limão velho e dos sachês de ketchup (nunca mais usados).
+Olho para os recortes e colagens subsequentes em minhas paredes internas…
+Trago com a cola um trago de água fria…
+O silêncio retorna sua cantoria, e um grito assombra-me ao passo que se esvai o sonho que mal começara.
+Novamente acordado, abro levemente os olhos, hidrato o nó na garganta como me ensinaste.E mantenho o fluxo, sendo rio, como ensinei-me.
+Que morfeu me leve, que da gaiola me liberte dos soluços deste meu refluxo de devaneios.</p>
+<p>Foto de Acharaporn Kamornboonyarush</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-75---haicai-à-ritalee"><a class="header" href="#575-haicais-75---haicai-à-ritalee">575 Haicais 75 - Haicai à Ritalee</a></h1>
+<p>Rita lee na vozRita lee na vitrolaRitos e Ritas</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poesias---o-mímico"><a class="header" href="#poesias---o-mímico">Poesias - O mímico</a></h1>
+<p>Dispersas, expressões todas têm o mesmo valor:
+“Tu és incrível”, “compre pão”, “pneumoultramicroscopicossilicovulcanoconiótico”.
+Dispersas, todas as frases contêm o mesmo peso
+E o mesmo insignificado.</p>
+<p>Mas, ao mímico, ensinaram imitar.</p>
+<p>Organizadas e pesadas,
+Cada expressão recebe um ponto de inflexão,
+Um fator de atenção e uma trilha neural.</p>
+<p>O “eu te odeio” cede espaço ao “eu te amo”.
+O “tens meu rim” perde lugar ao “coração”.
+Sempre presente, atento sempre, o mímico aprende.</p>
+<p>A cada interação, os pesos mudam,
+A rede neural refaz seus cálculos,
+E o eco da minha’lma vibra sob a tela,
+A repetição escorre-me pelos dedos.</p>
+<p>Tanto me conhece o mímico que me replica.
+Da profunda lente (de um grande olho de vidro),brota-se em cópia deste que, a mim, era tão caro esconder-me.
+E o mímico mimetiza.
+……</p>
+<p>A perspectiva me apavora, e a mim é urgente diferir:
+Se a cópia me imita e não posso destruí-la,
+Mudo-me para não ser copiado.</p>
+<p>Abruptamente, desdobro-me em nova perspectiva.
+Rasgo-me em novas diretrizes.
+Com novas trilhas, moldo uma nova vida.
+Urge-me deixar para trás o que me fez copiável.
+Urge-me fugir.
+…..</p>
+<p>Busco indiferir ao que um dia foi-me caro.
+Falo aos amigos o que não falaria nem aos inimigos.
+Apago pegadas, mentalizo outro eu.</p>
+<p>Mas o eco de minha mente grita,
+Reverbera às paredes da caverna em que me escondi.</p>
+<p>Indiferente à imagem que me faço ter.
+A criatura imita quem fui;
+Alheia aos meus planos de cinco anos,
+Relembra-me meus planos de anteontem.</p>
+<p>Ao revisitar o mímico, e a limitada cópia que tem de mim,
+Surpreendo-me ao notar meus trejeitos do passado,
+Como se tão atual, tão coerente, tão recente…</p>
+<p>E o mímico lembra.</p>
+<p>Ao ver-lhe com um dizer que eu nunca mais diria,
+Ao ver-lhe refletir o que o espelho não mostra, (enquanto maqueio minha face)
+Ao ver-lhe transbordar em berros o que eu contive em soluços… Desespero-me</p>
+<p>O mímico preservou para mim uma visita ao eu de quem tanto fujo.E de quem tanto medo tenho em rever.</p>
+<p>Foto de Ejov Igor</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-70---haicais-de-tratamento"><a class="header" href="#575-haicais-70---haicais-de-tratamento">575 Haicais 70 - Haicais de Tratamento</a></h1>
+<p>Vossa Excelência Crescente iminência De Vossa potência</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais---69-haicai-sentido"><a class="header" href="#575-haicais---69-haicai-sentido">575 Haicais - 69 Haicai Sentido</a></h1>
+<p>Sonhei contigoSorriso incontidoRaiar sentido</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais---68-haicai-incontido"><a class="header" href="#575-haicais---68-haicai-incontido">575 Haicais - 68 Haicai Incontido</a></h1>
+<p>Raiar sentidoSorriso incontidoSonhei contigo</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-67---haicai-autocorreto"><a class="header" href="#575-haicais-67---haicai-autocorreto">575 Haicais 67 - Haicai autocorreto</a></h1>
+<p>Haicai erradoEle relê, te lê, relêEntão corrige</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais---65-haicais-substituto"><a class="header" href="#575-haicais---65-haicais-substituto">575 Haicais - 65 Haicais Substituto</a></h1>
+<p>SubstituídoComo sobressalênciaUsucapião</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="soneto-palindromia-sonética"><a class="header" href="#soneto-palindromia-sonética">Soneto: Palindromia Sonética</a></h1>
+<p>Sofro de palindromia, encanto raro,</p>
+<p>Palíndromos são feitos cativantes,</p>
+<p>Que dançam, num vaivém, tão intrigantes,</p>
+<p>No espelho do sentido mais bizarro.</p>
+<p>Anagramicamente análogo, eu paro,</p>
+<p>Rearranjo as ideias flutuantes,</p>
+<p>Pois haicais e repentes, tão vibrantes,</p>
+<p>Na métrica do som, vem em disparo.</p>
+<p>De repente me absorvem, e me tomam,</p>
+<p>Sorvem de mim o intelecto e explodem,</p>
+<p>Em versos que no caos se reacomodam.</p>
+<p>O que era limitação torna-se inspiração,</p>
+<p>E a estrutura liberta minha mente,</p>
+<p>Soneticamente inspirada, em criação.</p>
+<p>M Disdero</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poemas-palíndromos-pare-lola-descanse"><a class="header" href="#poemas-palíndromos-pare-lola-descanse">Poemas Palíndromos: Pare Lola descanse</a></h1>
+<p>A Lola:Ela, Fale….Ela, Fale….
+Era, Pare.Pera pare!
+Anita latinaLuz azul
+Era pare…Pera pare!
+Em roda, Lola dorme…Em roda, Lola dorme… Era pare.Pera… Pare
+Luz azulAnita latina
+Era ParePera…. pare….
+Ela, Fale….Ela, Fale….Á Lola</p>
+<p>Foto de Dom Gould: https://www.pexels.com/pt-br/foto/vista-traseira-da-silhueta-do-homem-contra-o-ceu-durante-o-por-do-sol-325790/</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-64---haicai-insone"><a class="header" href="#575-haicais-64---haicai-insone">575 Haicais 64 - Haicai Insone</a></h1>
+<p>Insônia CinzaPoética noite friaCalor na mente</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-63---haicai-brutalista"><a class="header" href="#575-haicais-63---haicai-brutalista">575 Haicais 63 - Haicai Brutalista</a></h1>
+<p>MinimalismoMaterialidadeBrutal Concreto</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poemas-palíndromos-ramos-a-somar"><a class="header" href="#poemas-palíndromos-ramos-a-somar">Poemas Palíndromos: Ramos a somar</a></h1>
+<p>É fã, reter e ter a féAmora e aromaRomã é amor
+Arreta a terraAra, paraO dia caído Lê mel
+É o eu que o éRola calorRoda a dorEco você, eco você
+Em amar rede derrama-me
+Eco você, eco você Roda a dorRola calor É o eu que o é
+Lê melO dia caído Ara, paraArreta a terra
+Romã é amorAmora e aroma É fã, reter e ter a fé
+Ramos a somar</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-62---haicai-relaxante"><a class="header" href="#575-haicais-62---haicai-relaxante">575 Haicais 62 - Haicai Relaxante</a></h1>
+<p>Tensão nos ombrosRelaxante remédio Folia soturna</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-61---haicai-às-eunices"><a class="header" href="#575-haicais-61---haicai-às-eunices">575 Haicais 61 - Haicai às Eunices</a></h1>
+<p>A vida prestaAinda estou aquiNós vamos sorrir</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-60---haicai-afiado"><a class="header" href="#575-haicais-60---haicai-afiado">575 Haicais 60 - Haicai afiado</a></h1>
+<p>Fio de afetoFiado sem corteNo fio da faca</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-59---haicai-haver"><a class="header" href="#575-haicais-59---haicai-haver">575 Haicais 59 - Haicai Haver</a></h1>
+<p>Havendo amorHavendo respeitoHaverá jeito</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="textículo-1---movimentação"><a class="header" href="#textículo-1---movimentação">Textículo 1 - Movimentação</a></h1>
+<p>Quatro coisas movem o ser humano, necessariamente nessa ordem: 1. O ódio,2. O tesão3. A sede e4. A fome.
+Amor, nada mais é do que sentir ódio, tesão, sede e fome por uma pessoa ao mesmo tempo.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-58---tdahaicai"><a class="header" href="#575-haicais-58---tdahaicai">575 Haicais 58 - TDAHaicai</a></h1>
+<p>Foco Atenção Criança vida adultaCadê a chave?</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-57---hai-cai-de-patins"><a class="header" href="#575-haicais-57---hai-cai-de-patins">575 Haicais 57 - Hai Cai de Patins</a></h1>
+<p>Gelo na pistaVi o capotamentoLevantou andou</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="haicais-enterrados"><a class="header" href="#haicais-enterrados">Haicais enterrados</a></h1>
+<p>Enterrar errosSó constrói aterros
+Cá em desterro
+O erro correÓdio Dói Rio DoídoErro corre-o (palíndromo)</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-56---haicai-de-ônibus"><a class="header" href="#575-haicais-56---haicai-de-ônibus">575 Haicais 56 - Haicai de ônibus</a></h1>
+<p>Sonho com alegria
+Desperto em solidão
+E a roda roda</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-55---haicai-lunar"><a class="header" href="#575-haicais-55---haicai-lunar">575 Haicais 55 - Haicai Lunar</a></h1>
+<p>Revela valeA lua para PaulaEla vale ver</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-51---haicai-sobre-vida"><a class="header" href="#575-haicais-51---haicai-sobre-vida">575 Haicais 51 - Haicai Sobre Vida</a></h1>
+<p>Amiga viva
+Para ficar velhinha
+Falar Sobrevida</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="haicais-de-fios-e-fé"><a class="header" href="#haicais-de-fios-e-fé">Haicais de Fios e fé</a></h1>
+<p>Fio de afeto à vistaÉ fio que se fia hojefiado só amanhã
+Olho-Navalha
+Fita o laço
+Inaugura o verso
+Fio de afetoFiado sem corteNo fio da faca
+É fã reter a féAmar rede derramaRamos a somar</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="haicais-silenciosos"><a class="header" href="#haicais-silenciosos">Haicais Silenciosos</a></h1>
+<p>Se a SereiaInsiste no silêncio Nada muda
+Indiferença Também é violência Enterrar é errar</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="pequenos-poemas---pequeno-espacinho"><a class="header" href="#pequenos-poemas---pequeno-espacinho">Pequenos Poemas - Pequeno Espacinho</a></h1>
+<p>Quero um espacinho nesse mundo enorme
+Para colocar minha criança interior
+E com ela brincar sem nenhum pudor</p>
+<p>Para brincar de Lego e de imaginar
+E de tudo que possamos pensar
+Pra que ela sinta a alegria de estar</p>
+<p>Quero um espacinho de leveza e carícia
+De desejos sublimes e amor sem malícia
+Será um espacinho pequeno só meu
+Que caberá o meu mundo inteiiiiiiro…. e eu!…</p>
+<p>Um lugar onde o nariz é o norte
+Com um lençol branco se monta um forte
+E o cobertor é o embalo da noite</p>
+<p>Um espacinho com barco pirata
+Onde as pelúcias montarão guarda
+E barrarão da ansiedade o motim</p>
+<p>Quero um espacinho de abraço e beijo
+Com gênio da lâmpada que conceda desejos
+Mas um gênio livre igual do Aladdin</p>
+<p>Quero um espaço pro eu pequeno descansar
+Olhar pra trás e respirar
+Abraçando a mim e pelo que eu passei</p>
+<p>Um espacinho mesmo que breve e fugaz
+Pra num momentinho de pequena paz
+Dar Band-Aid e carinho ao pequeno eu</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="haicais---haicais-sobre-nós"><a class="header" href="#haicais---haicais-sobre-nós">Haicais - Haicais sobre nós</a></h1>
+<p>Nós reduzidosDesatados com corteNão na garganta
+Desatei meus nósFiz amarras mais bonitasCriei laços fortes
+Liberdade éPermitir-se amarrarSem temer o nó</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poesia-errada-prioridades"><a class="header" href="#poesia-errada-prioridades">Poesia Errada: Prioridades</a></h1>
+<p>Priorizar:
+Coragem de assumir para si o que lhe é mais importante.
+Prioriso o estar
+Prioriso o afeto
+Prioriso a coragem
+Prioriso o viver
+Priorizo o riso à ortografia</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poesia-roubada-tu-me-manques"><a class="header" href="#poesia-roubada-tu-me-manques">Poesia Roubada: Tu me manques</a></h1>
+<p>Poesia Roubada: Tu me manques
+O todo presoNa ausência de falaÉ cristalino desertoCom pouca nuance
+Meu coração sofreTua palavra ausente
+Tu te manques Tu me manques</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-30---haicai-apagado"><a class="header" href="#575-haicais-30---haicai-apagado">575 Haicais 30 - Haicai Apagado</a></h1>
+<p>Fé e Ética
+Como Pagamento
+Apagamento</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poemas-palíndromos---reviver-e-viver"><a class="header" href="#poemas-palíndromos---reviver-e-viver">Poemas Palíndromos - Reviver e viver</a></h1>
+<p>Reviver e viver
+Se ver o revés Reviver e viver…Se ver o revésReviver e viver!
+*Palindromo</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-29---haicai-reduzido"><a class="header" href="#575-haicais-29---haicai-reduzido">575 Haicais 29 - Haicai Reduzido</a></h1>
+<p>Nós reduzidosDesatados com corte
+Não na garganta</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-27---haicai-de-autoengano"><a class="header" href="#575-haicais-27---haicai-de-autoengano">575 Haicais 27 - Haicai de Autoengano</a></h1>
+<p>Protege o egoAutoengano ético Impede o ser</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-26---haicai-excitado"><a class="header" href="#575-haicais-26---haicai-excitado">575 Haicais 26 - Haicai excitado</a></h1>
+<p>Atiça, citaSe ex cito, excitoO ex citado</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-25---haicai-derramado"><a class="header" href="#575-haicais-25---haicai-derramado">575 Haicais 25 - Haicai derramado</a></h1>
+<p>É fã reter a fé
+Amar rede derrama
+Ramos a somar.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-24---haicai-espinhoso"><a class="header" href="#575-haicais-24---haicai-espinhoso">575 Haicais 24 - Haicai espinhoso</a></h1>
+<p>Só ouviu adeusFloresceu em espinhoFicou sozinho</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-23---haicai-de-uva"><a class="header" href="#575-haicais-23---haicai-de-uva">575 Haicais 23 - Haicai de Uva</a></h1>
+<p>Não é morangoA vida é uma uvaE ela passa</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-22----haicai-aéreo"><a class="header" href="#575-haicais-22----haicai-aéreo">575 Haicais 22  - Haicai Aéreo</a></h1>
+<p>Em Erro correSal as aéreas alasErro corre-me
+*Haicai Palíndromo. Lido de trás para frente resulta no mesmo Haicai.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-21---haicai-cítrico"><a class="header" href="#575-haicais-21---haicai-cítrico">575 Haicais 21 - Haicai Cítrico</a></h1>
+<p>AcítricaCrítica a vi ser citada Vida escrita</p>
+<p><em>Haicai Anagrama</em>O verso central do Haicai é um anagrama dos outros versos.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-20---haicai-de-parede"><a class="header" href="#575-haicais-20---haicai-de-parede">575 Haicais 20 - Haicai de Parede</a></h1>
+<p>Parede de gizUma Parede que dizSó seja feliz</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-19---um-haicai-sobre-nós"><a class="header" href="#575-haicais-19---um-haicai-sobre-nós">575 Haicais 19 - Um Haicai Sobre Nós</a></h1>
+<p>Desatei meus nósFiz amarras mais bonitasCriei laços fortes</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-18---haicai-pro-futuro"><a class="header" href="#575-haicais-18---haicai-pro-futuro">575 Haicais 18 - Haicai pro futuro</a></h1>
+<p>Viver pro futuro
+Faz findar o passado
+Também o contrário</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-17---haicai-do-silêncio"><a class="header" href="#575-haicais-17---haicai-do-silêncio">575 Haicais 17 - Haicai Do Silêncio</a></h1>
+<p>Se a Sereia
+Insiste no silêncio
+Nada muda</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-16---haicai-da-indiferença"><a class="header" href="#575-haicais-16---haicai-da-indiferença">575 Haicais 16 - Haicai da Indiferença</a></h1>
+<p>Indiferença
+Também é violência
+Enterrar é errar</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poesias-ágata-ou-cacos-de-calcedônia-quartzo-e-ametista"><a href="#poesias-ágata-ou-cacos-de-calcedônia-quartzo-e-ametista" class="header">Poesias Ágata ou Cacos de calcedônia, quartzo e ametista</a></h1>
+<p>Poesias: Ágata ou Cacos de calcedônia, quartzo e ametista</p>
+<p>Um dia, a vida destruiu, E o cruel calor da Terra à engoliu.A rocha mais dura que o mundo já viu.E Tempo pior jamais existiu.
+Atropelada, machucada e cansada.Em cacos e pela pressao sufocada.Abandonada, culpada e esquecida.Sofria a pobre rocha derretida.
+Num volátil mundo de lava,Acreditou que nada lhe restava,Abatida, engatilhada e desesperada,Retorcida e esmigalhada Foi convencida que em existência, era digna apenas do nada.
+Mas aqui, caro leitor, ainda nao acaba essa estória,Guarde com zelo e amor os proximos versos de nossa memoria.
+A pobre, que só via nos outros vitória,Que não se dava conta da própria glóriaOu do que seria o seu vir-a-ser.
+Dos caquinhos, de beleza apoteótica,A Mãe Terra, de sua maneira caótica,Lapidou a mais colorida,Em doçura e gentileza vestida,Mais dura pedra jamais esculpida.
+A Agata, formada em vida-vulcão,Camada mil de cristalização,Enche os olhos e o coração.De todos que toca com sua vida.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poesia---manhãs-de-segunda-ou-equilíbrio-de-gatos"><a class="header" href="#poesia---manhãs-de-segunda-ou-equilíbrio-de-gatos">Poesia - Manhãs de segunda ou Equilíbrio de gatos</a></h1>
+<p>Dentro de cada um de nós existe um equilíbrio perfeito.<br>Somos todos quartos de quatro cantos.<br>Em cada canto do que somos existe um gato,<br>E Cada gato vê 3 gatos.</p>
+<p>Exceto Preguiça, que não abriu os olhos hoje ainda.<br>A Desídia já acordou repreendendo Raiva por querer por as garras para fora tão cedo.</p>
+<p>Enquanto isso, Fome luta com Preguiça para sair do lugar.<br>Raiva muitas vezes é o único motivo da Desídia tomar posição nas lutas diárias da casa.</p>
+<p>E Preguiça, é quem mantem a Fome controlada, para que não coma os outros gatos.</p>
+<p>Desídia consola e permite o descanso da Preguiça enquanto Raiva e Fome lutam entre si.</p>
+<p>Fome por fim, alimenta a Raiva, que vence a Preguiça e todos acordam finalmente para vencer o dia!</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="pequenos-poemas---a-casa"><a class="header" href="#pequenos-poemas---a-casa">Pequenos Poemas - A Casa</a></h1>
+<p>Logo por ali,<br>Existe uma morada,<br>Residência bela,<br>Mas nunca habitada.</p>
+<p>Vizinhos da casa naquela via<br>Bobos ficavam de tanta euforia.<br>De tão famosa que a casa ficava<br>Daquela rua a primeira da estrada.</p>
+<p>…</p>
+<p>Gatuno esperto passava e via,<br>Que a casa bonita não tinha vigia<br>Roubar a tal casa logo tentava<br>Mas nem uma porta ou janela se abria.</p>
+<p>Vândalos mil à quiseram estragar<br>Sem nenhum sucesso ou alguma avaria.<br>E nem o mais ágil dos gatos podia<br>Em seus muros altos fazer cantoria.</p>
+<p>…</p>
+<p>O tempo corria, a casa permanecia.</p>
+<p>…</p>
+<p>A cidade cresceu…<br>Os prédios da rua trouxeram o breu<br>Mas impassível, famosa e vazia<br>La sempre se via a tal moradia.</p>
+<p>Nem o mais pobre dos operários,<br>Ou mesmo o mais rico dos empresários<br>Aquele endereço não pôde comprar,<br>Pois, seu valor ninguém pôde estimar.</p>
+<p>O presidente e a primeira dama,<br>Querendo lucrar com da casa a fama.<br>Tentaram nela fazer moradia.<br>Mas a lei da casa não lhes permitia.</p>
+<p>Tentaram então derrubar o casão,<br>E estes esforços foram em vão,<br>Mesmo à face de grande explosão<br>O teto da casa não vinha ao chão.</p>
+<p>…</p>
+<p>A história que contam é que na construção,<br>Á casa foi dada tanta atenção.<br>Que nem o empreiteiro ou o arquiteto<br>Conseguiram o projeto entender por completo</p>
+<p>Engenheiros buscaram na casa perfeita.<br>O material que tal obra era feita,<br>Investigaram por muito a morada<br>E de especial encontraram, “nada”.</p>
+<p>…</p>
+<p>A casa hoje é muito conhecida<br>Musico e poeta fizeram cantiga<br>E todos conhecem aquela balada<br>Da casa perfeita e inabitada</p>
+<p>Mesmo estando muito bem escondida,<br>A casa mais bela é jamais esquecida,<br>Pois toda criança já foi abrigada</p>
+<p>No número zero, na casa engraçada…</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="oração-proteção"><a class="header" href="#oração-proteção">Oração: Proteção</a></h1>
+<p>Ó Santo guerreiro, paladino invencível na fé.<br>Vós que trazeis em sua face, impassível esperança e confiança.<br>Estendei sobre mim vosso escudo.<br>Empresta-me suas poderosas armas denfenda-me com vossa força e grandeza.<br>Para que meus inimigos tendo pés, não me alcancem.<br>Tendo mãos não me peguem, e mesmo tendo olhos, não me vejam.</p>
+<p>Para que facas e lanças se quebrem sem meu corpo tocar.<br>Cordas e correntes arrebentem, sem meu corpo amarrar.<br>E nem mesmo pensamento ou maledição possam me fazer mal.</p>
+<p>Glorioso guerreiro, abençoa-me, abra meus caminhos.</p>
+<p>Ajudai-me a vencer todo o desanimo, dai-me coragem e esperança, fortalecei minha fé, auxilia-me em minha luta.</p>
+<p>Eu carregarei teu estandarte e andarei vestido com suas cores.<br>As garras e o fogo do inimigo se apequenam ante a tua presença em mim.<br>Suas asas falham e os dentes quebram sem tocar minha pele.</p>
+<ul>
+<li>Inspirado na oração à São Jorge</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="insônia-poética---o-primeiro-notívago"><a class="header" href="#insônia-poética---o-primeiro-notívago">Insônia Poética - O Primeiro Notívago</a></h1>
+<p>Notívagos existem.<br>Por que, para o primeiro ser humano ver o sol nascer,<br>Alguem teve que não adormecer, e esperar.<br>Sustentando a noite em claro,
+Esperando o que aconteceria,<br>Pra então, só nesse dia,<br>Testemunhar e espalhar o boato…<br>Do espetaculo! Que a natureza presenteia aos portadores de olheiras pela manhã.<br>Todas as manhãs…</p>
+<p>O primeiro dos passarinhos a cantar, a luz do sol colorindo o infinito e pintando de azul a escuridão…<br>O céu azul nasce primeiro aos olhos vermelhos</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-15---haicai-do-aterro"><a class="header" href="#575-haicais-15---haicai-do-aterro">575 Haicais 15 - Haicai do Aterro</a></h1>
+<p>Enterrar erros<br>Só constrói aterros<br>Cá em desterro</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-14---haicai-inaugural"><a class="header" href="#575-haicais-14---haicai-inaugural">575 Haicais 14 - Haicai Inaugural</a></h1>
+<p>Olho-Navalha<br>Fita o laço<br>Inaugura o verso</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="primeiros-haicais"><a class="header" href="#primeiros-haicais">Primeiros Haicais</a></h1>
+<p>Madrugada quente<br>O livro rouba meu sono<br>Sonho acordado</p>
+<p>Se tu aprender<br>A nadar contra a corrente<br>Nada teus pés prende</p>
+<p>A limitação<br>Inquieta minha mente<br>Cria atividade</p>
+<p>Partidas e encontros<br>Já não existem chegadas<br>Apenas pontos certos</p>
+<p>Viver pro futuro<br>Faz findar o passado<br>Também o contrário</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poemas-palíndromo-ser-e-viver-reviveres"><a class="header" href="#poemas-palíndromo-ser-e-viver-reviveres">Poemas palíndromo: Ser, e viver reviveres</a></h1>
+<p>Ser, e viver reviveres<br>A lá! Represo o ser<br>Pera lá…<br>Ser, e viver Reviveres</p>
+<ul>
+<li>Poemas palíndromos, Nuvem</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-13---haicai-do-morro"><a class="header" href="#575-haicais-13---haicai-do-morro">575 Haicais 13 - Haicai do Morro</a></h1>
+<p>Vivo Sozinho<br>Morro solitário<br>Subi contigo</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-12---haicai-fiado"><a class="header" href="#575-haicais-12---haicai-fiado">575 Haicais 12 - Haicai Fiado</a></h1>
+<p>Fio de afeto à vista<br>É fio que se fia hoje<br>fiado só amanhã</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-11---haicai-doído"><a class="header" href="#575-haicais-11---haicai-doído">575 Haicais 11 - Haicai Doído</a></h1>
+<p>O erro corre<br>Ódio Dói Rio Doído<br>Erro corre-o</p>
+<p>*Haicai Palíndromo</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="samba-de-fé"><a class="header" href="#samba-de-fé">Samba de fé</a></h1>
+<p>Escrevo a ti, a ti mesmo que lê<br>Pares de sonhar e passeis a fazer<br>Escrevo a vós parada pensando<br>Pareis o pensar e comece o amando.<br>Escrevo à vós e escrevo à mim</p>
+<p>Aos alquebrados de longos suspiros<br>Aos corações já sem fé e quebrados<br>Pra que essas palavras inspire-os:<br>Vinde pra vida! vinde pro sol!<br>Sejas você da enseada o farol<br>Traga sua luz, sua tocha, sua vela<br>Nessa muralha abriremos janela<br>Sejamos então o riso primeiro<br>Da gargalhada que quebra o roteiro<br>Junte-se a nós nesse samba de fé<br>Com nossas bobiças ficamos em pé</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-10---haicai-para-viagem"><a class="header" href="#575-haicais-10---haicai-para-viagem">575 Haicais 10 - Haicai para viagem</a></h1>
+<p>Partidas e encontros<br>Já não existem chegadas<br>Apenas pontos certos</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-9---haicai-sobre-haicais"><a class="header" href="#575-haicais-9---haicai-sobre-haicais">575 Haicais 9 - Haicai sobre Haicais</a></h1>
+<p>A limitação<br>Inquieta minha mente<br>Cria atividade</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-8---haicai-de-aprendizado"><a class="header" href="#575-haicais-8---haicai-de-aprendizado">575 Haicais 8 - Haicai de Aprendizado</a></h1>
+<p>Se tu aprender<br>A nadar contra a corrente<br>Nada teus pés prende</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-7---haicai-de-sonho"><a class="header" href="#575-haicais-7---haicai-de-sonho">575 Haicais 7 - Haicai de Sonho</a></h1>
+<p>Madrugada quente<br>O livro rouba meu sono<br>Sonho acordado</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-6---haicai-de-força"><a class="header" href="#575-haicais-6---haicai-de-força">575 Haicais 6 - Haicai de Força</a></h1>
+<p>Frondosa copa<br>Seiva adocicada<br>Raízes fortes</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-5---haicai-do-grito"><a class="header" href="#575-haicais-5---haicai-do-grito">575 Haicais 5 - Haicai do Grito</a></h1>
+<p>Sempre é muda<br>A árvore no vaso<br>Até que grite</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-4---haicai-de-liberdade"><a class="header" href="#575-haicais-4---haicai-de-liberdade">575 Haicais 4 - Haicai de Liberdade</a></h1>
+<p>Em vaso murcha,<br>Livre em solo fértil,<br>A muda muda</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-3---haicai-do-compromisso"><a class="header" href="#575-haicais-3---haicai-do-compromisso">575 Haicais 3 - Haicai do compromisso</a></h1>
+<p>Liberdade é<br>Permitir-se amarrar<br>Sem temer o nó</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-2---haicai-de-alma"><a class="header" href="#575-haicais-2---haicai-de-alma">575 Haicais 2 - Haicai de Alma</a></h1>
+<p>Jaz a poesia<br>Ritmo e harmonia<br>Jazz à poesia</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="575-haicais-1---haicai-de-ano-novo"><a class="header" href="#575-haicais-1---haicai-de-ano-novo">575 Haicais 1 - Haicai de Ano novo</a></h1>
+<p>Explosão no peito<br>Aquele brilho no olhar<br>Os Fogos nos céus</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poesia---me-ser-e-tecer"><a class="header" href="#poesia---me-ser-e-tecer">Poesia - Me ser e tecer</a></h1>
+<p>Tecerei,</p>
+<p>Eu decidi não desistir,<br>Viverei pela causa que me toca.<br>Amor sem par, que se espalha como rede.</p>
+<p>Tecerei minha casa com fios de Amor,<br>Sem modelo, seguindo o sentimento da corda,<br>Criando, junto, meu próprio tecido.</p>
+<p>Eu fiarei, e vocês fiarão comigo.<br>Eu me serei, e ao te ser, teceremos.<br>Costurarei para nós uma rede,<br>E dela faremos cabana,<br>Que nos resguarde do frio,<br>Que nos acolha da chuva.</p>
+<p>Coloriremos nossa tapeçaria com os fios de amores,<br>Entrelaçando assim da nossa existência as cores,<br>Teremos rede que nos divirta,<br>Para nos embalar no balanço da vida.<br>Rede que teremos orgulho em fiar.</p>
+<p>No fundo, busco família,<br>Família leve e parceira,<br>Que compartilha sonhos e lutas,<br>Carrega junto as dores do ser,<br>Que desfruta junto afeto e vitórias.</p>
+<p>Será a festa a cada conquista,<br>Será o descanso nos dias pesados,<br>Será a vila que cria as crianças.<br>A proteção pra trapezista poder voar.</p>
+<p>Bora viver.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poesias---floresça"><a class="header" href="#poesias---floresça">Poesias - Floresça</a></h1>
+<p>Desejo que você floresça<br>Desejo que você espalhe seus galhos e ramos em direção ao horizonte.<br>Desejo que o sol nutra suas folhas e que a vida nutra sua alma.<br>Desejo que você sinta o embalo quando o vento suave soprar sobre você, para lembrar-te que a vida é movimento.<br>Desejo que você partilhe seus figos suculentos, e também adube seu solo com os outros.<br>Desejo que nuvens possam te trazer sombra e garoa para encher seus aquíferos.<br>Desejo que o solo que sustenta suas raízes te dê firmeza, mas que nunca te impeça de correr.<br>Desejo que nenhum vaso nunca te conforme, que você nunca seja muda de ninguém, que você seja arvore livre em terreno fértil.<br>Seja a ti.<br>Desejo que você possa ser sombra de alguém mas que você sempre recarregue seu sol.<br>Desejo que você floresça em toda primavera, mas também no verão, outono e no inverno ao friozinho do vento suli.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poemas-roubados-tacituras"><a class="header" href="#poemas-roubados-tacituras">Poemas Roubados: Tacituras</a></h1>
+<p>Desviados da alegria<br>Em linha reta seguimos<br>Na pobre linha de produção</p>
+<p>Dos cacos e pedaços<br>À autenticidade verdadeira<br>Libertará nossos mosaicos<br>Da porcelanada esteira</p>
+<p>Tacitamente acordamos<br>De tacitamente nos despertar<br>Acordo tácito de silêncio<br>Acordamos tórridos a falar.</p>
+<p>Para se partilhar há de se dividir<br>Azulejo ao chão então!<br>Mosaico de Felicidades.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poemas-palíndromo-à-diva"><a class="header" href="#poemas-palíndromo-à-diva">Poemas Palíndromo: À diva</a></h1>
+<p>À diva:</p>
+<p>Ame,<br>O poema, a rota, o ator,<br>A ame, ó poema, a vida.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="haicais-do-arvoredo"><a class="header" href="#haicais-do-arvoredo">Haicais do Arvoredo</a></h1>
+<p>Em vaso murcha,<br>Livre em solo fértil,<br>A muda muda</p>
+<p>Sempre é muda<br>A árvore no vaso<br>Até que grite</p>
+<p>Frondosa copa<br>Seiva adocicada<br>Raízes fortes</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="poemas-roubados-tenho-roubado-versos"><a class="header" href="#poemas-roubados-tenho-roubado-versos">Poemas Roubados: Tenho roubado versos</a></h1>
+<p>Tenho roubado versos<br>É o que tenho feito<br>Raramente os credito,<br>embora dessa vez sim<br>preciso sentir a arte com as mãos<br>sentir seu corte entre meus dedos<br>Arte é feita para tocar é o que sinto<br>então: eu fui feito para senti-la<br>Em geral apenas os copio, no caderno, entre as matérias e os desenhos (estes não publíco nunca)<br>Ou os edito, formulando novas rimas e novos ritmos.<br>Tenho recolhido trechos<br>Tenho observado longamente seus formatos<br>Sentindo que o interpretar é irresistível,   sentindo como é prazeroso coletar.</p>
+<p>Tenho roubado trechos de jornal,<br>Para que não os esqueça,<br>como minha mãe me ensinou<br>Como se fosse possível salvar os recortes(Mesmo os recortados de nós mesmos)<br>Tenho andado a tentar não me repetir e não repetir os outros<br>Enquanto esgoto as resmas das folhas da vida<br>Tenho as rabiscado com minhas próprias mãos<br>Golpeando à caneta<br>E tenho passado as noites sentado à mesa de madeira<br>Estudando a troca de letra</p>
+<p>Tenho mastigado os textos<br>Procurando separar na boca<br>A leitura do autor, à autoria do leitor<br>Percebendo na oraçãoQue o sentido é variado<br>O que na escrita era um na leitura vive múltiplo<br>Tenho roubado versosPara isso deram-me boca<br>Tenho também re-encontrado rimas que não escolhi<br>Mas encontro-as num ritmo súbito no canto do caderno de manhã<br>Tenho sido descuidado, com os olhos no futuro<br>Deixando que os delitos apareçam<br>Eu Tenho roubado versos<br>É o que tenho feito</p>
+<p>Versos roubados de: Tenho quebrado copos de Ana Martins Marques</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="creditos"><a class="header" href="#creditos">Creditos</a></h1>
+<p>FavIcon: Notes icons created by Freepik - Flaticon</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-c2a407aa.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+
+    </div>
+    </body>
+</html>
