@@ -3,9 +3,32 @@ set -e
 
 echo "🔧 Instalando pré-requisitos para o projeto mdBook..."
 
-# 1. Atualiza sistema e instala pacotes base
-sudo apt update
-sudo apt install -y git curl build-essential
+# Detecta distro e define gerenciador de pacotes
+if [ -f /etc/os-release ]; then
+    . /etc/os-release
+    DISTRO=$ID
+else
+    echo "⚠️ Não foi possível detectar a distribuição Linux."
+    exit 1
+fi
+
+install_packages() {
+    case "$DISTRO" in
+        ubuntu|debian)
+            sudo apt update
+            sudo apt install -y git curl build-essential
+            ;;
+        fedora)
+            sudo dnf install -y git curl @development-tools
+            ;;
+        *)
+            echo "⚠️ Distribuição não suportada: $DISTRO"
+            exit 1
+            ;;
+    esac
+}
+
+install_packages
 
 # 2. Instala Rust (se ausente)
 if ! command -v rustc &> /dev/null; then
@@ -32,7 +55,7 @@ if ! grep -q 'export PATH="$HOME/.cargo/bin:$PATH"' ~/.bashrc; then
     echo "➕ PATH atualizado no ~/.bashrc"
 fi
 
-# 5. Cria script update-summary.sh (gerador de SUMMARY.md plano)
+# 5. Cria script update-summary.sh
 cat > update-summary.sh << 'EOF'
 #!/bin/bash
 # Gera src/SUMMARY.md no formato plano (sem aninhamento)
@@ -96,20 +119,18 @@ EOF
 chmod +x publish.sh
 echo "✅ Script publish.sh criado."
 
-# 7. Configura hooks do Git (se dentro de um repositório)
+# 7. Configura hooks do Git
 if [ -d ".git" ]; then
     mkdir -p .git/hooks
 
-    # pre-commit: atualiza SUMMARY.md e adiciona ao commit
     cat > .git/hooks/pre-commit << 'EOF'
 #!/bin/bash
 ./update-summary.sh
 git add src/SUMMARY.md
 EOF
     chmod +x .git/hooks/pre-commit
-    echo "✅ Hook pre-commit instalado (atualiza SUMMARY.md antes de cada commit)."
+    echo "✅ Hook pre-commit instalado."
 
-    # post-commit: (opcional) publica automaticamente
     read -p "Deseja instalar o hook post-commit para publicar automaticamente após cada commit? (s/N) " -n 1 -r
     echo
     if [[ $REPLY =~ ^[Ss]$ ]]; then
@@ -118,19 +139,15 @@ EOF
 ./publish.sh
 EOF
         chmod +x .git/hooks/post-commit
-        echo "✅ Hook post-commit instalado (publica automaticamente)."
+        echo "✅ Hook post-commit instalado."
     else
         echo "ℹ️ Você pode executar ./publish.sh manualmente quando quiser publicar."
     fi
 else
     echo "⚠️ Diretório .git não encontrado. Hooks não instalados."
-    echo "   Execute 'git init' e depois rode este script novamente para configurar os hooks."
 fi
 
 echo "🎉 Instalação concluída!"
 echo "Comandos disponíveis:"
-echo "  ./update-summary.sh   - atualiza o SUMÁRIO do blog (apenas links planos)"
+echo "  ./update-summary.sh   - atualiza o SUMÁRIO do blog"
 echo "  ./publish.sh          - gera o site e publica no GitHub Pages"
-echo ""
-echo "Se instalou o hook pre-commit, o sumário será atualizado automaticamente a cada commit."
-echo "Se instalou o post-commit, o site será publicado automaticamente após cada commit."
