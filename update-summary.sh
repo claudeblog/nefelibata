@@ -29,6 +29,7 @@ for file in src/*.md; do
     files+=("$file")
 done
 
+# Função para extrair data do nome do arquivo
 extract_date() {
     local filename=$(basename "$1")
     if [[ "$filename" =~ ^([0-9]{4}-[0-9]{2}-[0-9]{2})-(.*)$ ]]; then
@@ -38,23 +39,22 @@ extract_date() {
     fi
 }
 
+# Ordena os arquivos por data decrescente
 IFS=$'\n' sorted_files=($(for f in "${files[@]}"; do
     echo "$(extract_date "$f") $f"
 done | sort -r | awk '{print $2}'))
 
+# Adiciona os arquivos ao SUMMARY.md sem mostrar a data
 for file in "${sorted_files[@]}"; do
     basename=$(basename "$file" .md)
     if [[ "$basename" =~ ^([0-9]{4}-[0-9]{2}-[0-9]{2})-(.*)$ ]]; then
-        date="${BASH_REMATCH[1]}"
         title_part="${BASH_REMATCH[2]}"
     else
-        date="0000-00-00"
         title_part="$basename"
     fi
     title=$(echo "$title_part" | sed 's/_/ /g; s/-/ /g; s/  */ /g')
-    date_formatted=$(echo "$date" | sed 's/-/\//g')
     rel_path=$(echo "$file" | sed 's|src/||')
-    echo "- [$title ($date_formatted)]($rel_path)" >> "$TMP_SUMMARY"
+    echo "- [$title]($rel_path)" >> "$TMP_SUMMARY"
 done
 
 mv "$TMP_SUMMARY" "$SUMMARY_FILE"
