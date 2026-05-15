@@ -4,8 +4,7 @@
       "name": "Default",
       "files": [
         "install.sh",
-        ".vscode/changelists.json",
-        "src/Capa.md"
+        ".vscode/changelists.json"
       ]
     }
   ],

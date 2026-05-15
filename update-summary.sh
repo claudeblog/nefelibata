@@ -7,7 +7,7 @@ cat > "$TMP_SUMMARY" << 'HEAD'
 
 HEAD
 
-# 1 Adiciona Sobre.md como primeira página
+# 1 Adiciona Capa.md como primeira página
 if [ -f "src/Capa.md" ]; then
     echo "- [Capa](Capa.md)" >> "$TMP_SUMMARY"
 fi
@@ -25,7 +25,7 @@ for file in src/*.md; do
     [ -f "$file" ] || continue
     basename=$(basename "$file")
     [[ "$basename" == "README.md" || "$basename" == "SUMMARY.md" ]] && continue
-    [[ "${basename,,}" == "sobre.md" ]] && continue
+    [[ "${basename,,}" == "Sobre.md" || "${basename,,}" == "Capa.md" ]] && continue
     if [[ "$basename" =~ \  ]]; then
         echo "⚠️ Ignorando arquivo com espaço: $basename"
         continue
