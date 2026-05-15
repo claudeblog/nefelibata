@@ -3,8 +3,9 @@
     {
       "name": "Default",
       "files": [
-        "install.sh",
-        ".vscode/changelists.json"
+        "src/blankbook.png",
+        ".vscode/changelists.json",
+        "src/Capa.md"
       ]
     }
   ],
