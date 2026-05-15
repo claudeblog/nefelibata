@@ -67,7 +67,7 @@ SUMMARY_FILE="src/SUMMARY.md"
 TMP_SUMMARY=$(mktemp)
 
 cat > "$TMP_SUMMARY" << 'HEAD'
-# Summary
+# Sumário
 
 HEAD
 
