@@ -9,7 +9,7 @@ HEAD
 
 # 1️⃣ Adiciona Sobre.md como primeira página
 if [ -f "src/Sobre.md" ]; then
-    echo "- [Sobre](sobre.md)" >> "$TMP_SUMMARY"
+    echo "- [Sobre](Sobre.md)" >> "$TMP_SUMMARY"
 fi
 
 # 2️⃣ Adiciona SUMÁRIO.md como segunda página

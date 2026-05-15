@@ -3,7 +3,8 @@
     {
       "name": "Default",
       "files": [
-        "install.sh"
+        "install.sh",
+        "src/sobre.md"
       ]
     }
   ],
