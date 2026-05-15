@@ -70,7 +70,7 @@ cat > "$TMP_SUMMARY" << 'HEAD'
 HEAD
 
 # 1️⃣ Adiciona Sobre.md como primeira página
-if [ -f "src/sobre.md" ]; then
+if [ -f "src/Sobre.md" ]; then
     echo "- [Sobre](sobre.md)" >> "$TMP_SUMMARY"
 fi
 
