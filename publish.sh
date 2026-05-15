@@ -6,7 +6,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 echo "🔄 Atualizando SUMMARY.md..."
 ./update-summary.sh
 
-# Comita todas alterações
+# Comita todas alterações no branch principal e faz push
 if [ -n "$(git status --porcelain)" ]; then
     echo "📝 Adicionando todas as alterações..."
     git add .
@@ -15,6 +15,9 @@ if [ -n "$(git status --porcelain)" ]; then
     git commit -m "Atualização automática em $commit_date
 Arquivos alterados:
 $changed_files"
+
+    echo "📤 Enviando commit para o repositório remoto..."
+    git push origin HEAD
 else
     echo "ℹ️ Nenhuma alteração para commitar."
 fi

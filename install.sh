@@ -120,7 +120,7 @@ EOF
 chmod +x update-summary.sh
 echo "✅ Script update-summary.sh criado."
 
-# Cria publish.sh unificado
+# Cria publish.sh unificado com commit e push
 cat > publish.sh << 'EOF'
 #!/bin/bash
 set -e
@@ -130,7 +130,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 echo "🔄 Atualizando SUMMARY.md..."
 ./update-summary.sh
 
-# Comita todas alterações
+# Comita todas alterações no branch principal e faz push
 if [ -n "$(git status --porcelain)" ]; then
     echo "📝 Adicionando todas as alterações..."
     git add .
@@ -139,6 +139,9 @@ if [ -n "$(git status --porcelain)" ]; then
     git commit -m "Atualização automática em $commit_date
 Arquivos alterados:
 $changed_files"
+
+    echo "📤 Enviando commit para o repositório remoto..."
+    git push origin HEAD
 else
     echo "ℹ️ Nenhuma alteração para commitar."
 fi
@@ -165,4 +168,4 @@ chmod +x publish.sh
 echo "✅ Script publish.sh criado."
 
 echo "🎉 Instalação concluída!"
-echo "Use ./publish.sh para atualizar SUMMARY.md, commitar alterações e publicar o site."
+echo "Use ./publish.sh para atualizar SUMMARY.md, commitar alterações, enviar para o repositório e publicar o site."
