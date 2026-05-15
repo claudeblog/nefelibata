@@ -3,9 +3,9 @@
     {
       "name": "Default",
       "files": [
-        "src/blankbook.png",
+        "src/Capa.md",
         ".vscode/changelists.json",
-        "src/Capa.md"
+        "src/blankbook.png"
       ]
     }
   ],
