@@ -3,7 +3,7 @@ set -e
 
 echo "🔧 Instalando pré-requisitos para o projeto mdBook..."
 
-# Detecta distro e define gerenciador de pacotes
+# Detecta distro
 if [ -f /etc/os-release ]; then
     . /etc/os-release
     DISTRO=$ID
@@ -12,6 +12,7 @@ else
     exit 1
 fi
 
+# Função para instalar pacotes
 install_packages() {
     case "$DISTRO" in
         ubuntu|debian)
@@ -30,18 +31,21 @@ install_packages() {
 
 install_packages
 
-# 2. Instala Rust (se ausente)
+# Instala Rust se necessário
 if ! command -v rustc &> /dev/null; then
     echo "🦀 Instalando Rust..."
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-    source "$HOME/.cargo/env"
-else
-    echo "✅ Rust já instalado."
 fi
 
+# Carrega Rust/Cargo no shell atual
+if [ -f "$HOME/.cargo/env" ]; then
+    source "$HOME/.cargo/env"
+fi
+
+# Garante que ~/.cargo/bin está no PATH
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# 3. Instala mdBook via Cargo
+# Instala mdBook
 if ! command -v mdbook &> /dev/null; then
     echo "📚 Instalando mdBook..."
     cargo install mdbook
@@ -49,16 +53,16 @@ else
     echo "✅ mdBook já instalado."
 fi
 
-# 4. Adiciona ~/.cargo/bin ao PATH permanentemente
+# Adiciona ~/.cargo/bin ao PATH permanentemente
 if ! grep -q 'export PATH="$HOME/.cargo/bin:$PATH"' ~/.bashrc; then
     echo 'export PATH="$HOME/.cargo/bin:$PATH"' >> ~/.bashrc
     echo "➕ PATH atualizado no ~/.bashrc"
 fi
 
-# 5. Cria script update-summary.sh
+# Cria update-summary.sh no formato mdBook + ordenação por data
 cat > update-summary.sh << 'EOF'
 #!/bin/bash
-# Gera src/SUMMARY.md no formato plano (sem aninhamento)
+# Gera src/SUMMARY.md compatível com mdBook (ordenado do mais novo para o mais antigo)
 
 SUMMARY_FILE="src/SUMMARY.md"
 TMP_SUMMARY=$(mktemp)
@@ -68,6 +72,8 @@ cat > "$TMP_SUMMARY" << 'HEAD'
 
 HEAD
 
+# Coleta os arquivos válidos
+files=()
 for file in src/*.md; do
     [ -f "$file" ] || continue
     basename=$(basename "$file")
@@ -77,26 +83,51 @@ for file in src/*.md; do
         echo "⚠️ Ignorando arquivo com espaço: $basename"
         continue
     fi
-    title=$(basename "$file" .md | tr '-' ' ')
-    title=$(echo "$title" | sed 's/  */ /g')
+    files+=("$file")
+done
+
+# Função para extrair a data do início do nome do arquivo (YYYY-MM-DD)
+extract_date() {
+    local filename=$(basename "$1")
+    if [[ "$filename" =~ ^([0-9]{4}-[0-9]{2}-[0-9]{2}) ]]; then
+        echo "${BASH_REMATCH[1]}"
+    else
+        echo "0000-00-00"  # fallback para arquivos sem data
+    fi
+}
+
+# Ordena arquivos do mais novo para o mais antigo
+IFS=$'\n' sorted_files=($(for f in "${files[@]}"; do
+    echo "$(extract_date "$f") $f"
+done | sort -r | awk '{print $2}'))
+
+# Gera SUMMARY.md
+for file in "${sorted_files[@]}"; do
+    basename=$(basename "$file" .md)
+    # substitui "_" e "-" por espaços, mantendo legibilidade
+    title=$(echo "$basename" | sed 's/_/ /g; s/-/ /g')
     rel_path=$(echo "$file" | sed 's|src/||')
     echo "- [$title]($rel_path)" >> "$TMP_SUMMARY"
 done
 
+# Adiciona sobre.md por último, se existir
 if [ -f "src/sobre.md" ]; then
     echo "- [Sobre](sobre.md)" >> "$TMP_SUMMARY"
 fi
 
 mv "$TMP_SUMMARY" "$SUMMARY_FILE"
-echo "✅ SUMMARY.md atualizado (formato plano)."
+echo "✅ SUMMARY.md atualizado (do mais novo para o mais antigo)."
 EOF
 chmod +x update-summary.sh
 echo "✅ Script update-summary.sh criado."
 
-# 6. Cria script publish.sh
+# Cria publish.sh usando SSH
 cat > publish.sh << 'EOF'
 #!/bin/bash
 set -e
+
+# Garante que mdBook seja encontrado
+export PATH="$HOME/.cargo/bin:$PATH"
 
 echo "📚 Gerando o site com mdBook..."
 mdbook build
@@ -109,7 +140,9 @@ git init
 git checkout -b gh-pages
 git add .
 git commit -m "Deploy do site - $(date '+%Y-%m-%d %H:%M:%S')"
-git remote add origin https://github.com/claudeblog/nefelibata.git
+
+# Usa SSH para push
+git remote add origin git@github.com:claudeblog/nefelibata.git
 git push origin gh-pages --force
 cd -
 rm -rf "$TMP_DIR"
@@ -117,12 +150,13 @@ rm -rf "$TMP_DIR"
 echo "✅ Site publicado em: https://claudeblog.github.io/nefelibata"
 EOF
 chmod +x publish.sh
-echo "✅ Script publish.sh criado."
+echo "✅ Script publish.sh criado (SSH ready)."
 
-# 7. Configura hooks do Git
+# Configura hooks do Git
 if [ -d ".git" ]; then
     mkdir -p .git/hooks
 
+    # pre-commit hook
     cat > .git/hooks/pre-commit << 'EOF'
 #!/bin/bash
 ./update-summary.sh
@@ -131,6 +165,7 @@ EOF
     chmod +x .git/hooks/pre-commit
     echo "✅ Hook pre-commit instalado."
 
+    # post-commit hook (opcional)
     read -p "Deseja instalar o hook post-commit para publicar automaticamente após cada commit? (s/N) " -n 1 -r
     echo
     if [[ $REPLY =~ ^[Ss]$ ]]; then
@@ -150,4 +185,4 @@ fi
 echo "🎉 Instalação concluída!"
 echo "Comandos disponíveis:"
 echo "  ./update-summary.sh   - atualiza o SUMÁRIO do blog"
-echo "  ./publish.sh          - gera o site e publica no GitHub Pages"
+echo "  ./publish.sh          - gera o site e publica no GitHub Pages (SSH)"

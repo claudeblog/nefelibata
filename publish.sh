@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+# Garante que mdBook seja encontrado
+export PATH="$HOME/.cargo/bin:$PATH"
+
 echo "📚 Gerando o site com mdBook..."
 mdbook build
 
@@ -12,7 +15,9 @@ git init
 git checkout -b gh-pages
 git add .
 git commit -m "Deploy do site - $(date '+%Y-%m-%d %H:%M:%S')"
-git remote add origin https://github.com/claudeblog/nefelibata.git
+
+# Usa SSH para push
+git remote add origin git@github.com:claudeblog/nefelibata.git
 git push origin gh-pages --force
 cd -
 rm -rf "$TMP_DIR"
