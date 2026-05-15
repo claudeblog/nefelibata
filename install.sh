@@ -69,15 +69,19 @@ cat > "$TMP_SUMMARY" << 'HEAD'
 
 HEAD
 
-# 1️⃣ Adiciona Sobre.md como primeira página
+# 1 Adiciona Sobre.md como primeira página
+if [ -f "src/Capa.md" ]; then
+    echo "- [Capa](Capa.md)" >> "$TMP_SUMMARY"
+fi
+# 2 Adiciona Sobre.md como primeira página
 if [ -f "src/Sobre.md" ]; then
     echo "- [Sobre](Sobre.md)" >> "$TMP_SUMMARY"
 fi
 
-# 2️⃣ Adiciona SUMÁRIO.md como segunda página
+# 3 Adiciona SUMÁRIO.md como segunda página
 echo "- [Sumário](SUMMARY.md)" >> "$TMP_SUMMARY"
 
-# 3️⃣ Lista todos os outros arquivos .md na pasta src
+# 4 Lista todos os outros arquivos .md na pasta src
 files=()
 for file in src/*.md; do
     [ -f "$file" ] || continue

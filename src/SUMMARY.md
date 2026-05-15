@@ -1,5 +1,6 @@
 # Summary
 
+- [Capa](Capa.md)
 - [Sobre](Sobre.md)
 - [Sumário](SUMMARY.md)
 - [575 Haicais 66 Haicai de gole](2026-05-08-575_Haicais_66_-_Haicai_de_gole.md)
@@ -273,3 +274,4 @@
 - [Haicais do Arvoredo](2024-10-06-Haicais_do_Arvoredo.md)
 - [Poemas Roubados Tenho roubado versos](2024-10-01-Poemas_Roubados__Tenho_roubado_versos.md)
 - [Creditos](2024-01-01-Creditos.md)
+- [Capa](Capa.md)
