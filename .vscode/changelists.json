@@ -3,7 +3,8 @@
     {
       "name": "Default",
       "files": [
-        "src/SUMMARY.md"
+        "src/SUMMARY.md",
+        "install.sh"
       ]
     }
   ],

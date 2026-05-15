@@ -7,6 +7,15 @@ cat > "$TMP_SUMMARY" << 'HEAD'
 
 HEAD
 
+# 1️⃣ Adiciona Sobre.md como primeira página
+if [ -f "src/sobre.md" ]; then
+    echo "- [Sobre](sobre.md)" >> "$TMP_SUMMARY"
+fi
+
+# 2️⃣ Adiciona SUMÁRIO.md como segunda página
+echo "- [Sumário](SUMMARY.md)" >> "$TMP_SUMMARY"
+
+# 3️⃣ Lista todos os outros arquivos .md na pasta src
 files=()
 for file in src/*.md; do
     [ -f "$file" ] || continue
@@ -47,10 +56,6 @@ for file in "${sorted_files[@]}"; do
     rel_path=$(echo "$file" | sed 's|src/||')
     echo "- [$title ($date_formatted)]($rel_path)" >> "$TMP_SUMMARY"
 done
-
-if [ -f "src/sobre.md" ]; then
-    echo "- [Sobre](sobre.md)" >> "$TMP_SUMMARY"
-fi
 
 mv "$TMP_SUMMARY" "$SUMMARY_FILE"
 echo "✅ SUMMARY.md atualizado."

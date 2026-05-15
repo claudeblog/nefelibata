@@ -1,5 +1,6 @@
 # Summary
 
+- [Sumário](SUMMARY.md)
 - [575 Haicais 66 Haicai de gole (2026/05/08)](2026-05-08-575_Haicais_66_-_Haicai_de_gole.md)
 - [Textículos Camisetas pretas (2026/05/02)](2026-05-02-Textículos__Camisetas_pretas.md)
 - [575 Haicais 57 Haicai Malescrito (2026/04/27)](2026-04-27-575_Haicais_57_-_Haicai_Malescrito.md)
