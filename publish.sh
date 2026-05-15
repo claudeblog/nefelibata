@@ -6,7 +6,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 echo "🔄 Atualizando SUMMARY.md..."
 ./update-summary.sh
 
-# Comita todas alterações no branch principal e faz push
 if [ -n "$(git status --porcelain)" ]; then
     echo "📝 Adicionando todas as alterações..."
     git add .
