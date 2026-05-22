@@ -3,6 +3,9 @@ set -e
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# Domain for GitHub Pages custom domain
+DOMAIN="ameopoema.com.br"
+
 echo "🔄 Atualizando SUMMARY.md..."
 ./update-summary.sh
 
@@ -24,6 +27,15 @@ fi
 echo "📚 Construindo o site com mdBook..."
 mdbook build
 
+# --- CRIAR E GARANTIR O ARQUIVO CNAME ---
+echo "🌐 Configurando domínio personalizado: $DOMAIN"
+echo "$DOMAIN" > book/CNAME
+# Também cria na raiz do repositório para referência (opcional)
+if [ ! -f "CNAME" ]; then
+    echo "$DOMAIN" > CNAME
+    echo "   (Arquivo CNAME criado na raiz do repositório)"
+fi
+
 echo "🚀 Publicando para gh-pages..."
 TMP_DIR=$(mktemp -d -t gh-pages-deploy-XXXXXX)
 cp -r book/* "$TMP_DIR/"
@@ -37,4 +49,4 @@ git push origin gh-pages --force
 cd -
 rm -rf "$TMP_DIR"
 
-echo "✅ Publicação concluída!"
+echo "✅ Publicação concluída! O domínio $DOMAIN foi persistido."
