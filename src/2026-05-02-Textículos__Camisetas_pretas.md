@@ -1,7 +1,8 @@
 # Textículos: Camisetas pretas  
 
 O conforto das camisetas pretas,  
-Não desbotam, Não amassam,  
+Não desbotam,  
+Não amassam,  
 Secam no corpo e não pegam odor.  
 
 São macias, no frio esquentam  
@@ -34,8 +35,11 @@ Não fosse eu pai de um serzinho pequeno, com dote artístico e rosto travesso.
 Quando com ele visto cores, sorrisos,  
 visto canetinhas, cola glitter, pincel,  
 guache, lantejoulas e "muitos brilhos".....  
-Rosa, Amarelo, azul cor de céu.  
+Rosa,  
+Amarelo, azul cor de céu.  
 
-Por que você diz: "Sem cores é muito chato, o mundo brilhante fica mais bonito. É o que eu acredito!" E o papai também.  
+Por que você diz: "  
+Sem cores é muito chato, o mundo brilhante fica mais bonito. É o que eu acredito!"  
+E o papai também.  
 
 Bora viver.  

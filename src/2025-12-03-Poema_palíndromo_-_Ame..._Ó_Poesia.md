@@ -5,7 +5,9 @@ Até o poeta ama
 Até o poeta rama  
 Ame! Ó poesia  
 Ai se o poeta amar  
-Ame ó poeta, ama!Até o poema rama...Até.... Ó poesia  
+Ame ó poeta, ama!  
+Até o poema rama...  
+Até.... Ó poesia  
 Aí, se o poema amar  
 Até o poeta ama  
 Até o poeta rama  

@@ -2,4 +2,5 @@
 
 Peiture et brisure  
 Un verse inverse effacer  
-Viens au Clair obscur  
+Viens au  
+Clair obscur  

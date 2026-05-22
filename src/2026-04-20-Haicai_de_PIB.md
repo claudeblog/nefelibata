@@ -2,6 +2,10 @@
 
 Gente tem fome  
 
-De arroz, Feijão e pão  
+De arroz,  
+Feijão e pão  
 
-Não de PIB não  
+Não de  
+P  
+I  
+B não  

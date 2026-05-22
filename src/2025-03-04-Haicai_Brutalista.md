@@ -2,4 +2,5 @@
 
 Minimalismo  
 Materialidade  
-Brutal Concreto  
+Brutal  
+Concreto  

@@ -1,7 +1,8 @@
 # Poesias - O mímico  
 
 Dispersas, expressões todas têm o mesmo valor:  
-"Tu és incrível", "compre pão", "pneumoultramicroscopicossilicovulcanoconiótico".  
+"  
+Tu és incrível", "compre pão", "pneumoultramicroscopicossilicovulcanoconiótico".  
 Dispersas, todas as frases contêm o mesmo peso  
 E o mesmo insignificado.  
 
@@ -56,10 +57,14 @@ E o mímico lembra.
 
 Ao ver-lhe com um dizer que eu nunca mais diria,  
 Ao ver-lhe refletir o que o espelho não mostra, (enquanto maqueio minha face)  
-Ao ver-lhe transbordar em berros o que eu contive em soluços... Desespero-me  
+Ao ver-lhe transbordar em berros o que eu contive em soluços...  
+Desespero-me  
 
-O mímico preservou para mim uma visita ao eu de quem tanto fujo.E de quem tanto medo tenho em rever.  
+O mímico preservou para mim uma visita ao eu de quem tanto fujo.  
+E de quem tanto medo tenho em rever.  
 
 
 
-Foto de Ejov Igor  
+Foto de  
+Ejov  
+Igor  

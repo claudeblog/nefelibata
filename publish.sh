@@ -3,72 +3,67 @@ set -e
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# Domínio personalizado do GitHub Pages
 DOMAIN="ameopoema.com.br"
 
 # ------------------------------------------------------------
-# Função 1: Inserir quebra de linha antes de maiúsculas (ignorando cabeçalhos)
+# Função 1: Inserir quebra de linha antes de CADA letra maiúscula
+#           (ignorando cabeçalhos e primeira posição da linha)
 # ------------------------------------------------------------
 fix_capitalization_breaks() {
     echo "🔠 Inserindo quebras de linha antes de letras maiúsculas (ignorando cabeçalhos)..."
-    find . -name "*.md" -not -path "./book/*" -not -path "./.git/*" -not -path "./node_modules/*" | while read -r file; do
-        awk '
-        function is_header(line) {
-            return match(line, /^[[:space:]]*#/)
-        }
-        function split_on_uppercase(line, out_lines, n) {
-            n = 0
-            len = length(line)
-            if (len == 0) {
-                out_lines[++n] = ""
-                return n
+
+    # Verifica se perl está disponível (recomendado)
+    if command -v perl &>/dev/null; then
+        echo "   Usando perl (suporte a Unicode e espaços especiais)"
+        find . -name "*.md" -not -path "./book/*" -not -path "./.git/*" -not -path "./node_modules/*" | while read -r file; do
+            perl -i -pe '
+                # Pula linhas que são cabeçalhos (começam com #)
+                next if /^\s*#/;
+                # Insere newline antes de cada letra maiúscula que não esteja no início da linha
+                s/(?<=.)(?=[A-Z])/\n/g;
+            ' "$file"
+            echo "   ✔ $file"
+        done
+    else
+        # Fallback usando awk (menos robusto, mas tenta)
+        echo "   ⚠️ perl não encontrado, usando awk (pode falhar com espaços especiais)"
+        find . -name "*.md" -not -path "./book/*" -not -path "./.git/*" -not -path "./node_modules/*" | while read -r file; do
+            awk '
+            function is_header(line) {
+                return match(line, /^[[:space:]]*#/)
             }
-            result = ""
-            prev_char = ""
-            for (i = 1; i <= len; i++) {
-                char = substr(line, i, 1)
-                # Se é maiúscula (A-Z) e o caractere anterior é minúscula (a-z)
-                if (char ~ /[A-Z]/ && prev_char ~ /[a-z]/) {
-                    # Finaliza a linha atual e começa nova
-                    if (result != "") {
-                        out_lines[++n] = result
-                        result = ""
+            {
+                if (is_header($0)) {
+                    print $0
+                } else {
+                    # Insere newline antes de cada maiúscula (exceto no início)
+                    line = $0
+                    result = ""
+                    for (i = 1; i <= length(line); i++) {
+                        char = substr(line, i, 1)
+                        if (i > 1 && char ~ /[A-Z]/ && substr(line, i-1, 1) !~ /\n/) {
+                            result = result "\n" char
+                        } else {
+                            result = result char
+                        }
                     }
+                    print result
                 }
-                result = result char
-                prev_char = char
-            }
-            if (result != "" || n == 0) {
-                out_lines[++n] = result
-            }
-            return n
-        }
-        {
-            if (is_header($0)) {
-                # Cabeçalho: mantém como está (sem quebras)
-                print $0
-            } else {
-                # Linha normal: quebra nas maiúsculas
-                n = split_on_uppercase($0, lines)
-                for (i = 1; i <= n; i++) {
-                    print lines[i]
-                }
-            }
-        }' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
-        echo "   ✔ $file"
-    done
-    echo "✅ Quebras de linha por maiúsculas inseridas."
+            }' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
+            echo "   ✔ $file"
+        done
+    fi
+    echo "✅ Quebras de linha antes de maiúsculas inseridas."
 }
 
 # ------------------------------------------------------------
-# Função 2: Garantir que toda linha NÃO vazia termine com exatamente 2 espaços
+# Função 2: Garantir que toda linha NÃO vazia termine com 2 espaços
 # ------------------------------------------------------------
 fix_line_breaks() {
     echo "🔧 Garantindo que todas as linhas não vazias terminem com 2 espaços..."
     find . -name "*.md" -not -path "./book/*" -not -path "./.git/*" -not -path "./node_modules/*" | while read -r file; do
         awk '
         {
-            # Remove qualquer whitespace do final
             gsub(/[[:space:]]+$/, "", $0)
             if (length($0) > 0) {
                 print $0 "  "
@@ -87,10 +82,10 @@ fix_line_breaks() {
 echo "🔄 Atualizando SUMMARY.md..."
 ./update-summary.sh
 
-# 1. Corrigir quebras de linha por maiúsculas (antes de tudo)
+# Corrige quebras antes de maiúsculas (ignora cabeçalhos)
 fix_capitalization_breaks
 
-# 2. Garantir duas espaços no final de cada linha não vazia
+# Corrige dois espaços no final
 fix_line_breaks
 
 if [ -n "$(git status --porcelain)" ]; then
@@ -111,7 +106,7 @@ fi
 echo "📚 Construindo o site com mdBook..."
 mdbook build
 
-# --- CRIAR E GARANTIR O ARQUIVO CNAME ---
+# --- CNAME ---
 echo "🌐 Configurando domínio personalizado: $DOMAIN"
 echo "$DOMAIN" > book/CNAME
 if [ ! -f "CNAME" ]; then

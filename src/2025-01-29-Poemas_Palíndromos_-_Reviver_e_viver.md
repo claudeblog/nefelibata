@@ -5,4 +5,5 @@ Se ver o revés 
 Reviver e viver...  
 Se ver o revés  
 Reviver e viver!  
-*Palindromo  
+*  
+Palindromo  

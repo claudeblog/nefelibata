@@ -12,5 +12,6 @@ Quem dos fracos toma as dores
 
 As crises humanitárias do mundo  
 Tem sua raiz nesse solo.  
-A falta de hombridade no Homem,  
+A falta de hombridade no  
+Homem,  
 Aquela que sobra na mãe solo.  

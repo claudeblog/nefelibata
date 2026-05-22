@@ -6,5 +6,6 @@ Não na garganta
 Desatei meus nós  
 Fiz amarras mais bonitas  
 Criei laços fortes  
-Liberdade éPermitir-se amarrar  
+Liberdade é  
+Permitir-se amarrar  
 Sem temer o nó  

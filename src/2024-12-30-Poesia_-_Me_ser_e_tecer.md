@@ -6,7 +6,8 @@ Eu decidi não desistir,
 Viverei pela causa que me toca.  
 Amor sem par, que se espalha como rede.  
 
-Tecerei minha casa com fios de Amor,  
+Tecerei minha casa com fios de  
+Amor,  
 Sem modelo, seguindo o sentimento da corda,  
 Criando, junto, meu próprio tecido.  
 

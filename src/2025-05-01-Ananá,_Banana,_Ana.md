@@ -1,7 +1,10 @@
 # 575 Haicais 121 - Ananá, Banana, Ana  
 
-Ana, Anita  
+Ana,  
+Anita  
 Lana na banana  
-Latina, Ana  
+Latina,  
+Ana  
 
-*Palíndromo  
+*  
+Palíndromo  

@@ -2,4 +2,5 @@
 
 Explosão no peito  
 Aquele brilho no olhar  
-Os Fogos nos céus  
+Os  
+Fogos nos céus  

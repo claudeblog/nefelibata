@@ -7,7 +7,8 @@ Sustentando a noite em claro,
 Esperando o que aconteceria,  
 Pra então, só nesse dia,  
 Testemunhar e espalhar o boato...  
-Do espetaculo! Que a natureza presenteia aos portadores de olheiras pela manhã.  
+Do espetaculo!  
+Que a natureza presenteia aos portadores de olheiras pela manhã.  
 Todas as manhãs...  
 
 O primeiro dos passarinhos a cantar, a luz do sol colorindo o infinito  

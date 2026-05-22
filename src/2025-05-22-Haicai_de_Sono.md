@@ -1,4 +1,6 @@
 # 575 Haicais 142 - Haicai de Sono  
 
-Reviravolta Deita vira e volta  
-E Adormece  
+Reviravolta   
+Deita vira e volta  
+E  
+Adormece  

@@ -1,6 +1,7 @@
 # Oração: Proteção  
 
-Ó Santo guerreiro, paladino invencível na fé.  
+Ó  
+Santo guerreiro, paladino invencível na fé.  
 Vós que trazeis em sua face, impassível esperança e confiança.  
 Estendei sobre mim vosso escudo.  
 Empresta-me suas poderosas armas denfenda-me com vossa força e grandeza.  
@@ -18,4 +19,7 @@ Ajudai-me a vencer todo o desanimo, dai-me coragem e esperança, fortalecei minh
 Eu carregarei teu estandarte e andarei vestido com suas cores.  
 As garras e o fogo do inimigo se apequenam ante a tua presença em mim.  
 Suas asas falham e os dentes quebram sem tocar minha pele.  
-- Inspirado na oração à São Jorge  
+-  
+Inspirado na oração à  
+São  
+Jorge  

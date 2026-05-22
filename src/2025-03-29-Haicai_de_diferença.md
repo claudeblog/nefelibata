@@ -1,4 +1,5 @@
 # 575 Haicais 89 - Haicai de diferença  
 
-Indiferença Contudo vive em mim  
+Indiferença   
+Contudo vive em mim  
 Em deferência  

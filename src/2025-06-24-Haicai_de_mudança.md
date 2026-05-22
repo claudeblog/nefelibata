@@ -1,4 +1,6 @@
 # 575 Haicais 174 - Haicai de mudança  
 
-Vida mudança Onde Lá ou cá é lar  
+Vida mudança   
+Onde  
+Lá ou cá é lar  
 Bumbum descansa  
