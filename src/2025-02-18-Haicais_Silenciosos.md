@@ -1,4 +1,5 @@
 # Haicais Silenciosos  
 
-Se a SereiaInsiste no silêncio Nada muda  
+Se a Sereia  
+Insiste no silêncio Nada muda  
 Indiferença Também é violência Enterrar é errar  

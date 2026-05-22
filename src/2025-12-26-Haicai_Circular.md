@@ -1,3 +1,5 @@
 # 575 Haicais 360 - Haicai Circular  
 
-Giro a giroNós construímos laçoPasso a passo  
+Giro a giro  
+Nós construímos laço  
+Passo a passo  

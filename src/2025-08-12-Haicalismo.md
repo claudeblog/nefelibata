@@ -1,3 +1,5 @@
 # 575 Haicais 223 - Haicalismo  
 
-O HaicailismoBrevemente contemplaA Vida simples  
+O Haicailismo  
+Brevemente contempla  
+A Vida simples  

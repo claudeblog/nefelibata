@@ -1,3 +1,5 @@
 # 575 Haicais 57 - Hai Cai de Patins  
 
-Gelo na pistaVi o capotamentoLevantou andou  
+Gelo na pista  
+Vi o capotamento  
+Levantou andou  

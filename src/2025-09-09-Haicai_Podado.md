@@ -1,3 +1,5 @@
 # 575 Haicais 252 - Haicai Podado  
 
-De poda à podaBaobá vira bonsaiSemente seca  
+De poda à poda  
+Baobá vira bonsai  
+Semente seca  

@@ -1,3 +1,5 @@
 # 575 Haicais 186 - Haicai de Passagem  
 
-Ela vi passarPasso em sobressaltoVirei passado  
+Ela vi passar  
+Passo em sobressalto  
+Virei passado  

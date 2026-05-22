@@ -1,4 +1,6 @@
 # 575 Haicais 88 - Haicai Colorido  
 
-Li na luz azulRaiar Reviver RaiarLuz azul Anil  
+Li na luz azul  
+Raiar Reviver Raiar  
+Luz azul Anil  
 *Palíndromo  

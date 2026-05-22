@@ -1,4 +1,5 @@
 # 575 Haicais 147 - Haicai de Cristais  
 
-Suaves toquesEm delicadas taças  
+Suaves toques  
+Em delicadas taças  
 A mão desliza  

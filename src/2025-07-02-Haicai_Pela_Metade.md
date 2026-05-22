@@ -1,3 +1,4 @@
 # 575 Haicais 182 - Haicai Pela Metade  
 
-Minha metadeÉ partir e repartirNoutra metade  
+Minha metadeÉ partir e repartir  
+Noutra metade  

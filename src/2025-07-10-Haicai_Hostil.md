@@ -1,3 +1,5 @@
 # 575 Haicais 190 - Haicai Hostil  
 
-Planeta quenteSão taxado por loucoAr comprimido  
+Planeta quente  
+São taxado por louco  
+Ar comprimido  

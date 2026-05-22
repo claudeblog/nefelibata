@@ -1,3 +1,6 @@
 # Poeminha de Transbordo  
 
-Tu me ensinou a comporEntumecidoTu me enseja ao transbordoEm tu me excedo  
+Tu me ensinou a compor  
+Entumecido  
+Tu me enseja ao transbordo  
+Em tu me excedo  

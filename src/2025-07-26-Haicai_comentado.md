@@ -1,3 +1,5 @@
 # 575 Haicais 206 - Haicai comentado  
 
-Semea versosCem haicais e poemasSem comentários  
+Semea versos  
+Cem haicais e poemas  
+Sem comentários  

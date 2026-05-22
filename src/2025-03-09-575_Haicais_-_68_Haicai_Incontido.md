@@ -1,3 +1,5 @@
 # 575 Haicais - 68 Haicai Incontido  
 
-Raiar sentidoSorriso incontidoSonhei contigo  
+Raiar sentido  
+Sorriso incontido  
+Sonhei contigo  

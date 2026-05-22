@@ -1,3 +1,5 @@
 # 575 Haicais 75 - Haicai à Ritalee  
 
-Rita lee na vozRita lee na vitrolaRitos e Ritas  
+Rita lee na voz  
+Rita lee na vitrola  
+Ritos e Ritas  

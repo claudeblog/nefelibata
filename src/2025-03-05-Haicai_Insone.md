@@ -1,3 +1,5 @@
 # 575 Haicais 64 - Haicai Insone  
 
-Insônia CinzaPoética noite friaCalor na mente  
+Insônia Cinza  
+Poética noite fria  
+Calor na mente  

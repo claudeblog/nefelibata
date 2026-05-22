@@ -4,4 +4,6 @@ Metahumano
 
 Memória extendida  
 
-Me3҉̛͡͝crR̷͘͢͠uP!̴̡͘͡ corrompida  
+Me3҉̛͡͝cr  
+R̷͘͢͠u  
+P!̴̡͘͡ corrompida  

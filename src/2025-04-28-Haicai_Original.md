@@ -1,3 +1,5 @@
 # 575 Haicais 118 - Haicai Original  
 
-O OriginalSe OriginalizaAutenticado  
+O Original  
+Se Originaliza  
+Autenticado  

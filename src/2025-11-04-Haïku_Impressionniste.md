@@ -1,3 +1,5 @@
 # 575 Haicais 310 - Haïku Impressionniste  
 
-Peiture et brisureUn verse inverse effacerViens au Clair obscur  
+Peiture et brisure  
+Un verse inverse effacer  
+Viens au Clair obscur  

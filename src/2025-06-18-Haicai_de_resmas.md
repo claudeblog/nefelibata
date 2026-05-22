@@ -1,3 +1,5 @@
 # 575 Haicais 168 - Haicai de resmas  
 
-Papéis pesadosMemórias silentesFolhas molhadas  
+Papéis pesados  
+Memórias silentes  
+Folhas molhadas  

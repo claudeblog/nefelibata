@@ -1,4 +1,5 @@
 # 575 Haicais 57 - Haicai Malescrito  
 
-DespreparadoSem sal destemperado  
+Despreparado  
+Sem sal destemperado  
 Desinspirado  

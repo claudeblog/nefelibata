@@ -1,3 +1,4 @@
 # 575 Haicais 176 - Haicai Luto  
 
-Em roupa pretaLuto eternamente De faixa branca  
+Em roupa preta  
+Luto eternamente De faixa branca  

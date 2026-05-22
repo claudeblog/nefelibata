@@ -1,3 +1,4 @@
 # 575 Haicais 166 - Haicai era Acróstico  
 
-Era AcrósticoResplandecente Aos olhos de ti  
+Era Acróstico  
+Resplandecente Aos olhos de ti  

@@ -1,3 +1,5 @@
 # 575 Haicais 52 - Haicai de amigos  
 
-Ouvinte vorazE parceiros de risoAmigos fiéis  
+Ouvinte voraz  
+E parceiros de riso  
+Amigos fiéis  

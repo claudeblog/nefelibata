@@ -1,4 +1,5 @@
 # 575 Haicais 161 - Haicai São acrósticos  
 
-São acrósticosAs estruturas belas  
+São acrósticos  
+As estruturas belas  
 Ora reprimidas  

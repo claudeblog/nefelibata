@@ -1,3 +1,5 @@
 # 575 Haicais 158 - Haicai de Quermesse  
 
-Do corpo do pãoChurros Pamonha PinhãoFofoca Afeição  
+Do corpo do pão  
+Churros Pamonha Pinhão  
+Fofoca Afeição  

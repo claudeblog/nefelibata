@@ -1,3 +1,5 @@
 # 575 Haicais - 65 Haicais Substituto  
 
-SubstituídoComo sobressalênciaUsucapião  
+Substituído  
+Como sobressalência  
+Usucapião  

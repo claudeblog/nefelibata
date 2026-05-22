@@ -4,7 +4,8 @@ Desde que meu pai partiu, conheci a morte.
 Não como ideia — mas como presença. Silente, constante, inexorável.  
 Descobri que são poucos, pouquíssimos, os que amamos que nos acompanham até nosso fim.  
 Por isso informo, quero que meus amigos me conheçam em vida. — não em flores e silêncio.  
-Meu legado? Como disse antesRelego à Visa, à Mastercard, ao finado Banestado.  
+Meu legado? Como disse antes  
+Relego à Visa, à Mastercard, ao finado Banestado.  
 Desde que conheci a morte, faço exames.E os exames confirmam: estou morrendo.Tenho essa doença incurável chamada Vida.  
 Meu corpo segue seu roteiro,me conduz, sem delicadeza, ao desfecho inevitável.  
 Pouco posso fazer.  

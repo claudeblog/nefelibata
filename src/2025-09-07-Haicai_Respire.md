@@ -1,3 +1,5 @@
 # 575 Haicais 250 - Haicai Respire  
 
-Tudo expiraNo vencimento venceEntão inspire  
+Tudo expira  
+No vencimento vence  
+Então inspire  

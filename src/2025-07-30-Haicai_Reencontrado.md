@@ -1,3 +1,5 @@
 # 575 Haicais 211 - Haicai Reencontrado  
 
-Pássaro pousaEm fino frágil galhoMas passaro voa  
+Pássaro pousa  
+Em fino frágil galho  
+Mas passaro voa  

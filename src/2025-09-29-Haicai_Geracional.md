@@ -1,3 +1,5 @@
 # 575 Haicais 272 - Haicai Geracional  
 
-Novo ensinaA viver o velhoA sobreviver  
+Novo ensina  
+A viver o velho  
+A sobreviver  

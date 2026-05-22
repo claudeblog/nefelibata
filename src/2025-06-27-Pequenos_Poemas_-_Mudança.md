@@ -8,4 +8,5 @@ Tenho o coração apertado e tenho trabalho dobrado, pra ir e vir nessa vida.Con
 Cansado de estar só comigo, sem ter comigo um amigo que queira compartilhar.Pois o peso sozinho é dobrado, devia ser partilhado, pra se poder conversar.  
 Me encontro agora no meio, da mudança sem marca-tempo, tentando me fazer sorrir.É um estado ingrato de peso e pouco trato mesmo eu querendo partir.  
 Porque no fundo estou indo embora, de uma vida e de tantas memórias, que me fizeram muito feliz.É dificil segurar a barra de viver sua liberdade, caminhar pr'onde aponta o nariz.  
-Sinto falta da vida, da parceria e do afeto, sinto falta das cachorras e dos abraços de peito aberto.Sinto falta do colo, do bolo, e do amasso, que faziam meu dia melhorMas hoje vou-me embora, atravesso a rua na aurora esperar  aqui é pior.  
+Sinto falta da vida, da parceria e do afeto, sinto falta das cachorras e dos abraços de peito aberto.Sinto falta do colo, do bolo, e do amasso, que faziam meu dia melhor  
+Mas hoje vou-me embora, atravesso a rua na aurora esperar  aqui é pior.  

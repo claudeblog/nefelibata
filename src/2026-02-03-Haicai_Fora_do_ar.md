@@ -1,3 +1,5 @@
 # 574 Haicais 41 - Haicai Fora do ar  
 
-Não encontradoDomínio erradoAusente de ar  
+Não encontrado  
+Domínio errado  
+Ausente de ar  

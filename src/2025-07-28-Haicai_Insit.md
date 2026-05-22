@@ -1,4 +1,5 @@
 # 575 Haicais 208 - Haicai Insit  
 
-Arbor insitusEm Entorpecimento  
+Arbor insitus  
+Em Entorpecimento  
 Neuropático  

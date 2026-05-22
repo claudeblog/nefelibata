@@ -1,5 +1,10 @@
 # Haicais - Haicais sobre nós  
 
-Nós reduzidosDesatados com corteNão na garganta  
-Desatei meus nósFiz amarras mais bonitasCriei laços fortes  
-Liberdade éPermitir-se amarrarSem temer o nó  
+Nós reduzidos  
+Desatados com corte  
+Não na garganta  
+Desatei meus nós  
+Fiz amarras mais bonitas  
+Criei laços fortes  
+Liberdade éPermitir-se amarrar  
+Sem temer o nó  

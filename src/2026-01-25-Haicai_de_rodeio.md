@@ -1,3 +1,5 @@
 # 575 Haicais 39 - Haicai de rodeio  
 
-Passando aquiSem voltas nem rodeiosPra te desejar  
+Passando aqui  
+Sem voltas nem rodeios  
+Pra te desejar  

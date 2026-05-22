@@ -1,3 +1,5 @@
 # 575 Haicais 276 - Haicai de Fome  
 
-Pediu AbraçoFoi abrindo a guelaOferta de paz  
+Pediu Abraço  
+Foi abrindo a guela  
+Oferta de paz  

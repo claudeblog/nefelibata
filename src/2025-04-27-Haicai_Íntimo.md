@@ -1,3 +1,5 @@
 # 575 Haicais 117 - Haicai Íntimo  
 
-IntimidadeVulnerabilidadeHumanidade  
+Intimidade  
+Vulnerabilidade  
+Humanidade  

@@ -7,34 +7,90 @@ export PATH="$HOME/.cargo/bin:$PATH"
 DOMAIN="ameopoema.com.br"
 
 # ------------------------------------------------------------
-# Função: garantir que toda linha NÃO vazia termine com exatamente 2 espaços
+# Função 1: Inserir quebra de linha antes de maiúsculas (ignorando cabeçalhos)
+# ------------------------------------------------------------
+fix_capitalization_breaks() {
+    echo "🔠 Inserindo quebras de linha antes de letras maiúsculas (ignorando cabeçalhos)..."
+    find . -name "*.md" -not -path "./book/*" -not -path "./.git/*" -not -path "./node_modules/*" | while read -r file; do
+        awk '
+        function is_header(line) {
+            return match(line, /^[[:space:]]*#/)
+        }
+        function split_on_uppercase(line, out_lines, n) {
+            n = 0
+            len = length(line)
+            if (len == 0) {
+                out_lines[++n] = ""
+                return n
+            }
+            result = ""
+            prev_char = ""
+            for (i = 1; i <= len; i++) {
+                char = substr(line, i, 1)
+                # Se é maiúscula (A-Z) e o caractere anterior é minúscula (a-z)
+                if (char ~ /[A-Z]/ && prev_char ~ /[a-z]/) {
+                    # Finaliza a linha atual e começa nova
+                    if (result != "") {
+                        out_lines[++n] = result
+                        result = ""
+                    }
+                }
+                result = result char
+                prev_char = char
+            }
+            if (result != "" || n == 0) {
+                out_lines[++n] = result
+            }
+            return n
+        }
+        {
+            if (is_header($0)) {
+                # Cabeçalho: mantém como está (sem quebras)
+                print $0
+            } else {
+                # Linha normal: quebra nas maiúsculas
+                n = split_on_uppercase($0, lines)
+                for (i = 1; i <= n; i++) {
+                    print lines[i]
+                }
+            }
+        }' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
+        echo "   ✔ $file"
+    done
+    echo "✅ Quebras de linha por maiúsculas inseridas."
+}
+
+# ------------------------------------------------------------
+# Função 2: Garantir que toda linha NÃO vazia termine com exatamente 2 espaços
 # ------------------------------------------------------------
 fix_line_breaks() {
     echo "🔧 Garantindo que todas as linhas não vazias terminem com 2 espaços..."
     find . -name "*.md" -not -path "./book/*" -not -path "./.git/*" -not -path "./node_modules/*" | while read -r file; do
         awk '
         {
-            # Remove qualquer whitespace (espaços, tabs) do final da linha
+            # Remove qualquer whitespace do final
             gsub(/[[:space:]]+$/, "", $0)
-            # Se a linha não estiver vazia após a remoção
             if (length($0) > 0) {
-                # Adiciona exatamente dois espaços
                 print $0 "  "
             } else {
-                # Linha vazia (ou que continha só espaços) -> imprime linha vazia
                 print ""
             }
         }' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
         echo "   ✔ $file"
     done
-    echo "✅ Correção concluída: todas as linhas com conteúdo agora têm exatamente 2 espaços no final."
+    echo "✅ Linhas não vazias agora terminam com exatamente 2 espaços."
 }
 
+# ------------------------------------------------------------
+# Execução principal
 # ------------------------------------------------------------
 echo "🔄 Atualizando SUMMARY.md..."
 ./update-summary.sh
 
-# Corrige line breaks em todos os .md antes de commitar
+# 1. Corrigir quebras de linha por maiúsculas (antes de tudo)
+fix_capitalization_breaks
+
+# 2. Garantir duas espaços no final de cada linha não vazia
 fix_line_breaks
 
 if [ -n "$(git status --porcelain)" ]; then

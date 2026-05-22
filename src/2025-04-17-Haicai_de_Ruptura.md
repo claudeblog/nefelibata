@@ -1,3 +1,5 @@
 # 575 Haicais 107 - Haicai de Ruptura  
 
-Olhar atentoEm um piscar de olhosEsquecimento  
+Olhar atento  
+Em um piscar de olhos  
+Esquecimento  

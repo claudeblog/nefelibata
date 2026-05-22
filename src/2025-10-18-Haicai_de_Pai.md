@@ -1,3 +1,4 @@
 # 575 Haicais 293 - Haicai de Pai  
 
-Pai por convitePaizinho Paizão e Pai Eu sou Pai VIP  
+Pai por convite  
+Paizinho Paizão e Pai Eu sou Pai VIP  

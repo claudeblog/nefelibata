@@ -1,3 +1,4 @@
 # 575 Haicais 33 - Haicai de veto  
 
-Poder de vetoVenta ventriloquismos Nas marionetes  
+Poder de veto  
+Venta ventriloquismos Nas marionetes  

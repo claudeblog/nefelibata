@@ -1,3 +1,5 @@
 # 575 Haicais 193 - Haicai de Pintura  
 
-Pincel molhadoO rolo escorregaRespinga molha  
+Pincel molhado  
+O rolo escorrega  
+Respinga molha  
