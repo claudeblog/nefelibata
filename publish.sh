@@ -3,7 +3,7 @@ set -e
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# Domain for GitHub Pages custom domain
+# Domínio personalizado do GitHub Pages
 DOMAIN="ameopoema.com.br"
 
 # ------------------------------------------------------------
@@ -12,7 +12,6 @@ DOMAIN="ameopoema.com.br"
 fix_line_breaks() {
     echo "🔧 Garantindo que todas as linhas não vazias terminem com 2 espaços..."
     find . -name "*.md" -not -path "./book/*" -not -path "./.git/*" -not -path "./node_modules/*" | while read -r file; do
-        # Usa awk para processar linha a linha
         awk '
         {
             # Remove qualquer whitespace (espaços, tabs) do final da linha
