@@ -19,13 +19,13 @@ Eu vou encontrar um caminho para funcionar e eu espero que as dores e os traumas
 Por que você é a maior alegria de todos nós.  
 
 ###### *07/02/2026*  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  ​
+  ​
+  ​
+  ​
+  ​
+  ​
+  ​
+  ​
+  ​
+  ​

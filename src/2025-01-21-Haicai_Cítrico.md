@@ -8,13 +8,13 @@ O verso central do
 Haicai é um anagrama dos outros versos.  
 
 ###### *21/01/2025*  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  ​
+  ​
+  ​
+  ​
+  ​
+  ​
+  ​
+  ​
+  ​
+  ​
