@@ -50,6 +50,9 @@ fi
 echo "📚 Construindo o site com mdBook..."
 mdbook build
 
+echo "📄 Criando blog.html para leitura contínua..."
+./create-blog.sh
+
 echo "🌐 Configurando domínio personalizado: $DOMAIN"
 echo "$DOMAIN" > book/CNAME
 if [ ! -f "CNAME" ]; then

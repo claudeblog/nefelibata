@@ -5,7 +5,7 @@ SUMMARY_FILE="src/SUMMARY.md"
 TMP_SUMMARY=$(mktemp)
 
 # Limpa o conteúdo do arquivo (sem remover o arquivo)
-> "$SUMMARY_FILE"   # ou use : > "$SUMMARY_FILE"
+> "$SUMMARY_FILE"
 
 # Gera o novo conteúdo no temporário
 cat > "$TMP_SUMMARY" << 'HEAD'
@@ -16,6 +16,10 @@ HEAD
 # Adiciona páginas especiais
 [ -f "src/Capa.md" ] && echo "- [Capa](Capa.md)" >> "$TMP_SUMMARY"
 [ -f "src/Sobre.md" ] && echo "- [Sobre](Sobre.md)" >> "$TMP_SUMMARY"
+
+# === NOVO: Link para o Blog (página agregadora sem impressão automática) ===
+echo "- [Blog (todos os poemas)](blog.html)" >> "$TMP_SUMMARY"
+
 echo "- [Sumário](SUMMARY.md)" >> "$TMP_SUMMARY"
 
 # Lista todos os outros arquivos .md
@@ -56,4 +60,4 @@ done
 cat "$TMP_SUMMARY" > "$SUMMARY_FILE"
 rm -f "$TMP_SUMMARY"
 
-echo "✅ SUMMARY.md foi limpo e reescrito (arquivo mantido)."
+echo "✅ SUMMARY.md foi limpo e reescrito (arquivo mantido). Link do Blog adicionado após Sobre."
