@@ -23,8 +23,11 @@ files=()
 for file in src/*.md; do
     [ -f "$file" ] || continue
     basename=$(basename "$file")
+    # Ignorar páginas especiais e arquivos que contenham espaços
     [[ "$basename" =~ ^(README|SUMMARY|Sobre|Capa)\.md$ ]] && continue
     [[ "$basename" =~ \  ]] && { echo "⚠️ Ignorando arquivo com espaço: $basename"; continue; }
+    # Ignorar arquivos que terminam com Template.md (case-sensitive)
+    [[ "$basename" =~ Template\.md$ ]] && continue
     files+=("$file")
 done
 
