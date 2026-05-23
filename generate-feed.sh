@@ -4,8 +4,11 @@
 SITE_URL="https://ameopoema.com"
 FEED_TITLE="Ame o Poema"
 FEED_DESCRIPTION="Poemas do livro Nefelibata"
-SRC_DIR="src"                  # pasta com os arquivos .md
-OUTPUT_FILE="feed.xml"        # arquivo de saída (pode ser book/feed.xml, etc.)
+
+# Diretório onde este script está localizado (raiz do projeto)
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+SRC_DIR="$SCRIPT_DIR/src"               # pasta com os arquivos .md
+OUTPUT_FILE="$SCRIPT_DIR/feed.xml"      # feed gerado na raiz
 # =================================================
 
 # Gera o cabeçalho do RSS

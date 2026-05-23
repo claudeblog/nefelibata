@@ -55,24 +55,24 @@ echo "📄 Criando blog.html para leitura contínua..."
 ./create-blog.sh
 
 # ============================================================
-# Geração do feed RSS
+# Geração do feed RSS (com verificação rígida)
 # ============================================================
 echo "📡 Gerando feed RSS..."
-if [ -f "./generate_feed.sh" ]; then
-    # O script generate_feed.sh deve estar na raiz do projeto
-    # e gerar feed.xml no diretório atual.
-    # Ajuste OUTPUT_FILE="" para "book/feed.xml" diretamente, se preferir.
-    ./generate_feed.sh
-
-    if [ -f "feed.xml" ]; then
-        echo "   ✅ feed.xml gerado. Copiando para book/..."
-        cp feed.xml book/feed.xml
-    else
-        echo "   ⚠️  generate_feed.sh executou, mas feed.xml não foi encontrado."
-    fi
-else
-    echo "   ⚠️  generate_feed.sh não encontrado. Pulando geração do feed."
+if [ ! -f "./generate_feed.sh" ]; then
+    echo "❌ ERRO: generate_feed.sh não encontrado no diretório atual."
+    exit 1
 fi
+
+./generate_feed.sh
+
+if [ ! -f "feed.xml" ]; then
+    echo "❌ ERRO: generate_feed.sh executou mas feed.xml não foi gerado."
+    exit 1
+fi
+
+echo "   ✅ feed.xml gerado. Copiando para book/..."
+cp feed.xml book/feed.xml
+echo "   ✅ feed.xml copiado para book/"
 
 echo "🌐 Configurando domínio personalizado: $DOMAIN"
 echo "$DOMAIN" > book/CNAME
