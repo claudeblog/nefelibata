@@ -2,7 +2,6 @@
 
 - [Capa](Capa.md)  
 - [Sobre](Sobre.md)  
-- [Blog (todos os poemas)](blog.html)  
 - [Sumário](SUMMARY.md)  
 - [Haicai de Livro](2026-05-22-Haicai_de_Livro.md)  
 - [Haicai de gole](2026-05-08-Haicai_de_gole.md)  

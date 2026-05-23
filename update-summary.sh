@@ -17,9 +17,6 @@ HEAD
 [ -f "src/Capa.md" ] && echo "- [Capa](Capa.md)" >> "$TMP_SUMMARY"
 [ -f "src/Sobre.md" ] && echo "- [Sobre](Sobre.md)" >> "$TMP_SUMMARY"
 
-# === NOVO: Link para o Blog (página agregadora sem impressão automática) ===
-echo "- [Blog (todos os poemas)](blog.html)" >> "$TMP_SUMMARY"
-
 echo "- [Sumário](SUMMARY.md)" >> "$TMP_SUMMARY"
 
 # Lista todos os outros arquivos .md
