@@ -4,7 +4,7 @@ set -e
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Domínio personalizado do GitHub Pages
-DOMAIN="ameopoema.com.br"
+DOMAIN="ameopoema.com"
 
 # ------------------------------------------------------------
 # Função: garantir que toda linha NÃO vazia termine com exatamente 2 espaços
