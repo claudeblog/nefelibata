@@ -71,7 +71,7 @@ cd -
 rm -rf "$TMP_DIR"
 
 echo "✍️ Novo Template gerado, boa escrita..."
-./template.sh
+./template.sh || true
 
 echo "✅ Publicação concluída! O domínio $DOMAIN foi persistido."
 
