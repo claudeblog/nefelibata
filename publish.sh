@@ -54,6 +54,26 @@ mdbook build
 echo "📄 Criando blog.html para leitura contínua..."
 ./create-blog.sh
 
+# ============================================================
+# Geração do feed RSS
+# ============================================================
+echo "📡 Gerando feed RSS..."
+if [ -f "./generate_feed.sh" ]; then
+    # O script generate_feed.sh deve estar na raiz do projeto
+    # e gerar feed.xml no diretório atual.
+    # Ajuste OUTPUT_FILE="" para "book/feed.xml" diretamente, se preferir.
+    ./generate_feed.sh
+
+    if [ -f "feed.xml" ]; then
+        echo "   ✅ feed.xml gerado. Copiando para book/..."
+        cp feed.xml book/feed.xml
+    else
+        echo "   ⚠️  generate_feed.sh executou, mas feed.xml não foi encontrado."
+    fi
+else
+    echo "   ⚠️  generate_feed.sh não encontrado. Pulando geração do feed."
+fi
+
 echo "🌐 Configurando domínio personalizado: $DOMAIN"
 echo "$DOMAIN" > book/CNAME
 if [ ! -f "CNAME" ]; then
@@ -78,4 +98,3 @@ echo "✍️ Novo Template gerado, boa escrita..."
 ./template.sh || true
 
 echo "✅ Publicação concluída! O domínio $DOMAIN foi persistido."
-
