@@ -16,25 +16,14 @@ Viver pro futuro
 Faz findar o passado  
 Também o contrário  
 
-  ​  
-  ​  
-  ​  
-  ​  
-  ​  
-  ​  
-  ​  
-  ​  
-  ​  
-  ​  
-
 ###### *13/01/2025*  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
+  ​
+  ​
+  ​
+  ​
+  ​
+  ​
+  ​
+  ​
+  ​
+  ​

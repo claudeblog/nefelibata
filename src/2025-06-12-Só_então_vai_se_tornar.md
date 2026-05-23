@@ -20,25 +20,14 @@ Porque é no faz de conta ousado
 Que o impossível vai habitar,  
 Primeiro se sente, depois acredita, e então - só então - vai se tornar.  
 
-  ​  
-  ​  
-  ​  
-  ​  
-  ​  
-  ​  
-  ​  
-  ​  
-  ​  
-  ​  
-
 ###### *12/06/2025*  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
+  ​
+  ​
+  ​
+  ​
+  ​
+  ​
+  ​
+  ​
+  ​
+  ​
