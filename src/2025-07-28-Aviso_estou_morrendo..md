@@ -1,4 +1,4 @@
-#Textículos 21 - Aviso: estou morrendo.  
+# Textículos 21 - Aviso: estou morrendo.  
 
 Desde que meu pai partiu, conheci a morte.  
 Não como ideia — mas como presença.   

@@ -1,7 +1,7 @@
-#Meu Blog com mdBook  
+# Meu Blog com mdBook  
 Bem-vindo!  
 Este é meu blog.  
-#📖 Projeto mdBook - Blog estático  
+# 📖 Projeto mdBook - Blog estático  
 Este projeto utiliza [md  
 Book](https://rust-lang.github.io/md  
 Book/) para gerar um site estático a partir de arquivos  

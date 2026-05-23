@@ -1,4 +1,4 @@
-#Textículo 34 - Delírios e Devaneios  
+# Textículo 34 - Delírios e Devaneios  
 
 O destino age sobre o que sabemos.  
 Se somos pretensamente livres para fazer o que quisermos, mas apenas podemos querer aquilo que conhecemos.  
