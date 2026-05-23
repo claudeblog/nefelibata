@@ -60,8 +60,15 @@ for filename in "${files[@]}"; do
     # Link para o HTML correspondente
     link="${SITE_URL}/${filename%.md}.html"
 
-    # Conteúdo: escapa caracteres XML e envolve em <pre>
-    escaped_content=$(sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g' "$filepath")
+    # Conteúdo: remove título, data e linhas vazias com &nbsp;<br>, depois escapa XML
+    # - Remove a primeira linha se começar com "# "
+    # - Remove linhas que começam com "######" (data)
+    # - Remove linhas que contenham "&nbsp;<br>"
+    # - Remove linhas em branco (opcional)
+    filtered_content=$(sed -e '1{/^# /d}' -e '/^######/d' -e '/&nbsp;<br>/d' -e '/^[[:space:]]*$/d' "$filepath")
+    
+    # Escapa caracteres especiais XML
+    escaped_content=$(echo "$filtered_content" | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g')
 
     # Adiciona o item ao feed
     cat >> "$OUTPUT_FILE" <<ITEMEOF
