@@ -22,20 +22,22 @@ cat > "$OUTPUT_FILE" <<EOF
   <lastBuildDate>$(LC_TIME=en_US.UTF-8 date "+%a, %d %b %Y %H:%M:%S %z" 2>/dev/null || date -R)</lastBuildDate>
 EOF
 
-# Coleta apenas arquivos .md cujo nome comece com DATA (YYYY-MM-DD-)
-# Exemplo: 2025-01-01-Haicai_de_Ano_novo.md
-# Usa find com regex para garantir o padrão
+# Coleta apenas arquivos .md que:
+# 1) Começam com DATA no formato YYYY-MM-DD-
+# 2) NÃO terminam com "Template.md" (case sensitive)
 files=()
 while IFS= read -r -d '' file; do
-    files+=("$(basename "$file")")
-done < <(find "$SRC_DIR" -maxdepth 1 -type f -name '*.md' ! -name 'SUMMARY.md' -print0 | \
-         while IFS= read -r -d '' f; do
-             basename_f=$(basename "$f")
-             # Verifica se o nome começa com 4 dígitos, hífen, 2 dígitos, hífen, 2 dígitos, hífen
-             if [[ "$basename_f" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}-.+\.md$ ]]; then
-                 printf "%s\0" "$f"
-             fi
-         done | sort -rz)
+    basename_f=$(basename "$file")
+    # Verifica padrão de data e se NÃO termina com Template.md
+    if [[ "$basename_f" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}-.+\.md$ ]] && [[ ! "$basename_f" == *Template.md ]]; then
+        files+=("$basename_f")
+    fi
+done < <(find "$SRC_DIR" -maxdepth 1 -type f -name '*.md' ! -name 'SUMMARY.md' -print0)
+
+# Ordena os arquivos em ordem alfabética decrescente (mais recentes primeiro)
+# Como os nomes começam com YYYY-MM-DD, isso ordena por data decrescente
+IFS=$'\n' files=($(sort -r <<<"${files[*]}"))
+unset IFS
 
 # Para cada arquivo, gera um <item>
 for filename in "${files[@]}"; do
