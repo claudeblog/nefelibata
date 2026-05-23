@@ -68,10 +68,9 @@ scripts=(
     "fix-dates.sh"
     "fix-line-breaks.sh"
     "publish.sh"
-    "rename_.sh"
     "update-summary.sh"
     "template.sh"
-    "rename.sh"
+    "rename-files.sh"
 )
 
 for script in "${scripts[@]}"; do

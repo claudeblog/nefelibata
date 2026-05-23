@@ -14,6 +14,19 @@ echo "📅 Corrigindo data nos blocos de citação..."
 echo "✍️ Corrigindo quebras de linha nos arquivos .md..."
 ./fix-line-breaks.sh
 
+# ============================================================
+# Renomeia arquivos .md com base no título (cabeçalho #)
+# ============================================================
+echo "🏷️  Renomeando arquivos .md conforme título..."
+if [ -f "./rename-files.sh" ]; then
+    ./rename-files.sh
+else
+    echo "⚠️  Aviso: rename-files.sh não encontrado. Pulando renomeação."
+fi
+
+# ============================================================
+# Commit e push das alterações (incluindo renomeações)
+# ============================================================
 if [ -n "$(git status --porcelain)" ]; then
     echo "📝 Adicionando todas as alterações..."
     git add .
@@ -30,6 +43,9 @@ else
     echo "ℹ️ Nenhuma alteração para commitar."
 fi
 
+# ============================================================
+# Build e deploy
+# ============================================================
 echo "📚 Construindo o site com mdBook..."
 mdbook build
 

@@ -1,4 +1,4 @@
-# Poemas Palindromos: Ei! Erra! Farreie!  
+# Poemas Palindromos - Ei! Erra! Farreie!  
 
 Saia!  
 Sara-la faria, ir a falar as aias:  

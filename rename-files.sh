@@ -1,22 +1,11 @@
 #!/bin/bash
 
-# ============================================================
-# rename_md_by_title.sh
-# 
-# Renomeia arquivos .md dentro da pasta ./src
-# baseado na data do nome do arquivo e no primeiro cabeçalho #.
-#
-# Uso: ./rename_md_by_title.sh
-# ============================================================
-
 set -euo pipefail
 
-# Diretório relativo (pasta src no mesmo nível do script)
 SRC_DIR="./src"
 
 if [ ! -d "$SRC_DIR" ]; then
     echo "❌ Erro: Diretório $SRC_DIR não encontrado."
-    echo "Certifique-se de que a pasta 'src' existe no diretório atual."
     exit 1
 fi
 
@@ -33,14 +22,23 @@ for file in *.md; do
     date="${BASH_REMATCH[1]}"
 
     # Extrai o título (primeira linha que começa com '# ')
-    title=$(grep -m 1 '^# ' "$file" | sed 's/^# //' | sed 's/^[[:space:]]*//')
-    if [ -z "$title" ]; then
+    # O '|| true' evita que o script pare se o grep não encontrar nada
+    raw_title=$(grep -m 1 '^# ' "$file" | sed 's/^# //' | sed 's/^[[:space:]]*//' || true)
+    if [ -z "$raw_title" ]; then
         echo "⚠️  Aviso: $file não contém cabeçalho # Título, pulando."
         continue
     fi
 
+    # Se o título contiver um hífen, pega apenas a parte após o primeiro hífen
+    if [[ "$raw_title" == *-* ]]; then
+        cleaned_title="${raw_title#*-}"
+        cleaned_title="${cleaned_title## }"
+    else
+        cleaned_title="$raw_title"
+    fi
+
     # Sanitiza o título para usar no nome do arquivo
-    slug=$(echo "$title" | sed 's/[：:，,；;()（）]//g' | tr ' ' '_')
+    slug=$(echo "$cleaned_title" | sed 's/[：:，,；;()（）]//g' | tr ' ' '_')
     slug=$(echo "$slug" | sed 's/_\+/_/g' | sed 's/^_//;s/_$//')
 
     newname="${date}-${slug}.md"
