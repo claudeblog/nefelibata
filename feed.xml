@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:podcast="https://podcastindex.org/namespace/1.0">
 <channel>
   <title>Ame o Poema</title>
   <link>https://ameopoema.com</link>
   <description>Poesias do Nuvem, Poemas, Palindromos e Haicais, talvez um podcast em algum momento</description>
   <language>pt-br</language>
-  <lastBuildDate>Sat, 23 May 2026 13:29:11 -0300</lastBuildDate>
+  <lastBuildDate>Sat, 23 May 2026 13:31:01 -0300</lastBuildDate>
+  <itunes:author>Claudeblog</itunes:author>
+  <itunes:explicit>false</itunes:explicit>
+  <itunes:category text="Arte"/>
+  <itunes:image href="https://ameopoema.com/logo.jpg"/>
   <item>
     <title>575 Haicais 71 - Haicai de Livro  </title>
     <link>https://ameopoema.com/2026-05-22-Haicai_de_Livro.html</link>

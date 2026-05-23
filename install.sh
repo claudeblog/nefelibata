@@ -17,10 +17,10 @@ install_packages() {
     case "$DISTRO" in
         ubuntu|debian)
             sudo apt update
-            sudo apt install -y git curl build-essential
+            sudo apt install -y git curl build-essential ffmpeg
             ;;
         fedora)
-            sudo dnf install -y git curl @development-tools
+            sudo dnf install -y git curl @development-tools ffmpeg
             ;;
         *)
             echo "⚠️ Distribuição não suportada: $DISTRO"
@@ -84,6 +84,15 @@ for script in "${scripts[@]}"; do
     fi
 done
 
+# ------------------------------------------------------------
+# Verifica se o comando ffprobe está disponível (pode ser necessário reiniciar o terminal)
+# ------------------------------------------------------------
+if command -v ffprobe &> /dev/null; then
+    echo "✅ ffprobe instalado – o feed RSS poderá incluir a duração dos áudios."
+else
+    echo "⚠️ ffprobe não encontrado. A duração dos áudios não será adicionada ao feed."
+    echo "   Tente reiniciar o terminal ou instalar o ffmpeg manualmente."
+fi
 
 echo "🎉 Instalação concluída!"
 echo "Use ./publish.sh para atualizar SUMMARY.md, corrigir quebras de linha, commitar alterações e publicar o site."
