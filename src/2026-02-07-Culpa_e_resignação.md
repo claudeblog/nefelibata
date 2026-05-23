@@ -1,4 +1,4 @@
-# Textículos - Culpa e resignação  
+## Textículos - Culpa e resignação  
 
 Perdoe meus destempero, minhas confusões e desesperos.  
 Minha ausência no seu anseio e meus gritos de pedalada.  

@@ -1,4 +1,4 @@
-# Soneto: Palindromia Sonética  
+## Soneto: Palindromia Sonética  
 
 Sofro de palindromia, encanto raro,  
 Palíndromos são feitos cativantes,  

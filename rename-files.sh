@@ -21,11 +21,10 @@ for file in *.md; do
     fi
     date="${BASH_REMATCH[1]}"
 
-    # Extrai o título (primeira linha que começa com '# ')
-    # O '|| true' evita que o script pare se o grep não encontrar nada
-    raw_title=$(grep -m 1 '^# ' "$file" | sed 's/^# //' | sed 's/^[[:space:]]*//' || true)
+    # Extrai o título (primeira linha que começa com '## ')
+    raw_title=$(grep -m 1 '^## ' "$file" | sed 's/^## //' | sed 's/^[[:space:]]*//' || true)
     if [ -z "$raw_title" ]; then
-        echo "⚠️  Aviso: $file não contém cabeçalho # Título, pulando."
+        echo "⚠️  Aviso: $file não contém cabeçalho ## Título, pulando."
         continue
     fi
 
