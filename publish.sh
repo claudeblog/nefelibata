@@ -5,14 +5,15 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 DOMAIN="ameopoema.com"
 
+echo "✍️ Corrigindo quebras de linha nos arquivos .md..."
+./fix-line-breaks.sh
+
 echo "🔄 Atualizando SUMMARY.md..."
 ./update-summary.sh
 
-echo "📅 Corrigindo data nos blocos de citação..."
+echo "📅 Corrigindo data nos arquivos..."
 ./fix-dates.sh
 
-echo "✍️ Corrigindo quebras de linha nos arquivos .md..."
-./fix-line-breaks.sh
 
 # ============================================================
 # Renomeia arquivos .md com base no título (cabeçalho #)
