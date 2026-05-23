@@ -5,5 +5,3 @@ Inquieta minha mente
 Cria atividade  
 
 ###### *09/01/2025*  
-
-###### *09/01/2025*  

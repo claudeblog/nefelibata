@@ -5,5 +5,3 @@ A todaSexta-feira
 É sobreviver  
 
 ###### *13/12/2025*  
-
-###### *13/12/2025*  

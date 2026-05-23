@@ -5,5 +5,3 @@ Mas consciente de si
 Sabio aos cinco  
 
 ###### *22/01/2026*  
-
-###### *22/01/2026*  

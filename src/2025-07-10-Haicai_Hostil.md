@@ -5,5 +5,3 @@ São taxado por louco
 Ar comprimido  
 
 ###### *10/07/2025*  
-
-###### *10/07/2025*  

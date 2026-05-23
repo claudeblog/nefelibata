@@ -5,5 +5,3 @@ Honesto e acessível 
 Sinal de força  
 
 ###### *02/01/2026*  
-
-###### *02/01/2026*  

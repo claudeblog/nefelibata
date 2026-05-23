@@ -5,5 +5,3 @@ Vê distância e terra 
 Anda o caminhão  
 
 ###### *25/06/2025*  
-
-###### *25/06/2025*  

@@ -5,5 +5,3 @@ Havendo respeito
 Haverá jeito  
 
 ###### *28/02/2025*  
-
-###### *28/02/2025*  

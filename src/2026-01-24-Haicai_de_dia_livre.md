@@ -5,5 +5,3 @@ Subimos no telhado
 Doce sábado  
 
 ###### *24/01/2026*  
-
-###### *24/01/2026*  

@@ -5,5 +5,3 @@ Reviver e viver
 Se ver o revés  
 
 ###### *21/05/2025*  
-
-###### *21/05/2025*  

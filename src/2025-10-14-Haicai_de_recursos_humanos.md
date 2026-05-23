@@ -5,5 +5,3 @@ Açougue Cinco Estrelas
 Grilhões de seda  
 
 ###### *14/10/2025*  
-
-###### *14/10/2025*  

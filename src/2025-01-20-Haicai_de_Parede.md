@@ -5,5 +5,3 @@ Uma Parede que diz
 Só seja feliz  
 
 ###### *20/01/2025*  
-
-###### *20/01/2025*  

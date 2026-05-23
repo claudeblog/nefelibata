@@ -5,5 +5,3 @@ Livre em solo fértil,
 A muda muda  
 
 ###### *04/01/2025*  
-
-###### *04/01/2025*  

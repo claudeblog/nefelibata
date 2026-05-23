@@ -16,34 +16,25 @@ find "$TARGET_DIR" -maxdepth 1 -type f -name "[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0
     tmp_file=$(mktemp)
 
     awk -v newdate="$formatted_date" '
-    {
-        # Armazena todas as linhas em um array
-        lines[++n] = $0
-    }
+    # Remove qualquer linha que seja exatamente "###### *DD/MM/AAAA*" (com espaços opcionais no final)
+    /^###### \*[0-9]{2}\/[0-9]{2}\/[0-9]{4}\*\s*$/ { next }
+    
+    # Acumula as demais linhas em um array
+    { lines[++n] = $0 }
+    
     END {
-        # Imprime todas as linhas exceto a última
-        for (i = 1; i <= n-1; i++) {
+        # Imprime todo o conteúdo que não era uma linha de data
+        for (i = 1; i <= n; i++) {
             print lines[i]
         }
-        # Trata a última linha
-        last = lines[n]
-        # Verifica se a última linha já está no formato "###### *DD/MM/AAAA*"
-        if (last ~ /^###### \*[0-9]{2}\/[0-9]{2}\/[0-9]{4}\*$/ || 
-            last ~ /^###### \*[0-9]{2}\/[0-9]{2}\/[0-9]{4}\*[[:space:]]*$/) {
-            # Substitui pela nova data
-            print "###### *" newdate "*"
-        } else {
-            # Mantém a última linha
-            print last
-            # Adiciona linha em branco se a última não for vazia
-            if (last != "") {
-                print ""
-            }
-            # Adiciona a nova data
-            print "###### *" newdate "*"
+        # Adiciona uma linha em branco somente se a última linha impressa não estiver vazia
+        if (n > 0 && lines[n] != "") {
+            print ""
         }
+        # Adiciona a nova data no final
+        print "###### *" newdate "*"
     }' "$file" > "$tmp_file"
 
     mv "$tmp_file" "$file"
-    echo "Corrigido: $file -> data atualizada/adicionada ao final como ###### *$formatted_date*"
+    echo "Corrigido: $file -> data única adicionada/atualizada ao final como ###### *$formatted_date*"
 done

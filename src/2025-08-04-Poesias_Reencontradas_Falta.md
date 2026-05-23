@@ -38,5 +38,3 @@ Me faz falta meu melhor amigo,
 E me faz falta um abraço de pai.  
 
 ###### *04/08/2025*  
-
-###### *04/08/2025*  

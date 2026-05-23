@@ -13,5 +13,3 @@ A falta de hombridade no Homem,
 Aquela que sobra na mãe solo.  
 
 ###### *10/01/2026*  
-
-###### *10/01/2026*  

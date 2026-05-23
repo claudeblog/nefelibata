@@ -5,5 +5,3 @@ Não faz corre por pose
 Quem tem postura  
 
 ###### *09/02/2026*  
-
-###### *09/02/2026*  

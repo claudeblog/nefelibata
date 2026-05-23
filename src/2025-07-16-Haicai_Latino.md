@@ -5,5 +5,3 @@ Premeditatium Malorum
 et Carpe Diem  
 
 ###### *16/07/2025*  
-
-###### *16/07/2025*  

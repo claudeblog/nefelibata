@@ -5,5 +5,3 @@ O Envelhecimento
 Sem o lamento  
 
 ###### *26/04/2025*  
-
-###### *26/04/2025*  

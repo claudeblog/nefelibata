@@ -5,5 +5,3 @@ Desperto em solidão
 E a roda roda  
 
 ###### *25/02/2025*  
-
-###### *25/02/2025*  

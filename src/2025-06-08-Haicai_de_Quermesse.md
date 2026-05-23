@@ -5,5 +5,3 @@ Churros pamonha pinhão
 Fofoca afeição  
 
 ###### *08/06/2025*  
-
-###### *08/06/2025*  

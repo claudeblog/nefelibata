@@ -5,5 +5,3 @@ Amar rede derrama
 Ramos a somar.  
 
 ###### *25/01/2025*  
-
-###### *25/01/2025*  

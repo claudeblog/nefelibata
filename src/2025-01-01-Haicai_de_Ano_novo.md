@@ -5,5 +5,3 @@ Aquele brilho no olhar
 Os Fogos nos céus  
 
 ###### *01/01/2025*  
-
-###### *01/01/2025*  

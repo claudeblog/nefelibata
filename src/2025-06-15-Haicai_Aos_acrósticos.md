@@ -5,5 +5,3 @@ Tal semente difícil 
 Era pra florir  
 
 ###### *15/06/2025*  
-
-###### *15/06/2025*  

@@ -24,5 +24,3 @@ Mas um ano novo dentro de mim
 - `Sobre o fim da pandemia no inicio do século XXI`  
 
 ###### *04/08/2025*  
-
-###### *04/08/2025*  

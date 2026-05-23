@@ -5,5 +5,3 @@ Não consegue esperar
 Desespera-se  
 
 ###### *21/02/2026*  
-
-###### *21/02/2026*  

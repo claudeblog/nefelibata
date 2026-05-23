@@ -17,5 +17,3 @@ Faz findar o passado
 Também o contrário  
 
 ###### *13/01/2025*  
-
-###### *13/01/2025*  

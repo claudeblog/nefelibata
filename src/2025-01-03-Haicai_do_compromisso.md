@@ -5,5 +5,3 @@ Permitir-se amarrar
 Sem temer o nó  
 
 ###### *03/01/2025*  
-
-###### *03/01/2025*  

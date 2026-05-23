@@ -5,5 +5,3 @@ Passo em sobressalto
 Virei passado  
 
 ###### *06/07/2025*  
-
-###### *06/07/2025*  

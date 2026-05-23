@@ -6,5 +6,3 @@ Tu me enseja ao transbordo
 Em tu me excedo  
 
 ###### *03/12/2025*  
-
-###### *03/12/2025*  

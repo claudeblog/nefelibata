@@ -16,5 +16,3 @@ E a estrutura liberta minha mente,
 Soneticamente inspirada, em criação.  
 
 ###### *05/03/2025*  
-
-###### *05/03/2025*  

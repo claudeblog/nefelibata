@@ -5,5 +5,3 @@ Sem sal destemperado
 Desinspirado  
 
 ###### *27/04/2026*  
-
-###### *27/04/2026*  

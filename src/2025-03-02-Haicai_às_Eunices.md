@@ -5,5 +5,3 @@ Ainda estou aqui
 Nós vamos sorrir  
 
 ###### *02/03/2025*  
-
-###### *02/03/2025*  

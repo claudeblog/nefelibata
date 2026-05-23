@@ -5,5 +5,3 @@ Perdeste vossas garras
 Mas não tua ginga  
 
 ###### *07/07/2025*  
-
-###### *07/07/2025*  

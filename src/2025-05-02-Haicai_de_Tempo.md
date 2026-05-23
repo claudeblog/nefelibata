@@ -5,5 +5,3 @@ De volta pro futuro
 Feitiço do tempo  
 
 ###### *02/05/2025*  
-
-###### *02/05/2025*  

@@ -5,5 +5,3 @@ Como era seu avô 
 Chorou choramos  
 
 ###### *07/02/2026*  
-
-###### *07/02/2026*  

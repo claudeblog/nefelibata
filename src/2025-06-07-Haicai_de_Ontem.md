@@ -5,5 +5,3 @@ Saudade de esperança
 Que tivemos sós  
 
 ###### *07/06/2025*  
-
-###### *07/06/2025*  

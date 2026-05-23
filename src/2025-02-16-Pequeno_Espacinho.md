@@ -28,5 +28,3 @@ Pra num momentinho de pequena paz
 Dar Band-Aid e carinho ao pequeno eu  
 
 ###### *16/02/2025*  
-
-###### *16/02/2025*  

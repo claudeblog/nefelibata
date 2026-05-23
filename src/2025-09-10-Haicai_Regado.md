@@ -5,5 +5,3 @@ De Bonsai à Baobá 
 Semente viva  
 
 ###### *10/09/2025*  
-
-###### *10/09/2025*  

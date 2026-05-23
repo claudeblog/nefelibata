@@ -5,5 +5,3 @@ Oficializadas
 Em escritura  
 
 ###### *22/07/2025*  
-
-###### *22/07/2025*  

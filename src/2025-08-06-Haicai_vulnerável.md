@@ -5,5 +5,3 @@ Vulnerabilidade
 Local seguro  
 
 ###### *06/08/2025*  
-
-###### *06/08/2025*  
