@@ -71,6 +71,7 @@ scripts=(
     "rename_.sh"
     "update-summary.sh"
     "template.sh"
+    "rename.sh"
 )
 
 for script in "${scripts[@]}"; do

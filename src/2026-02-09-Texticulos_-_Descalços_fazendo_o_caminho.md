@@ -1,4 +1,4 @@
-# Texticulos - Descalços fazendo o caminho  
+# Texticulos: Descalços fazendo o caminho  
 
 Lhes convido a caminhar com os pés descalços na grama.  
 Aceitar as pedras pontudas,  
