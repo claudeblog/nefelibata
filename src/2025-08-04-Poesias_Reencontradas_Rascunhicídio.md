@@ -1,4 +1,4 @@
-## Poesias Reencontradas: Rascunhicídio  
+#Poesias Reencontradas: Rascunhicídio  
 
 Rascunhicídio  
 Os escritos escapam as bordas  
@@ -24,5 +24,7 @@ Publicados?
 Jamais.  
 Apenas rascunhados em sua breve existência.  
 Poesia Roubada  
+
+######*04/08/2025*  
 
 ###### *04/08/2025*  

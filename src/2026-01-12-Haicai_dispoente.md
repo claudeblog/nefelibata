@@ -1,7 +1,9 @@
-## 575 Haicais 35 - Haicai dispoente  
+#575 Haicais 35 - Haicai dispoente  
 
 Para viver mais  
 Menos dispositivos  
 Mais disposição  
+
+######*12/01/2026*  
 
 ###### *12/01/2026*  

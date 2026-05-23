@@ -1,4 +1,4 @@
-## Textículo 55: Transfuga de Classe, Mudança e Caminhos  
+#Textículo 55: Transfuga de Classe, Mudança e Caminhos  
 
 Firmo meu chão com raízes de mudança.  
 E construo minha casa com paredes de esperança  
@@ -27,5 +27,7 @@ Seu lar, seu cerne, sua face e identidade tornam-se em si o próprio caminho.
 Em outras palavras, "A rua é nois".  
 
 Bora viver.  
+
+######*05/01/2026*  
 
 ###### *05/01/2026*  

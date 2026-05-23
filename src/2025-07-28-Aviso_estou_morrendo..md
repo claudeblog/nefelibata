@@ -1,4 +1,4 @@
-## Textículos 21 - Aviso: estou morrendo.  
+#Textículos 21 - Aviso: estou morrendo.  
 
 Desde que meu pai partiu, conheci a morte.  
 Não como ideia — mas como presença.   
@@ -43,5 +43,7 @@ Incidentalmente, a consciência de minha condição terminal, me fez descobrir q
 E essa consciência se faz aterrorizantemente bela e motricial.  
 
 Bora viver.  
+
+######*28/07/2025*  
 
 ###### *28/07/2025*  

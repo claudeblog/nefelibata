@@ -1,4 +1,4 @@
-## Poemas Palíndromo: Eu quê?  
+#Poemas Palíndromo: Eu quê?  
 
 Eu que revivo o viver  
 Eu que ouso, suo  
@@ -13,5 +13,7 @@ Eu, que eco você (eco você)
 Eu que ouso, suo.  
 Eu que revivo o viver  
 Eu quê?...  
+
+######*01/04/2025*  
 
 ###### *01/04/2025*  

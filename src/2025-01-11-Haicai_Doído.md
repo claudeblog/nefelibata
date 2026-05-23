@@ -1,8 +1,10 @@
-## 575 Haicais 11 - Haicai Doído  
+#575 Haicais 11 - Haicai Doído  
 
 O erro corre  
 Ódio Dói Rio Doído  
 Erro corre-o  
 * Haicai Palíndromo  
+
+######*11/01/2025*  
 
 ###### *11/01/2025*  

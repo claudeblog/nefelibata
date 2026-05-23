@@ -1,7 +1,9 @@
-## 575 Haicais 288 - Haicai de Coabito  
+#575 Haicais 288 - Haicai de Coabito  
 
 Era convívio  
 Amar vira evitar  
 E coabitar  
+
+######*16/10/2025*  
 
 ###### *16/10/2025*  

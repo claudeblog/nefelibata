@@ -1,4 +1,4 @@
-## Poesia - Me ser e tecer  
+#Poesia - Me ser e tecer  
 
 Tecerei,  
 Eu decidi não desistir,  
@@ -29,5 +29,7 @@ Será o descanso nos dias pesados,
 Será a vila que cria as crianças.  
 A proteção pra trapezista poder voar.  
 Bora viver.  
+
+######*30/12/2024*  
 
 ###### *30/12/2024*  

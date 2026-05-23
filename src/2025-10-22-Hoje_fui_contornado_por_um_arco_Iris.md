@@ -1,4 +1,4 @@
-## Poesia - Hoje fui contornado por um arco Iris  
+#Poesia - Hoje fui contornado por um arco Iris  
 
 Hoje um arco-íris veio me visitar.  
 Numa manhã fria, de paisagem bela  
@@ -28,5 +28,7 @@ Entendo agora o que
 Oxumarê e sua adaga de bronze veio trazer,  
 Em toda chuva que venha na vida  
 Virá em seguida um reflorescer.  
+
+######*22/10/2025*  
 
 ###### *22/10/2025*  

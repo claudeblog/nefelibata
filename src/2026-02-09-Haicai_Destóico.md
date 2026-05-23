@@ -1,7 +1,9 @@
-## 575 Haicais 45 - Haicai Destóico  
+#575 Haicais 45 - Haicai Destóico  
 
 Samambaia  
 Medo da sombra de mim  
 No sol de você  
+
+######*09/02/2026*  
 
 ###### *09/02/2026*  
