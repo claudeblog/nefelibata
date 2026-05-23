@@ -2,6 +2,10 @@
 
 > 25/12/2025  
 
+
+
+
+
 Quanta partilha  
 Essa vida me trará   
 Sem compartilhar  

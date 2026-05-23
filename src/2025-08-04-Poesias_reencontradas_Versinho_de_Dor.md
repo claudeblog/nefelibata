@@ -2,6 +2,10 @@
 
 > 04/08/2025  
 
+
+
+
+
 Construo com quem está disposto comigo a desbravar a selva das emoções.  
 Tem a coragem de lidar com o difícil das intempéries das relações.  
 Construo afetos e amizades difíceis com honestidade e sobriedade.  

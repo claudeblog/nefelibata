@@ -2,6 +2,10 @@
 
 > 12/06/2025  
 
+
+
+
+
 No faz de conta da vida  
 Eu escolho acreditar  
 Na fantasia revivida  

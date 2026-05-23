@@ -2,6 +2,10 @@
 
 > 30/12/2024  
 
+
+
+
+
 Tecerei,  
 Eu decidi não desistir,  
 Viverei pela causa que me toca.  

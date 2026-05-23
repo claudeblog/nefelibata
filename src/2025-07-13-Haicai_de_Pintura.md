@@ -2,6 +2,10 @@
 
 > 13/07/2025  
 
+
+
+
+
 Pincel molhado  
 O rolo escorrega  
 Respinga molha  

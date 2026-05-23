@@ -2,6 +2,10 @@
 
 > 01/03/2025  
 
+
+
+
+
 Fio de afeto  
 Fiado sem corte  
 No fio da faca  

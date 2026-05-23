@@ -2,6 +2,10 @@
 
 > 03/01/2025  
 
+
+
+
+
 Liberdade é  
 Permitir-se amarrar  
 Sem temer o nó  

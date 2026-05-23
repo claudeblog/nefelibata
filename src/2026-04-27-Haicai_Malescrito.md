@@ -2,6 +2,10 @@
 
 > 27/04/2026  
 
+
+
+
+
 Despreparado  
 Sem sal destemperado  
 Desinspirado  

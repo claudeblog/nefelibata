@@ -2,6 +2,10 @@
 
 > 04/03/2025  
 
+
+
+
+
 Minimalismo  
 Materialidade  
 Brutal concreto  

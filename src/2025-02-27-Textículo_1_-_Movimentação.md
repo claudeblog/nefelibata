@@ -2,6 +2,10 @@
 
 > 27/02/2025  
 
+
+
+
+
 Quatro coisas movem o ser humano, necessariamente nessa ordem:   
 1. O ódio,  
 2. O tesão  

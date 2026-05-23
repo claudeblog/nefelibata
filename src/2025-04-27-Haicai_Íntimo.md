@@ -2,6 +2,10 @@
 
 > 27/04/2025  
 
+
+
+
+
 Intimidade  
 Vulnerabilidade  
 Humanidade  

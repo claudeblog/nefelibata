@@ -2,6 +2,10 @@
 
 > 04/08/2025  
 
+
+
+
+
 Saí de casa   
 Hoje andarei na rua  
 #EleNão  

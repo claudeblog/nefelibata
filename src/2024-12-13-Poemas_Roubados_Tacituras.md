@@ -2,6 +2,10 @@
 
 > 13/12/2024  
 
+
+
+
+
 Desviados da alegria  
 Em linha reta seguimos  
 Na pobre linha de produção  

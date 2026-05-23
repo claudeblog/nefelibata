@@ -2,6 +2,10 @@
 
 > 16/06/2025  
 
+
+
+
+
 Era Acróstico  
 Resplandecente   
 Aos olhos de ti  

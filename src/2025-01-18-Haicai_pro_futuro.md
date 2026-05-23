@@ -2,6 +2,10 @@
 
 > 18/01/2025  
 
+
+
+
+
 Viver pro futuro  
 Faz findar o passado  
 Também o contrário  

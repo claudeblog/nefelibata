@@ -2,6 +2,10 @@
 
 > 21/02/2026  
 
+
+
+
+
 Ser ansioso  
 Não consegue esperar  
 Desespera-se  

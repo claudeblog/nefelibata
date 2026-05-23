@@ -3,6 +3,10 @@
 > 24/12/2025  
 
 
+
+
+
+
 Ele ensinar  
 Que ser vulnerável  
 

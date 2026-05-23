@@ -2,6 +2,10 @@
 
 > 21/07/2025  
 
+
+
+
+
 Ao vulnerável   
 A fofoca protege  
 Também entretém  

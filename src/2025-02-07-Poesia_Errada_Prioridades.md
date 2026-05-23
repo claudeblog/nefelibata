@@ -2,6 +2,10 @@
 
 > 07/02/2025  
 
+
+
+
+
 Priorizar:  
 Coragem de assumir para si o que lhe é mais importante.  
 Prioriso o estar  

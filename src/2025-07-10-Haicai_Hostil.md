@@ -2,6 +2,10 @@
 
 > 10/07/2025  
 
+
+
+
+
 Planeta quente  
 São taxado por louco  
 Ar comprimido  

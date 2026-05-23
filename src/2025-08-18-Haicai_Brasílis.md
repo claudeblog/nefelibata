@@ -2,6 +2,10 @@
 
 > 18/08/2025  
 
+
+
+
+
 Terra brasílis  
 Indiferença vira   
 Desigualdade  

@@ -2,6 +2,10 @@
 
 > 15/01/2025  
 
+
+
+
+
 Dentro de cada um de nós existe um equilíbrio perfeito.  
 Somos todos quartos de quatro cantos.  
 Em cada canto do que somos existe um gato,  

@@ -2,6 +2,10 @@
 
 > 26/07/2025  
 
+
+
+
+
 Semea versos  
 Cem haicais e poemas  
 Sem comentários  

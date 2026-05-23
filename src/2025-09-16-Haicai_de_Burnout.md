@@ -2,6 +2,10 @@
 
 > 16/09/2025  
 
+
+
+
+
 Vender saúde   
 Onde a doença é  
 Lucro pro feitor  

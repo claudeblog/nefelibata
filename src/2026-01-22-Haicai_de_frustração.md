@@ -2,6 +2,10 @@
 
 > 22/01/2026  
 
+
+
+
+
 Desregulado  
 Mas consciente de si  
 Sabio aos cinco  

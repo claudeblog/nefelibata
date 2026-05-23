@@ -2,6 +2,10 @@
 
 > 04/10/2025  
 
+
+
+
+
 Pediu abraço  
 Foi abrindo a guela  
 Oferta de paz  

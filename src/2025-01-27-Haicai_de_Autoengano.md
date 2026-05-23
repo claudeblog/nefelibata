@@ -2,6 +2,10 @@
 
 > 27/01/2025  
 
+
+
+
+
 Protege o ego  
 Autoengano ético  
 Impede o ser  

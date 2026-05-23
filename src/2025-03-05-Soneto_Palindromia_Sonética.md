@@ -2,6 +2,10 @@
 
 > 05/03/2025  
 
+
+
+
+
 Sofro de palindromia, encanto raro,  
 Palíndromos são feitos cativantes,  
 Que dançam, num vaivém, tão intrigantes,  

@@ -2,6 +2,10 @@
 
 > 19/01/2025  
 
+
+
+
+
 Desatei meus nós  
 Fiz amarras mais bonitas  
 Criei laços fortes  

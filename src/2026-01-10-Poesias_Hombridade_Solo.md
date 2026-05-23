@@ -3,6 +3,10 @@
 > 10/01/2026  
 
 
+
+
+
+
 A maldade é um evento raro,  
 A indiferença, desumanização e covardia, atos mais comuns.  
 Delineiam a origem dos males do século 21.  

@@ -2,6 +2,10 @@
 
 > 02/01/2026  
 
+
+
+
+
 Ser vulnerável   
 Honesto e acessível   
 Sinal de força  

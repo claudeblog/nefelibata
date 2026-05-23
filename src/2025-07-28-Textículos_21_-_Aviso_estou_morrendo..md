@@ -2,6 +2,10 @@
 
 > 28/07/2025  
 
+
+
+
+
 Desde que meu pai partiu, conheci a morte.  
 Não como ideia — mas como presença.   
 Silente, constante, inexorável.  

@@ -2,6 +2,10 @@
 
 > 05/11/2025  
 
+
+
+
+
 Verso inverso  
 Esbóço e rasúro  
 Em chiaroscuro  

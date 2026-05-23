@@ -2,6 +2,10 @@
 
 > 30/06/2025  
 
+
+
+
+
 Parar é fazer  
 Descansar é produzir  
 Seja resistência  

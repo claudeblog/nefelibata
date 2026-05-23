@@ -2,6 +2,10 @@
 
 > 22/10/2025  
 
+
+
+
+
 Hoje um arco-íris veio me visitar.  
 Numa manhã fria, de paisagem bela  
 Encontrava-se um arco em minha janela  

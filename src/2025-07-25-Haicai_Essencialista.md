@@ -2,6 +2,10 @@
 
 > 25/07/2025  
 
+
+
+
+
 Essencialismo   
 Manter o essencial   
 \_____________\_  

@@ -2,6 +2,10 @@
 
 > 04/08/2025  
 
+
+
+
+
 Refletindo um pouco notei a minha própria tolice, e motivação de muitas de minhas mazelas ansiosas.  
 A cada decisão, tenho-as tomado como um perene bloco.  
 Acreditando que construo uma escada à céus, ao paraíso ou lugar qualquer.  

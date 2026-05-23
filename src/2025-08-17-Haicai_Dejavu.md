@@ -2,6 +2,10 @@
 
 > 17/08/2025  
 
+
+
+
+
 Pleno silêncio   
 Sua voz me acorda  
 Era só sonho  

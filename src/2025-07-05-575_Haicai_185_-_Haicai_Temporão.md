@@ -2,6 +2,10 @@
 
 > 05/07/2025  
 
+
+
+
+
 Pedra de hoje  
 Pássaro de outrora  
 Exu temporão  

@@ -2,6 +2,10 @@
 
 > 27/06/2025  
 
+
+
+
+
 Traumatizado  
 Resolvível com diálogo   
 Não ofertado  

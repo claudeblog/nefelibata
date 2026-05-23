@@ -2,6 +2,10 @@
 
 > 04/08/2025  
 
+
+
+
+
 E enfim.... finda o fim,  
 Crianças voltam pra escola   
 Já consigo ouvir dentro mim   

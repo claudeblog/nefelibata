@@ -2,6 +2,10 @@
 
 > 08/01/2025  
 
+
+
+
+
 Se tu aprender  
 A nadar contra a corrente  
 Nada teus pés prende  

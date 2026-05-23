@@ -2,6 +2,10 @@
 
 > 12/06/2025  
 
+
+
+
+
 Ora acróstico  
 Retidos em sentidos  
 Até explodir  

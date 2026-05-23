@@ -2,6 +2,10 @@
 
 > 15/06/2025  
 
+
+
+
+
 Se o são soa só É  
 s som, socos,   
 Só cosmos   

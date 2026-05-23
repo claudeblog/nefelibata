@@ -2,6 +2,10 @@
 
 > 06/08/2025  
 
+
+
+
+
 Conexão Mundial   
 Vulnerabilidade  
 Local seguro  
