@@ -2,6 +2,7 @@
 - [Capa](Capa.md)  
 - [Sobre](Sobre.md)  
 - [Sumário](SUMMARY.md)  
+- [Haicai detento](2026-05-25-Haicai_detento.md)  
 - [Haicai de acidente](2026-05-25-Haicai_de_acidente.md)  
 - [Haicai de Livro](2026-05-22-Haicai_de_Livro.md)  
 - [Haicai de gole](2026-05-08-Haicai_de_gole.md)  
