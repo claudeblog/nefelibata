@@ -21,6 +21,7 @@ Contem: 575 Haicais 160 - Haicai Aos acrósticos
 575 Haicais 166 - Haicai Era Acróstico  
 `Dedicado ao meu amigo Luco o Arquivista Naval`  
 
+
 ###### *15/06/2025*  
 &nbsp;<br>​
 &nbsp;<br>​

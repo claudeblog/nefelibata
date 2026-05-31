@@ -3,6 +3,7 @@ O retrovisor
 É um péssimo Guia  
 Olhe pra frente  
 
+
 ###### *25/05/2026*  
 &nbsp;<br>​
 &nbsp;<br>​

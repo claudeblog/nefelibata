@@ -6,6 +6,7 @@ Vida escrita
 O verso central do  
 Haicai é um anagrama dos outros versos.  
 
+
 ###### *21/01/2025*  
 &nbsp;<br>​
 &nbsp;<br>​

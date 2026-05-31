@@ -20,6 +20,7 @@ Seu lar, seu cerne, sua face e identidade tornam-se em si o próprio caminho.
 Em outras palavras, "A rua é nois".  
 Bora viver.  
 
+
 ###### *05/01/2026*  
 &nbsp;<br>​
 &nbsp;<br>​
