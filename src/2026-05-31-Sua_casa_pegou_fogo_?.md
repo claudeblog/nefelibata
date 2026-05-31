@@ -1,4 +1,4 @@
-# Sua casa pegou fogo?  
+# Sua casa pegou fogo ?  
 Antes de mais nada: se sua casa pegar fogo,  
 saia dela imediatamente.  
 Largue as chaves, os documentos,  
@@ -30,6 +30,7 @@ Mas há rotinas
 que fazem a mesma coisa,  
 só que mais devagar.  
 Bora viver  
+###### 31/05/2026*  
 ###### *31/05/2026*  
 &nbsp;<br>​
 &nbsp;<br>​
