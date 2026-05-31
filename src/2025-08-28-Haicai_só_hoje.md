@@ -1,4 +1,4 @@
-# 575 Haicais 240 - Haicai só hoje  
+# 575 Haicais 150 - Haicai só hoje  
 Só por hoje...  
 Qualquer palavra minha  
 Preciso ouvir  

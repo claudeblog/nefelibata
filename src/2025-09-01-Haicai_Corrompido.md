@@ -1,4 +1,4 @@
-# 575 Haicais 244 - Haicai Corrompido  
+# 575 Haicais 152 - Haicai Corrompido  
 Metahumano  
 Memória extendida  
 Me3҉̛͡͝crR̷͘͢͠uP!̴̡͘͡ corrompida  

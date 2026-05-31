@@ -1,4 +1,4 @@
-# 575 Haicais 180 - Haicai de Resistência  
+# 575 Haicais 104 - Haicai de Resistência  
 Parar é fazer  
 Descansar é produzir  
 Seja resistência  

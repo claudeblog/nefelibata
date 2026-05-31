@@ -1,4 +1,4 @@
-# 575 Haicais 77 - Haicai de Bet  
+# 575 Haicais 207 - Haicai de Bet  
 De Sete em Sete  
 A casa sempre vence  
 Pode apostar  

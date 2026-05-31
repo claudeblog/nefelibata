@@ -1,4 +1,4 @@
-# 575 Haicais 232 - Haicai Bilingue  
+# 575 Haicais 146 - Haicai Bilingue  
 Nevar, raven  
 E o poe se opõe   
 Revê, Never  
