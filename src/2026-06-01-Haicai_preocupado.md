@@ -1,6 +1,6 @@
 # 575 Haicais 211 - Haicai preocupado  
 Preocupação  
-Só criatividade  
+É criatividade  
 Desperdiçada  
 
 
