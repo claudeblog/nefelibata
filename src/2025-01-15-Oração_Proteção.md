@@ -1,4 +1,5 @@
 # Oração: Proteção  
+
 Ó santo guerreiro, paladino invencível na fé.  
 Vós que trazeis em sua face, impassível esperança e confiança.  
 Estendei sobre mim vosso escudo.  
