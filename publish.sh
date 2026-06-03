@@ -24,6 +24,25 @@ echo "📅 Corrigindo data nos blocos de citação..."
 echo "✍️ Corrigindo quebras de linha nos arquivos .md..."
 ./fix-line-breaks.sh
 
+
+# ============================================================
+# Geração do feed RSS (com verificação e cópia)
+# ============================================================
+echo "📡 Gerando feed RSS..."
+if [ -f "./generate-feed.sh" ]; then
+    ./generate-feed.sh
+else
+    echo "❌ ERRO: generate-feed.sh não encontrado."
+    exit 1
+fi
+
+# Verifica se o feed foi gerado
+if [ ! -f "feed.xml" ]; then
+    echo "❌ ERRO: generate-feed.sh não criou o arquivo feed.xml."
+    exit 1
+fi
+echo "   ✅ feed.xml gerado com sucesso."
+
 # ============================================================
 # Commit e push das alterações (incluindo renomeações)
 # ============================================================
@@ -43,23 +62,6 @@ else
     echo "ℹ️ Nenhuma alteração para commitar."
 fi
 
-# ============================================================
-# Geração do feed RSS (com verificação e cópia)
-# ============================================================
-echo "📡 Gerando feed RSS..."
-if [ -f "./generate-feed.sh" ]; then
-    ./generate-feed.sh
-else
-    echo "❌ ERRO: generate-feed.sh não encontrado."
-    exit 1
-fi
-
-# Verifica se o feed foi gerado
-if [ ! -f "feed.xml" ]; then
-    echo "❌ ERRO: generate-feed.sh não criou o arquivo feed.xml."
-    exit 1
-fi
-echo "   ✅ feed.xml gerado com sucesso."
 
 # ============================================================
 # Build do site com mdBook
