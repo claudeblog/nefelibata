@@ -44,8 +44,8 @@ AUDIO_PLAYER='<audio controls style="width: 100%; margin: 1rem 0;">
 Seu navegador não suporta o player de áudio.
 </audio>'
 
-# Insere o player logo após a tag <body>
-perl -i -0pe 's/(<body[^>]*>)/\1\n'"$AUDIO_PLAYER"'\n/s' book/blog.html
+# Insere o player logo após a tag <body> (delimitador alterado para |)
+perl -i -0pe 's|(<body[^>]*>)|\1\n'"$AUDIO_PLAYER"'\n|s' book/blog.html
 
 echo "✅ Player de áudio adicionado ao blog.html."
 
