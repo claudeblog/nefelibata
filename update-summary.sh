@@ -13,10 +13,7 @@ cat > "$TMP_SUMMARY" << 'HEAD'
 
 HEAD
 
-
-echo "- [Sumário](SUMMARY.md)" >> "$TMP_SUMMARY"
-
-# Lista todos os outros arquivos .md
+# Lista todos os arquivos .md
 files=()
 for file in src/*.md; do
     [ -f "$file" ] || continue
@@ -50,10 +47,11 @@ for file in "${sorted_files[@]}"; do
     echo "- [$title]($rel_path)" >> "$TMP_SUMMARY"
 done
 
-
 # Adiciona páginas especiais
 [ -f "src/Capa.md" ] && echo "- [Capa](Capa.md)" >> "$TMP_SUMMARY"
 [ -f "src/Sobre.md" ] && echo "- [Sobre](Sobre.md)" >> "$TMP_SUMMARY"
+
+echo "- [Sumário](SUMMARY.md)" >> "$TMP_SUMMARY"
 
 # Sobrescreve o conteúdo do arquivo original (sem deletá-lo)
 cat "$TMP_SUMMARY" > "$SUMMARY_FILE"

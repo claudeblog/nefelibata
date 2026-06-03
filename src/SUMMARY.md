@@ -1,6 +1,5 @@
 # Sumário  
 
-- [Sumário](SUMMARY.md)  
 - [Haicai desejo](2026-06-02-Haicai_desejo.md)  
 - [Haicai preocupado](2026-06-01-Haicai_preocupado.md)  
 - [Se sua casa pegar fogo](2026-05-31-Se_sua_casa_pegar_fogo.md)  
@@ -279,6 +278,7 @@
 - [Creditos](2024-01-01-Creditos.md)  
 - [Capa](Capa.md)  
 - [Sobre](Sobre.md)  
+- [Sumário](SUMMARY.md)  
 &nbsp;<br>​
 &nbsp;<br>​
 &nbsp;<br>​
