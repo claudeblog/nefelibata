@@ -13,56 +13,68 @@ cp book/print.html book/blog.html
 # Remove script de impressão automática
 sed -i '/<script>/,/<\/script>/ {
     /window\.print/d
-    /window\.addEventListener/d
-    /window\.setTimeout/d
+    /window.addEventListener/d
+    /window.setTimeout/d
 }' book/blog.html
 
-perl -i -0pe 's/\s*window\.addEventListener('"'"'load'"'"',\s*function\s*\(\s*\)\s*\{\s*window\.setTimeout\(window\.print,\s*100\s*\);\s*\}\s*\);\s*<\/script>//gis' book/blog.html
+perl -i -0pe 's/<script>\s*window\.addEventListener\('"'"'load'"'"',\s*function\(\s*\)\s*\{\s*window\.setTimeout\(window\.print,\s*100\s*\);\s*\}\s*\);\s*<\/script>//gis' book/blog.html
 
-sed -i 's|window\.print();|window.print = function() { return false; };|g' book/blog.html
+sed -i 's|</body>|<script>window.print = function() { return false; };</script></body>|' book/blog.html
 
 # ============================================================
-# REMOVER A SEÇÃO DO SUMÁRIO
+# REMOVER A SEÇÃO DO SUMÁRIO DO blog.html (método por linha)
 # ============================================================
-
 echo "📖 Removendo a página de sumário do blog.html..."
 
-sed -i '/id="summary"/,/<\/div>/d' book/blog.html
-sed -i '/Sum[áa]rio<\/h1>/,/<\/div>/d' book/blog.html
+# Remove desde a linha que contém <h1 id="sumário"> até a linha que contém </div> da quebra de página
+sed -i '/<h1 id="sum[áa]rio">/,/<div style="break-before: page; page-break-before: always;"><\/div>/d' book/blog.html
+
+# Caso ainda reste algum resíduo (título solto), remove também um possível título sem id
+sed -i '/<h1>Sum[áa]rio<\/h1>/,/<div style="break-before: page; page-break-before: always;"><\/div>/d' book/blog.html
 
 echo "✅ Seção do sumário removida."
 
 # ============================================================
-# FAZER O BLOG SER A PÁGINA PRINCIPAL
+# ADICIONAR BOTÃO "BLOG" EM TODAS AS PÁGINAS (à esquerda do ícone de impressão)
 # ============================================================
-
-echo "🏠 Tornando o blog a página padrão do site..."
-
-cp book/blog.html book/index.html
-
-echo "✅ index.html atualizado."
-
-# ============================================================
-# ADICIONAR BOTÃO "BLOG"
-# ============================================================
-
 echo "🔘 Inserindo botão 'Blog' à esquerda do ícone de impressão..."
 
-BLOG_BUTTON='<a href="index.html" class="icon-button" title="Blog" aria-label="Blog">Blog</a>'
+BLOG_BUTTON='<a href="blog.html" title="Ver todos os poemas em sequência" aria-label="Blog" style="margin-left: 8px; display: inline-flex; align-items: center; gap: 4px; color: gray; font-weight: bolder;">Blog</a>'
 
-find book -maxdepth 1 -name "*.html" \
-    ! -name "print.html" \
-    ! -name "blog.html" \
-    -type f | while read -r page; do
-
-    # Remove botão existente
-    perl -i -0pe 's|<a href="index\.html"[^>]*>.*?Blog</a>||gs' "$page"
-
-    # Insere antes do botão de impressão
+# Processa todas as páginas HTML na raiz da pasta book (exceto print.html e blog.html)
+find book -maxdepth 1 -name "*.html" ! -name "print.html" ! -name "blog.html" -type f | while read -r page; do
+    # Remove qualquer botão Blog existente
+    perl -i -0pe 's|<a href="blog\.html"[^>]*>.*?Blog<\/a>||gs' "$page"
+    
+    # Insere o botão dentro da div .right-buttons, antes do link de impressão
     perl -i -0pe 's|(<div class="right-buttons">)(.*?)(<a href="print\.html")|\1'"$BLOG_BUTTON"'\2\3|s' "$page"
-
+    
     echo "   ✅ Botão inserido em: $(basename "$page")"
-
 done
 
-echo "✅ Blog configurado como página inicial."
+echo "✅ Botão 'Blog' adicionado em todas as páginas (à esquerda do ícone de impressão)."
+
+# ============================================================
+# TORNAR blog.html A PÁGINA PADRÃO (redirecionamento via index.html)
+# ============================================================
+echo "🔀 Tornando blog.html a página principal..."
+
+if [ -f "book/index.html" ]; then
+    # Cria um redirecionamento instantâneo (meta refresh)
+    cat > "book/index.html" << 'EOF'
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="refresh" content="0; url=blog.html" />
+</head>
+<body>
+<p>Redirecionando para o <a href="blog.html">Blog</a>…</p>
+</body>
+</html>
+EOF
+    echo "✅ Redirecionamento configurado: index.html -> blog.html"
+else
+    echo "⚠️ Nenhum index.html encontrado. Verifique se a build foi executada."
+fi
+
+echo "🎉 Tudo pronto! Seu blog agora é a página inicial do livro."
