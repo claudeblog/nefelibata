@@ -13,9 +13,6 @@ cat > "$TMP_SUMMARY" << 'HEAD'
 
 HEAD
 
-# Adiciona páginas especiais
-[ -f "src/Capa.md" ] && echo "- [Capa](Capa.md)" >> "$TMP_SUMMARY"
-[ -f "src/Sobre.md" ] && echo "- [Sobre](Sobre.md)" >> "$TMP_SUMMARY"
 
 echo "- [Sumário](SUMMARY.md)" >> "$TMP_SUMMARY"
 
@@ -52,6 +49,11 @@ for file in "${sorted_files[@]}"; do
     rel_path=$(echo "$file" | sed 's|src/||')
     echo "- [$title]($rel_path)" >> "$TMP_SUMMARY"
 done
+
+
+# Adiciona páginas especiais
+[ -f "src/Capa.md" ] && echo "- [Capa](Capa.md)" >> "$TMP_SUMMARY"
+[ -f "src/Sobre.md" ] && echo "- [Sobre](Sobre.md)" >> "$TMP_SUMMARY"
 
 # Sobrescreve o conteúdo do arquivo original (sem deletá-lo)
 cat "$TMP_SUMMARY" > "$SUMMARY_FILE"

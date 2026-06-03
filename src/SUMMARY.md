@@ -1,7 +1,5 @@
 # Sumário  
 
-- [Capa](Capa.md)  
-- [Sobre](Sobre.md)  
 - [Sumário](SUMMARY.md)  
 - [Haicai desejo](2026-06-02-Haicai_desejo.md)  
 - [Haicai preocupado](2026-06-01-Haicai_preocupado.md)  
@@ -279,6 +277,8 @@
 - [Haicais do Arvoredo](2024-10-06-Haicais_do_Arvoredo.md)  
 - [Poemas Roubados Tenho roubado versos](2024-10-01-Poemas_Roubados_Tenho_roubado_versos.md)  
 - [Creditos](2024-01-01-Creditos.md)  
+- [Capa](Capa.md)  
+- [Sobre](Sobre.md)  
 &nbsp;<br>​
 &nbsp;<br>​
 &nbsp;<br>​
